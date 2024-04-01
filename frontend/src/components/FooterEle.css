@@ -1,0 +1,10 @@
+.footer {
+    font-family: Ember;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: whitesmoke;
+    color: black;
+    text-align: center;
+}
