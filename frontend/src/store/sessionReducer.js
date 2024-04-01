@@ -18,7 +18,7 @@ export const destroySession = () => ({
 
 //THUNK ACTION CREATORS
 
-export const createUser = (userInfo) => (dispatch, getState) => {
+export const createUser = userInfo => (dispatch, getState) => (
     postUser(userInfo)
     .then(res => {
         if (res.ok) {
@@ -31,7 +31,7 @@ export const createUser = (userInfo) => (dispatch, getState) => {
         sessionStorage.setItem('currentUser', JSON.stringify(data.user))
         dispatch(createSession(data.user))
     })
-}
+)
 
 export const loginUser = sessionInfo => (dispatch, getState) => (
     postSession(sessionInfo)
@@ -66,12 +66,12 @@ export const selectCurrentUser = state => state.session;
 
 
 //REDUCER
-// const initialState = JSON.parse(sessionStorage.getItem('currentUser'))
+const initialState = JSON.parse(sessionStorage.getItem('currentUser'))
 // Retrieve the currentUser from sessionStorage
-const currentUserData = sessionStorage.getItem('currentUser');
+// const currentUserData = sessionStorage.getItem('currentUser');
 
-// Initialize initialState based on the retrieved currentUserData
-const initialState = currentUserData ? JSON.parse(currentUserData) : null;
+// // Initialize initialState based on the retrieved currentUserData
+// const initialState = currentUserData ? JSON.parse(currentUserData) : null;
 
 const sessionReducer = (state = initialState, action) => {
     const nextState = { ...state }

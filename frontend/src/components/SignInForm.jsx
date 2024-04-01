@@ -1,8 +1,9 @@
 import './SignInForm.css'
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from 'react-router-dom';
-import { createSession, loginUser, selectCurrentUser } from '../store/sessionReducer'
+import { loginUser, selectCurrentUser } from '../store/sessionReducer'
+import Footer from './FooterEle'
 
 
 const SignInForm = () => {
@@ -19,15 +20,9 @@ const SignInForm = () => {
         }
     }
 
-    const handleSubmit = (e) => {
-        dispatch(loginUser({ email, password }))
-    }
-
-    // const handleClick = (e) => {
-    //    dispatch(loginUser({ email, password }));
-        
-    //         routeChange()
-    //     }
+    // const handleSubmit = (e) => {
+    //     dispatch(loginUser({ email, password }))
+    // }
     
 
     const handleClick = (e) => {
@@ -39,36 +34,27 @@ const SignInForm = () => {
             setErrors([])
             routeChange()
         })
-        .catch((error) => {
-            if (error.response && error.response.data) {
-                const { errors } = error.response.data
-                setErrors(errors)
-            } else {
-                setErrors([error.message])
-            }
+        .catch(async res => {
+            let data = await res.json();
+            setErrors(data.errors)
         })
     }
 
-    // const handleClick = (e) => {
-    //     e.preventDefault()
-    //     dispatch(loginUser({ email, password }))
-    //     .then(() => {
-    //         setEmail('');
-    //         setPassword('')
-    //         setErrors([])
-    //         routeChange()
-    //     })
-    //     .catch(async res => {
-    //         let data = await res.json()
-    //         setErrors(data.errors)
-    //     })
-    // }
+    const demoUser = (e) => {
+        e.preventDefault()
+        const demoEmail = 'demo@user.io'
+        const demoPassword = 'password'
+        setEmail(demoEmail)
+        setPassword(demoPassword)
+        dispatch(loginUser({ email: demoEmail, password: demoPassword }))
+        routeChange()
+    }
 
 
     return (
         <>
             <div className='form-container'>
-                <form className='form-data' onSubmit={handleSubmit}>
+                <form className='form-data' onSubmit={currentUser ? demoUser : handleClick}>
                     <label>Email
                         <input id='email' type="text" 
                         value={email}
@@ -83,9 +69,11 @@ const SignInForm = () => {
                         />
                     </label>
                     <button className='continue-button' type='submit' onClick={handleClick}>Sign In</button>
+                    <button className='demo' type='submit' onClick={demoUser}>Demo User</button>
                 </form>
                 {errors.map((err, idx) => (<p key={idx}>{err}</p>))}
             </div>
+            <Footer></Footer>
         </>
     )
 }

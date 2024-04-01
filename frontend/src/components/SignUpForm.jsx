@@ -1,5 +1,5 @@
 import './SignInForm.css'
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from 'react-router-dom';
 import { createUser, selectCurrentUser } from '../store/sessionReducer'
@@ -20,17 +20,10 @@ const SignUpForm = () => {
         }
     }
 
-    const handleSubmit = (e) => {
-        dispatch(createUser({ email, password }))
-    }
-
-    // const handleClick = (e) => {
-    //    dispatch(createUser({ email, password }));
-        
-    //         routeChange()
-    //     }
+    // const handleSubmit = (e) => {
+    //     dispatch(createUser({ email, password }))
+    // }
     
-
     const handleClick = (e) => {
         e.preventDefault()
         dispatch(createUser({ email, password }))
@@ -40,36 +33,17 @@ const SignUpForm = () => {
             setErrors([])
             routeChange()
         })
-        .catch((error) => {
-            if (error.response && error.response.data) {
-                const { errors } = error.response.data
-                setErrors(errors)
-            } else {
-                setErrors([error.message])
-            }
+        .catch(async res => {
+            let data = await res.json();
+            setErrors(data)
         })
     }
-
-    // const handleClick = (e) => {
-    //     e.preventDefault()
-    //     dispatch(createUser({ email, password }))
-    //     .then(() => {
-    //         setEmail('');
-    //         setPassword('')
-    //         setErrors([])
-    //         routeChange()
-    //     })
-    //     .catch(async res => {
-    //         let data = await res.json()
-    //         setErrors(data.errors)
-    //     })
-    // }
 
 
     return (
         <>
             <div className='form-container'>
-                <form className='form-data' onSubmit={handleSubmit}>
+                <form className='form-data' onSubmit={handleClick}>
                     <label>Email
                         <input id='email' type="text" 
                         value={email}
