@@ -43,23 +43,25 @@ const SignUpForm = () => {
     return (
         <>
             <div className='form-container'>
+                <h1 className='form-title'>Sign Up</h1>
                 <form className='form-data' onSubmit={handleClick}>
-                    <label>Email
-                        <input id='email' type="text" 
+                    <label className='form-label'>Email
+                        <input id='email' type="text"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         />
                     </label>
 
-                    <label>Password 
-                        <input id='password' type="password" 
+                    <label className='form-label'>Password 
+                        <input id='password' type="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         />
                     </label>
                     <button className='continue-button' type='submit' onClick={handleClick}>Sign Up</button>
                 </form>
-                {errors.map((err, idx) => (<p key={idx}>{err}</p>))}
+                    <span className='display-errors'>{errors.map((err, idx) => (<p key={idx}><li>{err}</li></p>))}</span>
+                    <p className='form-description'>By creating an account, you agree to David's Conditions of Use and Privacy Notice</p>
             </div>
             <Footer></Footer>
         </>

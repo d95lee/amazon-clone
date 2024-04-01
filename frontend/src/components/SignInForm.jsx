@@ -20,6 +20,10 @@ const SignInForm = () => {
         }
     }
 
+    const routeSignup = () => {
+        navigate('/signup')
+    }
+
     // const handleSubmit = (e) => {
     //     dispatch(loginUser({ email, password }))
     // }
@@ -54,15 +58,16 @@ const SignInForm = () => {
     return (
         <>
             <div className='form-container'>
+            <h1 className='form-title'>Sign In</h1>
                 <form className='form-data' onSubmit={currentUser ? demoUser : handleClick}>
-                    <label>Email
+                    <label className='form-label'>Email
                         <input id='email' type="text" 
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         />
                     </label>
 
-                    <label>Password 
+                    <label className='form-label'>Password 
                         <input id='password' type="password" 
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
@@ -71,8 +76,11 @@ const SignInForm = () => {
                     <button className='continue-button' type='submit' onClick={handleClick}>Sign In</button>
                     <button className='demo' type='submit' onClick={demoUser}>Demo User</button>
                 </form>
-                {errors.map((err, idx) => (<p key={idx}>{err}</p>))}
+                <span className='display-errors'>{errors.map((err, idx) => (<p key={idx}><li>{err}</li></p>))}</span>
+                <p className='form-description'>By continuing, you agree to David's Conditions of Use and Privacy Notice.</p>
             </div>
+            <p id='create-account-text'>New to Amazon?</p>
+            <button className='create-account-button' type='submit' onClick={routeSignup}>Create your Amazon Account</button>
             <Footer></Footer>
         </>
     )

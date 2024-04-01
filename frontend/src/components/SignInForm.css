@@ -1,12 +1,21 @@
+@font-face {
+    font-family: EmberMediumBold;
+    src: url('../assets/fonts/Ember/Amazon-Ember-Medium.ttf');
+
+    font-family: Ember;
+    src: url('../assets//fonts/Ember/AmazonEmber_Rg.ttf')
+}
+
 .form-container {
     border-radius: 8px;
     justify-content: center;
     align-items: center;
     border: 1px solid black;
-    width: 500px;
-    height: 300px;
+    width: 400px;
+    min-height: 400px;
+    margin: auto;
     margin-top: 40px;
-    
+    overflow: auto;
 }
 
 .form-data {
@@ -14,7 +23,14 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    padding: 30px;
+    width: 200px;
+    margin: auto; 
+}
+
+.form-data input {
+    border: 1px solid black;
+    border-radius: 2px;
+    font-size: 20px;
 }
 
 .continue-button {
@@ -48,4 +64,60 @@
     line-height: 30px;
     font-size: 13px;
     border-radius: 8px;
+}
+
+.display-errors {
+    color:rgb(199, 65, 65);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 6px;
+
+}
+
+.input-container {
+    padding: 10px;
+}
+
+.form-label {
+    padding: 8px;
+}
+
+.form-title {
+    margin-left: 65px;
+}
+
+.form-description {
+    display: flex;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.create-account-button {
+    background-color: #ffd814;
+    border-color: #FCD200;
+    height: 33px;
+    width: 300px;
+    box-shadow: 0 2px 5px 0 rgba(213, 217, 217, .5);
+    border-style: solid;
+    border-width: 1px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 13px;
+    border-radius: 8px;
+    margin: 0 auto;
+    display: block;
+}
+
+#create-account-text {
+    height: 33px;
+    width: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    margin: 0 auto;
+    display: block;
+    color: grey;
+    margin-top: 10px;
 }

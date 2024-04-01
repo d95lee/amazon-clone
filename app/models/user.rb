@@ -13,7 +13,7 @@ class User < ApplicationRecord
     has_secure_password
     before_validation :ensure_session_token
 
-    validates :email, :password_digest, :session_token, presence: true
+    validates :email, :session_token, presence: true
     validates :email, :session_token, uniqueness: true 
     validates :email, length: { in: 3..100 }, allow_nil: true
     validates :password, length: { in: 6..40 }, allow_nil: true
