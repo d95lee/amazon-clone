@@ -27,6 +27,7 @@ gem "puma", ">= 5.0"
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem 'bcrypt'
 gem 'jbuilder'
+gem 'faker'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false

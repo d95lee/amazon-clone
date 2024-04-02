@@ -2,6 +2,7 @@ import './NavBar.css'
 import { selectCurrentUser } from '../store/sessionReducer'
 import { useDispatch, useSelector } from 'react-redux'
 import { Route, useNavigate } from 'react-router-dom'
+import logo from '../assets/logo/white-logo.png'
 
 const NavBar = props => {
     const dispatch = useDispatch()
@@ -27,6 +28,10 @@ const NavBar = props => {
         } else {
             return (
             <>
+            
+                {/* <div className='navbar-logo-container'>
+                    <a href='/home'><img className='navbar-logo' src={logo} /></a>
+                </div> */}
                  <div className='nav-right'>
                     <button onClick={() => dispatch(routeChange)}>Sign In</button>
                     <p className='new-signup'> New Customer?  
@@ -40,8 +45,36 @@ const NavBar = props => {
 
     return (
         <nav className='nav-bar'>
-            <h1>Amazon Clone</h1>
+             <div className='navbar-logo-container'>
+                <a href='/home'><img className='navbar-logo' src={logo} /></a>
+            </div>
+
+            <div className='nav-location'>
+                <p>Update Location</p>
+            </div>
+
+            <div>
+                <input type="search" id='nav-search'
+                placeHolder="Search here"
+                />
+
+                <input type="submit" id='nav-search-icon'
+                />
+            </div>
+
+            <div className='nav-language'>
+                <p>Language</p>
+            </div>
+
             {sessionLinks()}
+
+            <div className='nav-orders'>
+                <p>Cart Placeholder</p>
+            </div>
+
+            <div className='nav-cart'>
+                <p>Cart Placeholder</p>
+            </div>
         </nav>
     )
 }

@@ -1,10 +1,11 @@
-import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { Navigate, Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 import './App.css'
 import NavBar from './components/NavBar'
 import SignInForm from './components/SignInForm'
 import ProductsIndex from './components/ProductsIndex'
 import SignUpForm from './components/SignUpForm'
+
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: 'signup',
     element: <SignUpForm />
+  },
+  {
+    path: '*',
+    element: <NavBar />
   }
 ])
 
