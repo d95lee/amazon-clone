@@ -2,7 +2,7 @@ class API::ProductsController < ApplicationController
     def show
         @product = Product.find(params[:id])
         if @product
-            render json: @product
+            render :show
         else
             render json: { product: nil }
         end
@@ -10,6 +10,7 @@ class API::ProductsController < ApplicationController
 
     def index 
         @products = Product.all
+        render :index
     end
 
 end

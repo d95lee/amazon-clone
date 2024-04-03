@@ -37,7 +37,6 @@ export const fetchProduct = (product) => async dispatch => {
 }
 
 
-
 const productReducer = (state = {}, action) => {
     const nextState = { ...state }
 

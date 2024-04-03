@@ -11,9 +11,7 @@
 #
 class Product < ApplicationRecord
     validates :name, :price, presence: true
-    validates :name, length: { in: 1..100 } allow_nil: true
-    validates :price, length: { in: 1..8 } allow_nil: true
-
-    belongs_to :user
+    validates :name, length: { in: 1..100 }, allow_nil: true
+    validates :price, length: { in: 1..8 }, allow_nil: true
 
 end
