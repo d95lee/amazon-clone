@@ -32,12 +32,19 @@
   
   .nav-drop-text:hover .nav-dropdown-content {
     display: block;
+    border: 2px solid white;
   }
 
   .nav-drop-text-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .nav-drop-text-container:hover {
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 8px;
   }
 
   #text-signin {

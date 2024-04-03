@@ -24,6 +24,12 @@ ApplicationRecord.transaction do
       email: 'demo@user.io', 
       password: 'password'
     )
+
+    Product1 = Product.create!(name: 'Lenovo X1 Thinkpad', price: '$799.99', description: 'Ultralight starting weight of just 1.12kg / 2.48lb')
+    product1.save!
+
+    Product1 = Product.create!(name: 'Lenovo X2 Thinkpad', price: '$899.99', description: 'Ultralight starting weight of just 2.12kg / 2.49lb')
+    product1.save!
   
     # More users
     10.times do 

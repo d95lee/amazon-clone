@@ -1,6 +1,7 @@
 import './Home.css'
 import NavBar from '../NavBar'
 import SubNav from '../SubNav/SubNav'
+import ProductShow from '../Product/ProductShow'
 
 const Home = () => {
     return (
@@ -8,7 +9,8 @@ const Home = () => {
             <NavBar/>
             <SubNav/>
             <div className='home-background'>
-                <p id='test'>test</p>
+            <ProductShow/>
+               
             </div>
         </>
     )
