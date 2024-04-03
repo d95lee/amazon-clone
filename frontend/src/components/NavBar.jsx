@@ -3,79 +3,59 @@ import { selectCurrentUser } from '../store/sessionReducer'
 import { useDispatch, useSelector } from 'react-redux'
 import { Route, useNavigate } from 'react-router-dom'
 import logo from '../assets/logo/white-logo.png'
+import flag from '../assets/icons/america-flag.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import DropDownMenu from './DropDownMenu'
+
 
 const NavBar = props => {
-    const dispatch = useDispatch()
-    const currentUser = useSelector(selectCurrentUser)
-    const navigate = useNavigate();
-
-    const routeChange = () => {
-        navigate('/signin')
-    }
-
-    const sessionLinks = () => {
-        if (currentUser) {
-            return (
-                <>
-                    <div className='nav-right'>
-                        <span className='session-links'>
-                            <p>Hello {currentUser.email} </p>
-                            <button onClick={() => dispatch(logoutUser())}>Logout</button>
-                        </span>
-                    </div>
-                </>
-            )
-        } else {
-            return (
-            <>
-            
-                {/* <div className='navbar-logo-container'>
-                    <a href='/home'><img className='navbar-logo' src={logo} /></a>
-                </div> */}
-                 <div className='nav-right'>
-                    <button onClick={() => dispatch(routeChange)}>Sign In</button>
-                    <p className='new-signup'> New Customer?  
-                        <a href="http://localhost:5173/signup"> Start Here.</a>
-                    </p>
-                </div>
-            </>
-            )
-        }
-    }
+    
 
     return (
+    <>  
         <nav className='nav-bar'>
              <div className='navbar-logo-container'>
                 <a href='/home'><img className='navbar-logo' src={logo} /></a>
             </div>
-
+       
+        
             <div className='nav-location'>
-                <p>Update Location</p>
+                <p id='text-city'>Delivering to San Jose 95002</p>
+                <p id='nav-location-icon'></p>
+                <p id='text-location'>Update Location</p>
             </div>
-
-            <div>
-                <input type="search" id='nav-search'
-                placeHolder="Search here"
-                />
-
-                <input type="submit" id='nav-search-icon'
-                />
+       
+        
+            <div className='nav-search-container'>
+                <select className='nav-search-left'>
+                    <option>All</option>
+                </select>
+                <input type="search" className='nav-search-middle'
+                placeholder="Search here"/>
+    
+                <div className='nav-search-right'>
+                    <FontAwesomeIcon icon={faMagnifyingGlass} id='search-icon'/>
+                </div>
             </div>
 
             <div className='nav-language'>
-                <p>Language</p>
+                <a href=""><img id='nav-flag' src={flag}/></a>
+                <p id='nav-english'>EN</p>
             </div>
 
-            {sessionLinks()}
+            <DropDownMenu/> 
 
             <div className='nav-orders'>
-                <p>Cart Placeholder</p>
+                <p id='text-returns'>Returns</p>
+                <p id='text-orders'>& Orders</p>
             </div>
 
             <div className='nav-cart'>
-                <p>Cart Placeholder</p>
+                <p className='nav-cart-logo'></p>
             </div>
         </nav>
+    </>  
     )
 }
 

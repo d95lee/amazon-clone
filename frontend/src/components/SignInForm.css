@@ -39,6 +39,11 @@
     background: #e7f0fe
 }
 
+.form-data input:hover {
+    outline: 2px solid #c8f3fa;
+    text-decoration: none;
+}
+
 .continue-button {
     background-color: #ffd814;
     border-color: #FCD200;

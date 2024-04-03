@@ -1,0 +1,57 @@
+@font-face {
+    font-family: EmberMediumBold;
+    src: url('../assets/fonts/Ember/Amazon-Ember-Medium.ttf');
+
+    font-family: Ember;
+    src: url('../assets//fonts/Ember/AmazonEmber_Rg.ttf')
+}
+
+.nav-drop-text {
+    position: relative;
+    display: inline-block;
+  }
+  
+  #login-trigger {
+    cursor: pointer;
+  }
+  
+  .nav-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 180px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    z-index: 1;
+  }
+  
+  .nav-dropdown-content {
+    margin: 0;
+  }
+  
+  .nav-drop-text:hover .nav-dropdown-content {
+    display: block;
+  }
+
+  .nav-drop-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #text-signin {
+    margin: 0px;
+    margin-bottom: -1px;
+    font-family: Ember;
+    color: white;
+    font-size: 14px;
+  }
+
+  #text-account {
+    margin: 0px;
+    font-family: Ember;
+    color: white;
+    font-weight: 1000;
+    font-size: 14px;
+  }

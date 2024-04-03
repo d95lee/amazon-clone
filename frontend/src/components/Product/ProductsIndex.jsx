@@ -1,4 +1,4 @@
-import './ProductsIndex.css'
+import './Product.css'
 
 const ProductsIndex = () => {
 

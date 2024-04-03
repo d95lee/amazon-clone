@@ -1,16 +1,17 @@
 import { Navigate, Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 import './App.css'
-import NavBar from './components/NavBar'
 import SignInForm from './components/SignInForm'
-import ProductsIndex from './components/ProductsIndex'
+import ProductsIndex from './components/Product/ProductsIndex'
+import ProductShow from './components/Product/ProductShow'
 import SignUpForm from './components/SignUpForm'
+import Home from './components/Home/Home'
 
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <NavBar /> 
+    element: <Home /> 
   },
   {
     path: 'signin',
@@ -21,8 +22,18 @@ const router = createBrowserRouter([
     element: <SignUpForm />
   },
   {
+    path: 'products',
+    element: <ProductsIndex/>,
+    children: [
+      {
+        path: 'productId',
+        element: <ProductShow/>
+      }
+    ]
+  },
+  {
     path: '*',
-    element: <NavBar />
+    element: <Home />
   }
 ])
 
@@ -31,7 +42,7 @@ function App() {
     
       <>
         <RouterProvider router={router}>
-            <NavBar/>
+            <Home/>
         </RouterProvider>
       </>
      

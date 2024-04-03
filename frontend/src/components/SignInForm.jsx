@@ -55,6 +55,7 @@ const SignInForm = () => {
         })
         .catch(async res => {
             let data = await res.json();
+            console.log(data)
             setErrors(data.errors)
         })
     }
