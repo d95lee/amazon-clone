@@ -19,13 +19,13 @@ const NavBar = props => {
                 <a href='/home'><img className='navbar-logo' src={logo} /></a>
             </div>
        
-        
+        <div className='nav-location-container'>
             <div className='nav-location'>
                 <p id='text-city'>Delivering to San Jose 95002</p>
                 <p id='nav-location-icon'></p>
                 <p id='text-location'>Update Location</p>
             </div>
-       
+        </div>
         
             <div className='nav-search-container'>
                 <select className='nav-search-left'>
@@ -38,7 +38,7 @@ const NavBar = props => {
                     <FontAwesomeIcon icon={faMagnifyingGlass} id='search-icon'/>
                 </div>
             </div>
-
+        <div className='nav-right-container'>
             <div className='nav-language'>
                 <a href=""><img id='nav-flag' src={flag}/></a>
                 <p id='nav-english'>EN</p>
@@ -54,6 +54,7 @@ const NavBar = props => {
             <div className='nav-cart'>
                 <p className='nav-cart-logo'></p>
             </div>
+        </div>
         </nav>
     </>  
     )

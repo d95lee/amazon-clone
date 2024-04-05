@@ -6,7 +6,8 @@ import productReducer from './productReducer'
 
 const rootReducer = combineReducers({
     session: sessionReducer,
-    product: productReducer
+    product: productReducer,
+    products: productReducer
 })
 
 const configureStore = (initialState = {}) => (

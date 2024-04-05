@@ -1,4 +1,4 @@
-class API::ProductsController < ApplicationController
+class Api::ProductsController < ApplicationController
     def show
         @product = Product.find(params[:id])
         if @product

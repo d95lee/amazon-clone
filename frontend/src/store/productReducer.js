@@ -8,33 +8,38 @@ export const receiveProducts = products => ({
     products 
 })
 
-export const receiveProduct = product => ({
+export const receiveProduct = data => ({
     type: RECEIVE_PRODUCT,
-    product
+    data
 })
 
 
 
 
-export const selectProduct = productId => state => state.products[productId]
-
+export const selectProduct = (productId) => state => state.product[productId]
+// export const selectProducts = state => Object.values(state.product)
+export const selectProductsArray = state => Object.values(state.product)
 
 
 export const fetchProducts = () => async dispatch => {
-    const res = await fetch(`/products`)
+    const res = await fetch(`/api/products`)
 
     if (res.ok) {
-        dispatch(receiveProducts(await res.json()))
+        const data = await res.json()
+        dispatch(receiveProducts(data))
     }
 }
 
-export const fetchProduct = (product) => async dispatch => {
-    const res = await fetch(`/products/${product.id}`)
+export const fetchProduct = (productId) => async dispatch => {
+    const res = await fetch(`/api/products/${productId}`)
+    
 
     if (res.ok) {
-        dispatch(receiveProduct(await res.json()))
+        const data = await res.json()
+        dispatch(receiveProduct(data))
     }
 }
+
 
 
 const productReducer = (state = {}, action) => {
@@ -42,7 +47,7 @@ const productReducer = (state = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_PRODUCT:
-            nextState[action.product.id] = action.product
+            nextState[action.data.product.id] = action.data.product
             return nextState
         case RECEIVE_PRODUCTS:
             return action.products

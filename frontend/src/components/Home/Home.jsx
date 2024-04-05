@@ -2,7 +2,8 @@ import './Home.css'
 import NavBar from '../NavBar'
 import SubNav from '../SubNav/SubNav'
 import ProductShow from '../Product/ProductShow'
-import ProductsIndex from '../Product/ProductsIndex'
+import { Link } from 'react-router-dom'
+// import ProductsIndex from '../Product/ProductsIndex'
 
 const Home = () => {
     return (
@@ -10,8 +11,6 @@ const Home = () => {
             <NavBar/>
             <SubNav/>
             <div className='home-background'>
-            <ProductShow/>
-            <ProductsIndex/>
                
             </div>
         </>
