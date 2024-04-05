@@ -3,7 +3,7 @@ import NavBar from '../NavBar'
 import SubNav from '../SubNav/SubNav'
 import ProductShow from '../Product/ProductShow'
 import { Link } from 'react-router-dom'
-// import ProductsIndex from '../Product/ProductsIndex'
+import ProductsHome from '../Product/ProductsHome'
 
 const Home = () => {
     return (
@@ -11,12 +11,12 @@ const Home = () => {
             <NavBar/>
             <SubNav/>
             <div className='home-background'>
+            <ProductsHome/>
                
             </div>
         </>
     )
 }
-
 
 
 export default Home

@@ -11,7 +11,8 @@
 #
 class Product < ApplicationRecord
     validates :name, :price, presence: true
-    validates :name, length: { in: 1..100 }, allow_nil: true
+    validates :name, length: { in: 1..200 }, allow_nil: true
     validates :price, length: { in: 1..8 }, allow_nil: true
 
+    has_one_attached :photo
 end

@@ -10,9 +10,10 @@ const ProductShow = () => {
     // const productId = 2
     const { productId } = useParams()
     const product = useSelector(selectProduct(productId))
+    
     useEffect(() => {
         dispatch(fetchProduct(productId))
-    }, [])
+    }, [productId])
 
     return (
         <Layout>
@@ -28,7 +29,7 @@ const ProductShow = () => {
             <div className='show-wrapper'>
                 <div className='show-left'>
                     <div id='show-left-content'>
-                        <p>Photo Placeholder</p>
+                        {product?.photoUrl && <img className='show-photo' src={product.photoUrl} /> }
                     </div>
                 </div>
 
@@ -37,8 +38,8 @@ const ProductShow = () => {
                         {product && <p id='product-name'>{product.name}</p>}
                         {/* {product && <p id='product-name'>{product.rating}</p>} */}
                         <hr />
-                        {product && <p id='product-price'>{product.price}</p>}
-                        {product && <p id='product-description'>{product.description}</p>}
+                        {product && <p id='product-price'>${product.price}</p>}
+                        {product && <p id='product-description'>Description: {product.description}</p>}
                     </div>
                 </div>
 
