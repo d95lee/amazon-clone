@@ -6,6 +6,7 @@ import ProductsIndex from './components/Product/ProductsIndex'
 import ProductShow from './components/Product/ProductShow'
 import SignUpForm from './components/SignUpForm'
 import Home from './components/Home/Home'
+import CartItemsIndex from './components/CartItem/CartItemsIndex'
 
 
 const router = createBrowserRouter([
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: '/products/:productId',
     element: <ProductShow/>
+  },
+  {
+    path: 'cart_items',
+    element: <CartItemsIndex/>
   },
   {
     path: '*',

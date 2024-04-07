@@ -9,6 +9,9 @@ import { deleteSession, postSession, postUser } from './utils/sessionApiUtils.js
 import { createUser, loginUser, logoutUser } from './store/sessionReducer.js'
 import { fetchProduct, fetchProducts } from './store/productReducer.js'
 import './components/global.css'
+import { deleteCartItem, editCartItem, postCartItem } from './utils/cartItemApiUtils.js'
+import { changeCartItem, clearCartItem, createCartItem, fetchCartItem, fetchCartItems } from './store/cartItemReducer.js'
+
 
 const initializeApp = () => {
   const store = configureStore();
@@ -23,6 +26,16 @@ const initializeApp = () => {
 
   window.fetchProducts = fetchProducts
   window.fetchProduct = fetchProduct
+
+  window.fetchCartItem = fetchCartItem
+  window.fetchCartItems = fetchCartItems
+  window.createCartItem = createCartItem
+  window.changeCartItem = changeCartItem
+  window.clearCartItem = clearCartItem
+
+  window.postCartItem = postCartItem
+  window.editCartItem = editCartItem
+  window.deleteCartItem = deleteCartItem
 
 
   ReactDOM.createRoot(document.getElementById('root')).render(

@@ -10,7 +10,11 @@ import DropDownMenu from './DropDownMenu'
 
 
 const NavBar = props => {
-    
+    const navigate = useNavigate()
+
+    const cartClick = () => {
+        navigate('cart_items')
+    }
 
     return (
     <>  
@@ -51,8 +55,8 @@ const NavBar = props => {
                 <p id='text-orders'>& Orders</p>
             </div>
 
-            <div className='nav-cart'>
-                <p className='nav-cart-logo'></p>
+            <div className='nav-cart' onClick={cartClick}>
+                {/* <p className='nav-cart-logo'></p> */}
             </div>
         </div>
         </nav>
