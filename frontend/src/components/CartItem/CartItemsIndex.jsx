@@ -38,6 +38,7 @@ const CartItemsIndex = () => {
                         {cart_item.product_id && (
                         <div>
                             <p className='test '>name: {fetchProduct(cart_item.product_id)?.data?.product?.name}</p>
+                            <p>{fetchProduct(2).name}</p>
                             <p>price: {fetchProduct(2).data?.product.price}</p>
                         </div>
                     )}

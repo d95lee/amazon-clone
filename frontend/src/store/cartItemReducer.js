@@ -128,34 +128,23 @@ export const selectCartItem = (cart_itemId) => state => state.cart_item[cart_ite
 const cartItemReducer = (state = {}, action) => {
     const nextState = { ...state }
         switch (action.type) {
-            case RECEIVE_CARTITEM:
-            console.log('RECEIVE_CARTITEM Action:', action);
+        case RECEIVE_CARTITEM:
             nextState[action.cart_item.id] = action.cart_item;
-            console.log('Next State after RECEIVE_CARTITEM:', nextState);
             return nextState;
         case RECEIVE_CARTITEMS:
-            console.log('RECEIVE_CARTITEMS Action:', action);
-            console.log('Next State after RECEIVE_CARTITEMS:', action.cart_items);
             return action.cart_items;
         case CREATE_CARTITEM:
-            console.log('CREATE_CARTITEM Action:', action);
             nextState[action.cart_item.id] = action.cart_item;
-            console.log('Next State after CREATE_CARTITEM:', nextState);
             return nextState;
         case UPDATE_CARTITEM: 
-            console.log('UPDATE_CARTITEM Action:', action);
             nextState[action.cart_item.id] = action.cart_item;
-            console.log('Next State after UPDATE_CARTITEM:', nextState);
             return nextState;
         case DESTROY_CARTITEM: 
-            console.log('DESTROY_CARTITEM Action:', action);
             delete nextState[action.cart_item.id];
-            console.log('Next State after DESTROY_CARTITEM:', nextState);
             return nextState;
         default:
-            console.log('Unknown Action:', action);
             return state;
-        }
+    }
 }
 
 export default cartItemReducer
