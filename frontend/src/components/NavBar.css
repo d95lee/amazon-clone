@@ -105,6 +105,7 @@ body {
     padding-right: 30px;
 }
 
+
 .nav-location {
     display: flex;
     align-items: flex-start;
@@ -117,14 +118,14 @@ body {
 }
 
 
-.nav-location:hover {
+/* .nav-location:hover {
     border: 1px solid white;
     border-radius: 3px;
     padding-left: 24px;
     padding-top: 8px;
     padding-bottom: 8px;
     padding-right: 6px;
-  }
+  } */
 
 
 #text-city {
@@ -249,12 +250,12 @@ body {
     cursor: pointer;
 }
 
-.nav-language:hover {
+/* .nav-language:hover {
     border: 1px solid white;
     border-radius: 3px;
     padding: 8px;
     padding-right: 18px;
-  }
+  } */
 
 
 #nav-flag {
@@ -278,12 +279,12 @@ body {
     cursor: pointer;
 }
 
-.nav-orders:hover {
+/* .nav-orders:hover {
     border: 1px solid white;
     border-radius: 3px;
     padding: 8px;
     opacity: 1;
-  }
+  } */
 
 #text-returns {
     margin: 0px;
@@ -300,6 +301,7 @@ body {
    font-weight: 1000;
    font-size: 14px;
 }
+
 
 .nav-right-container {
     display: flex;

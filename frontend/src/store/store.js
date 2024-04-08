@@ -8,7 +8,7 @@ import cartItemReducer from './cartItemReducer'
 const rootReducer = combineReducers({
     session: sessionReducer,
     product: productReducer,
-    products: productReducer,
+    // products: productReducer,
     cart_item: cartItemReducer
 })
 

@@ -9,7 +9,7 @@ import Layout from '../Layout/Layout'
 const ProductsIndex = () => {
     const dispatch = useDispatch()
 
-    const products = useSelector((state) => state.products)
+    const products = useSelector((state) => state.product)
     const productsArr = Object.values(products)
   
     // const products = useSelector(selectProductsArray)
@@ -21,24 +21,19 @@ const ProductsIndex = () => {
 
     return (
         <Layout>   
-            {productsArr.map((product, index) => (
-                <div key={index}>
-                    <p>ID: {product.id}</p>
-                    <p>Name: {product.name}</p>
-                    <p>Price: {product.price}</p>
-                    <p>Description: {product.description}</p>
-                </div>
-            ))}
-
-            {/* <p>{products}</p> */}
-            {/* <ul>
-                {productsArr.map((product, idx) => (
-                     
-                <ProductIndexItem key={idx} product={product.name} />
-            
+            <div className='product-container'>
+                {productsArr.map((product, index) => (
+                    <div key={index}>
+                        <div className='product-display-box'>
+                            {product?.photoUrl && <img className='index-photo' src={product.photoUrl} /> }
+                            <p>ID: {product.id}</p>
+                            <p>Name: {product.name}</p>
+                            <p>Price: {product.price}</p>
+                            <p>Description: {product.description}</p>
+                        </div>
+                    </div>
                 ))}
-            </ul>
-            <p>TESTING</p> */}
+            </div>
         </Layout>     
     )
 }
