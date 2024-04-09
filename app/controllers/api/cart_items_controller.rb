@@ -1,10 +1,14 @@
 class Api::CartItemsController < ApplicationController
-    # before_action :require_logged_in
+    before_action :require_logged_in
+    wrap_parameters include: CartItem.attribute_names + ['userId', 'productId']
+
     # skip_before_action :require_logged_in
     # skip_before_action :verify_authenticity_token
 
     def index
-        @cart_items = CartItem.all
+        @current_user = current_user 
+        @cart_items = @current_user.cart_items
+        @products = @current_user.cart_products
         render :index
     end
 
@@ -21,6 +25,8 @@ class Api::CartItemsController < ApplicationController
         @cart_item = CartItem.new(cart_items_params)
         if @cart_item.save
             render json: @cart_item, status: :ok
+            # product = @cart_item.product
+            # render json: { cart_item: @cart_item, product: product }, status: :ok
         else
             render json: @cart_item.errors.full_messages, status: 422
         end

@@ -4,6 +4,7 @@ import { fetchProducts } from '../../store/productReducer'
 import { useEffect } from 'react'
 import ProductIndexItem from './ProductIndexItem'
 import Layout from '../Layout/Layout'
+import { Link } from 'react-router-dom'
 // import ProductShow from './ProductShow'
 
 const ProductsIndex = () => {
@@ -21,18 +22,17 @@ const ProductsIndex = () => {
 
     return (
         <Layout>   
-            <div className='product-container'>
-                {productsArr.map((product, index) => (
-                    <div key={index}>
-                        <div className='product-display-box'>
-                            {product?.photoUrl && <img className='index-photo' src={product.photoUrl} /> }
-                            <p>ID: {product.id}</p>
-                            <p>Name: {product.name}</p>
-                            <p>Price: {product.price}</p>
-                            <p>Description: {product.description}</p>
+            <div className='products-index-container'>
+                <div className='product-container'>
+                    {productsArr.map((product, index) => (
+                        <div key={index}>
+                            <div className='product-display-box'>
+                               <Link to={`/products/${index + 1}`}>{product?.photoUrl && <img className='index-photo' src={product.photoUrl} /> }</Link>
+                                {/* <p>{product.name}</p> */}
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </Layout>     
     )

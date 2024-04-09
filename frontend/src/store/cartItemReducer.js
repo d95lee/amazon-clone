@@ -10,19 +10,19 @@ export const DESTROY_CARTITEM = 'cart_item/DESTROY_CARTITEM'
 
 
 //ACTION CREATORS
-export const receiveCartItems = cart_items => ({
+export const receiveCartItems = data => ({
     type: RECEIVE_CARTITEMS,
-    cart_items
+    data
 })
 
-export const receiveCartItem = cart_item => ({
+export const receiveCartItem = data => ({
     type: RECEIVE_CARTITEM,
-    cart_item 
+    data 
 })
 
-export const newCartItem = cart_item => ({
+export const newCartItem = data => ({
     type: CREATE_CARTITEM,
-    cart_item
+    data
 })
 
 export const updateCartItem = cart_item => ({
@@ -47,6 +47,7 @@ export const fetchCartItems = () => (dispatch, getState) => {
         }
     })
     .then(data => {
+        console.log(data)
         dispatch(receiveCartItems(data))
     })
     .catch(error => {
@@ -73,8 +74,8 @@ export const fetchCartItem = (cart_itemId) => (dispatch, getState) => {
 }
 
 //(userId, cart_item)
-export const createCartItem = (cart_item) => (dispatch, getState) => {
-    postCartItem(cart_item)
+export const createCartItem = (cartItem) => (dispatch, getState) => {
+    postCartItem(cartItem)
     .then(res => {
         if (res.ok) {
             return res.json()
@@ -129,20 +130,25 @@ const cartItemReducer = (state = {}, action) => {
     const nextState = { ...state }
         switch (action.type) {
         case RECEIVE_CARTITEM:
-            nextState[action.cart_item.id] = action.cart_item;
+            nextState[action.data.cartItem.id] = action.data.cartItem;
             return nextState;
-        case RECEIVE_CARTITEMS:
-            return action.cart_items;
+
         case CREATE_CARTITEM:
-            nextState[action.cart_item.id] = action.cart_item;
+            nextState[action.data.id] = action.data;
+            return nextState;    
+        
+        case UPDATE_CARTITEM:
+            nextState[action.data.cartItem.id] = action.data.cartItem;
             return nextState;
-        case UPDATE_CARTITEM: 
-            nextState[action.cart_item.id] = action.cart_item;
-            return nextState;
+        
+        case RECEIVE_CARTITEMS:
+            return action.data.cartItems
+    
         case DESTROY_CARTITEM: 
-            delete nextState[action.cart_item.id];
+            delete nextState[action.cart_itemId];
             return nextState;
-        default:
+        
+            default:
             return state;
     }
 }

@@ -11,6 +11,7 @@ import { fetchProduct, fetchProducts } from './store/productReducer.js'
 import './components/global.css'
 import { deleteCartItem, editCartItem, postCartItem } from './utils/cartItemApiUtils.js'
 import { changeCartItem, clearCartItem, createCartItem, fetchCartItem, fetchCartItems } from './store/cartItemReducer.js'
+import { changeReview, clearReview, createReview, fetchReview, fetchReviews } from './store/reviewReducer.js'
 
 
 const initializeApp = () => {
@@ -36,6 +37,12 @@ const initializeApp = () => {
   window.postCartItem = postCartItem
   window.editCartItem = editCartItem
   window.deleteCartItem = deleteCartItem
+
+  window.fetchReviews = fetchReviews
+  window.fetchReview = fetchReview
+  window.createReview = createReview
+  window.changeReview = changeReview
+  window.clearReview = clearReview
 
 
   ReactDOM.createRoot(document.getElementById('root')).render(

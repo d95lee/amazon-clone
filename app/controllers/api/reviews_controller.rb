@@ -1,5 +1,6 @@
 class Api::ReviewsController < ApplicationController
-    # before_action :require_logged_in
+    before_action :require_logged_in, only: [:create, :update, :destroy]
+    wrap_parameters include: Review.attribute_names + ['userId', 'productId']
 
     def index
         @reviews = Review.all
@@ -11,7 +12,7 @@ class Api::ReviewsController < ApplicationController
         if @review
             render :show
         else
-            render json: @review.error.full_messages, status: 422
+            render json: @review.errors.full_messages, status: 422
         end
     end
 
@@ -20,7 +21,7 @@ class Api::ReviewsController < ApplicationController
         if @review.save
             render json: @review, status: :ok
         else
-            render json: @review.error.full_messages, status: 422
+            render json: @review.errors.full_messages, status: 422
         end
     end
 

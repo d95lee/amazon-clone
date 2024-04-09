@@ -6,7 +6,8 @@ import { useEffect } from 'react'
 import Layout from '../Layout/Layout'
 import AddCartItem from '../CartItem/AddCartItem'
 import { createCartItem } from '../../store/cartItemReducer'
-
+// import ReviewShow from '../Review/ReviewShow'
+import ReviewsIndex from '../Review/ReviewsIndex'
 
 const ProductShow = () => {
     const dispatch = useDispatch()
@@ -14,7 +15,8 @@ const ProductShow = () => {
     // const productId = 2
     const { productId } = useParams()
     const product = useSelector(selectProduct(productId))
-    
+    const userId = useSelector(state => state.session.id)
+
     const currentDate = new Date()
 
     useEffect(() => {
@@ -24,8 +26,7 @@ const ProductShow = () => {
 
     const handleAddToCart = (e) => {
         e.preventDefault()
-        dispatch(createCartItem())
-        navigate('/cart_items')
+            dispatch(createCartItem({ productId, userId, quantity: 1 }));
     }
 
     return (
@@ -66,11 +67,19 @@ const ProductShow = () => {
                     </div>
                 </div>
             </div>
-
+        <hr id='product-show-divider'/>
             <div className='show-reviews'>
+                <div className='show-reviews-left'>
+                    <hr />
+                    <h3>Review this Product</h3>
+                    <p>Share your thoughts with other customers</p>
+                    <Link to={'/create_review'}><button className='create-review-button'>Write a customer review</button></Link>
+                    <hr />
+                </div>
                 <div className='show-bottom'>
-                    <div id='show-bottom-content'>
-                        <p>Reviews Placeholder</p>
+                    <div id='show-bottom-right-content'>
+                        <h3>Top reviews from the United States</h3>
+                        <ReviewsIndex/>
                     </div>
                 </div>
             </div>

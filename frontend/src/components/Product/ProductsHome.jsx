@@ -5,6 +5,7 @@ import { fetchProducts } from '../../store/productReducer'
 import { useEffect } from 'react'
 import ProductIndexItem from './ProductIndexItem'
 import Layout from '../Layout/Layout'
+import { Link } from 'react-router-dom'
 // import ProductShow from './ProductShow'
 
 const ProductsHome = () => {
@@ -32,7 +33,7 @@ const ProductsHome = () => {
                 <div className='home-product-box1'>
                     {Array.from({ length:8 }).map((_, index) => (
                         <div className='box-content' key={index}>    
-                            {products[(randomIndex1 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex1 + index) % productsArr.length].photoUrl} /> }
+                            <Link to={`products/${(randomIndex1 + index) % productsArr.length}`}>{products[(randomIndex1 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex1 + index) % productsArr.length].photoUrl} /> }</Link>
                         </div>
                         ))}
                 </div>
@@ -40,7 +41,7 @@ const ProductsHome = () => {
                 <div className='home-product-box2'>
                     {Array.from({ length:8 }).map((_, index) => (
                         <div className='box-content' key={index}>
-                            {products[(randomIndex2 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex2 + index) % productsArr.length].photoUrl} /> }
+                            <Link to={`products/${(randomIndex2 + index) % productsArr.length}`}>{products[(randomIndex2 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex2 + index) % productsArr.length].photoUrl} /> }</Link>
                         </div>
                     ))}
                 </div>
@@ -48,7 +49,7 @@ const ProductsHome = () => {
                 <div className='home-product-box3'>
                     {Array.from({ length:8 }).map((_, index) => (
                         <div className='box-content' key={index}>
-                            {products[(randomIndex3 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex3 + index) % productsArr.length].photoUrl} /> }
+                            <Link to={`products/${(randomIndex3 + index) % productsArr.length}`}>{products[(randomIndex3 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex3 + index) % productsArr.length].photoUrl} /> }</Link>
                         </div>
                     ))}
                 </div>
