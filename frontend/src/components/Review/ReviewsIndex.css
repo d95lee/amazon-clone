@@ -1,0 +1,93 @@
+.product-reviews {
+    display: block;
+    justify-content: center;
+}
+
+.create-review-button {
+    background-color: #ffd814;
+    border-color: #FCD200;
+    height: 33px;
+    width: 96%;
+    box-shadow: 0 2px 5px 0 rgba(255, 255, 255, 0.5);
+    border-style: solid;
+    border-width: 1px;
+    display: inline-block;
+    margin-top: 12px;
+    margin-left: 8px;
+    margin-bottom: 30px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    font-size: 13px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#product-show-divider {
+    margin: 50px 50px 30px 50px;
+}
+
+#review-owner-text {
+    color: rgb(77, 81, 79);
+    font-size: 16px;
+}
+
+/* #owner-text-positioning {
+
+} */
+
+#review-rating-text {
+
+}
+
+#review-body-text {
+    font-size: 15px;
+}
+
+.verified-purchase-text {
+    color: rgb(196, 85, 0);
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: -10px;
+}
+
+.profile-pic {
+    width: 25px;
+    height: auto;
+    margin-right: 8px;
+}
+
+.edit-button {
+    background-color: #ffa41c;
+    border-color: #ffa41c;
+    height: 18px;
+    min-width: 8%;
+    box-shadow: 0 2px 5px 0 rgba(255, 255, 255, 0.5);
+    border-style: solid;
+    border-width: 1px;
+    display: inline-block;
+    margin-left: 8px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 2px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+
+.delete-button {
+    background-color: #ffa41c;
+    border-color: #ffa41c;
+    height: 18px;
+    min-width: 8%;
+    box-shadow: 0 2px 5px 0 rgba(255, 255, 255, 0.5);
+    border-style: solid;
+    border-width: 1px;
+    display: inline-block;
+    margin-left: 8px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 2px;
+    font-size: 12px;
+    cursor: pointer;
+}

@@ -1,3 +1,4 @@
+import { CREATE_CARTITEM, RECEIVE_CARTITEM, RECEIVE_CARTITEMS } from "./cartItemReducer"
 
 
 export const RECEIVE_PRODUCTS = 'products/RECEIVE_PRODUCTS'
@@ -41,7 +42,6 @@ export const fetchProduct = (productId) => async dispatch => {
 }
 
 
-
 const productReducer = (state = {}, action) => {
     const nextState = { ...state }
 
@@ -51,6 +51,13 @@ const productReducer = (state = {}, action) => {
             return nextState
         case RECEIVE_PRODUCTS:
             return action.products
+
+        case RECEIVE_CARTITEMS:
+            return action.data.products
+      
+        case RECEIVE_CARTITEM:
+            nextState[action.data.cartItem.id] = action.data.cartItem
+            return nextState
         default:   
             return state;
     }

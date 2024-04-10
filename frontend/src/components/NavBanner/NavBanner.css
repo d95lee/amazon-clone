@@ -1,0 +1,11 @@
+.navbanner-top {
+    background-color: rgb(234, 237, 237);
+}
+
+.navbanner-top-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}

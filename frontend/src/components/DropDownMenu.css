@@ -41,11 +41,11 @@
     align-items: flex-start;
   }
 
-  .nav-drop-text-container:hover {
+  /* .nav-drop-text-container:hover {
     border: 1px solid white;
     border-radius: 3px;
     padding: 8px;
-  }
+  } */
 
   #text-signin {
     margin: 0px;

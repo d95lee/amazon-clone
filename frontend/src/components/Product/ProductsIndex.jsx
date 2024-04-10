@@ -4,12 +4,13 @@ import { fetchProducts } from '../../store/productReducer'
 import { useEffect } from 'react'
 import ProductIndexItem from './ProductIndexItem'
 import Layout from '../Layout/Layout'
+import { Link } from 'react-router-dom'
 // import ProductShow from './ProductShow'
 
 const ProductsIndex = () => {
     const dispatch = useDispatch()
 
-    const products = useSelector((state) => state.products)
+    const products = useSelector((state) => state.product)
     const productsArr = Object.values(products)
   
     // const products = useSelector(selectProductsArray)
@@ -21,24 +22,18 @@ const ProductsIndex = () => {
 
     return (
         <Layout>   
-            {productsArr.map((product, index) => (
-                <div key={index}>
-                    <p>ID: {product.id}</p>
-                    <p>Name: {product.name}</p>
-                    <p>Price: {product.price}</p>
-                    <p>Description: {product.description}</p>
+            <div className='products-index-container'>
+                <div className='product-container'>
+                    {productsArr.map((product, index) => (
+                        <div key={index}>
+                            <div className='product-display-box'>
+                               <Link to={`/products/${index + 1}`}>{product?.photoUrl && <img className='index-photo' src={product.photoUrl} /> }</Link>
+                                {/* <p>{product.name}</p> */}
+                            </div>
+                        </div>
+                    ))}
                 </div>
-            ))}
-
-            {/* <p>{products}</p> */}
-            {/* <ul>
-                {productsArr.map((product, idx) => (
-                     
-                <ProductIndexItem key={idx} product={product.name} />
-            
-                ))}
-            </ul>
-            <p>TESTING</p> */}
+            </div>
         </Layout>     
     )
 }

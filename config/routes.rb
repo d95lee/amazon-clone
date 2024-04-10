@@ -12,6 +12,10 @@ Rails.application.routes.draw do
     resources :users, only: [:create]
     resource :session, only: [:show, :create, :destroy]
 
-    resources :products, only: [:index, :show]
+    resources :cart_items, only: [:show, :index, :create, :update, :destroy]
+    
+    resources :products, only: [:index, :show] 
+    resources :reviews, only: [:show, :index, :create, :update, :destroy]
+    
   end
 end

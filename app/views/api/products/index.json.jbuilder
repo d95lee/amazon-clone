@@ -4,6 +4,6 @@
         :id, :name, :price, :description
         if product.photo.attached?
             json.photoUrl url_for(product.photo)
-          end
+        end
     end
 end
