@@ -92,8 +92,8 @@ export const createReview = (review) => (dispatch, getState) => {
     })
 }
 
-export const changeReview = (review) => (dispatch, getState) => {
-    editReview(review)
+export const changeReview = (reviewId) => (dispatch, getState) => {
+    editReview(reviewId)
     .then(res => {
         if (res.ok) {
             return res.json()
@@ -138,7 +138,7 @@ const reviewReducer = (state = {}, action) => {
                 nextState[action.review] = action.review
                 return nextState
             case UPDATE_REVIEW:
-                nextState[action.review.id] = action.review
+                nextState[action.reviewId] = action.reviewId
                 return nextState
             case DESTROY_REVIEW:
                 delete nextState[action.reviewId]

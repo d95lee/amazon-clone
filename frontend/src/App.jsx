@@ -10,6 +10,7 @@ import CartItemsIndex from './components/CartItem/CartItemsIndex'
 import ReviewShow from './components/Review/ReviewShow'
 import CreateReview from './components/Review/CreateReview'
 import ReviewsIndex from './components/Review/ReviewsIndex'
+import EditReview from './components/Review/EditReview'
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
   {
     path: '/products/:productId/create_review',
     element: <CreateReview/>
+  },
+  {
+    path: '/products/:productId/edit_review/:reviewId',
+    element: <EditReview/>
   },
   {
     path: '*',

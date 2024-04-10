@@ -4,10 +4,12 @@ import { useState } from "react"
 import './CreateReview.css'
 import { createReview } from "../../store/reviewReducer"
 import { selectProduct } from "../../store/productReducer"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
+import { FaStar } from 'react-icons/fa6'
 
 const CreateReview = () => {
     const dispatch = useDispatch()
+    const navigate = useNavigate()
     const [formHeadline, setFormHeadline] = useState('')
     const [formBody, setFormBody] = useState('')
     const userId = useSelector(state => state.session.id)
@@ -27,19 +29,43 @@ const CreateReview = () => {
             userId,
             body: formBody,
             productId: productId, // need to get this 
-            rating: 2,
+            rating: '2 stars',
             username: userEmail,
             owner: userEmail
         }))
-        setFormHeadline('')
-        setFormBody('')
+            setFormHeadline('')
+            setFormBody('')
+            navigate(`/products/${productId}`)
     }
+    
 
+    // const handleOnEditClick = (e) => {
+    //     e.preventDefault()
+    //     dispatch(EditReview({ 
+    //         reviewId: reviewId,
+    //         userId, 
+    //         body: formBody,
+    //         productId: productId, // need to get this 
+    //         rating: '2 stars',
+    //         username: userEmail,
+    //         owner: userEmail
+    //     }))
+    //         setFormHeadline('')
+    //         setFormBody('')
+    //         navigate(`/products/${productId}`)
+    // }
+    
+    // useEffect(() => {
+    //     setFormBody(fetchReview(reviewId).body)
+    // }, [setFormBody])
 
     return (
         <Layout>
             <div className="review-container">
             <form onSubmit={handleOnSubmit}>
+                <FaStar size={50}/>
+            <br />
+            <hr />
                 <label>Add a headline
                     <input type="text" 
                     value={formHeadline}

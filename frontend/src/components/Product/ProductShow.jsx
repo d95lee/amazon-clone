@@ -73,7 +73,7 @@ const ProductShow = () => {
                     <hr />
                     <h3>Review this Product</h3>
                     <p>Share your thoughts with other customers</p>
-                    <Link to={'/create_review'}><button className='create-review-button'>Write a customer review</button></Link>
+                    <Link to={`/products/${productId}/create_review`}><button className='create-review-button'>Write a customer review</button></Link>
                     <hr />
                 </div>
                 <div className='show-bottom'>
