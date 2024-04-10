@@ -2,9 +2,12 @@ import { thunk } from 'redux-thunk'
 import logger from 'redux-logger'
 import { createStore, applyMiddleware, combineReducers } from 'redux'
 import sessionReducer from './sessionReducer'
+import productReducer from './productReducer'
 
 const rootReducer = combineReducers({
-    session: sessionReducer
+    session: sessionReducer,
+    product: productReducer,
+    products: productReducer
 })
 
 const configureStore = (initialState = {}) => (

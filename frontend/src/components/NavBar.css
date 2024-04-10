@@ -16,9 +16,13 @@ body {
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    background-color: grey
-    /* #0F1111; */
+    background-color: rgba(19, 25, 33, 1);
+    height: 65px;
 }
+
+/* .nav-bar > * {
+    position: fixed;
+} */
 
 .session-links {
     display: flex;
@@ -42,6 +46,10 @@ body {
     text-decoration: none;
 }
 
+.nav-right a:hover {
+    text-decoration: underline;
+}
+
 .nav-right button {
     background-color: #ffd814;
     border-color: #FCD200;
@@ -60,30 +68,84 @@ body {
     cursor: pointer;
 }
 
+.nav-right button:hover {
+    text-decoration: underline;
+}
+
+.nav-right button:hover {
+    border-color: white;
+}
+
 .navbar-logo {
-    width: 143px;
-    height: 46px;
+    width: 108px;
+    height: 36px;
     margin: 10px 0 0 10px;
-    
 }
 
 .navbar-logo-container {
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+}
+
+#nav-location-icon {
+    width: 17px;
+    height: 20px;
+    background: url('https://m.media-amazon.com/images/G/31/gno/sprites/nav-sprite-global-1x-hm-dsk-reorg._CB405936311_.png') no-repeat -71px -306px;
+    margin-bottom: -14px;
+    margin-left: -20px;
+    cursor: pointer;
+}
+
+.nav-location-container {
+    margin-left: 10px;
+    margin-top: -4px;
+    position: relative;
+    margin-left: 40px;
+    padding-right: 30px;
 }
 
 .nav-location {
-    font-size: 20px;
     display: flex;
-    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 16px;
+    font-family: Ember;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
 }
 
-#nav-search {
 
+.nav-location:hover {
+    border: 1px solid white;
+    border-radius: 3px;
+    padding-left: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 6px;
+  }
+
+
+#text-city {
+    color: #ccc;
+    margin: 0px;
+    margin-bottom: -20px;
+    font-size: 14px;
+    min-width: 190px;
 }
 
-#nav-search-icon {
+#text-location {
+    font-weight: bolder;
+    margin: 0px;
+    font-size: 14px;
+}
+
+/* #nav-search {
+
+} */
+
+/* #nav-search-icon {
     height: 100%;
     width: 100%;
     font-size: 14px;
@@ -96,4 +158,153 @@ body {
     border: none;
     text-indent: -1000px;
     line-height: 1px;
+} */
+
+.nav-search-container {
+    background-color: rgb(255, 255, 255);
+    width: 1100px;
+    display: flex;
+    height: 38px;
+    border-radius: 4px;
+    justify-content: space-between;
+    overflow: hidden;
+    min-width: 600px;
+}
+
+.nav-search-container:hover {
+    outline: 2px solid orange;
+}
+
+.nav-search-left {
+    font-family: Ember;
+    background-color: rgb(230, 230, 230);
+    color: rgb(98, 98, 98);
+    width: 50px;
+    height: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding-left: 5px;
+    position: relative;
+}
+
+.nav-search-middle {
+    font-family: Ember;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 7px 10px 10px 10px;
+}
+
+.nav-search-right {
+    /* background-color: ; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    background-color: rgb(254, 189, 105);
+    font-size: 1.2rem;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+}
+
+#search-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+.nav-cart {
+    width: 40px;
+    height: 40px;
+    background: url('https://m.media-amazon.com/images/G/31/gno/sprites/nav-sprite-global-1x-hm-dsk-reorg._CB405936311_.png') no-repeat -10px -335px;
+    background-repeat: no-repeat;
+    margin-right: 30px;
+    margin-left: -10px;
+    cursor: pointer;
+}
+
+/* .nav-cart:hover {
+    border: 1px solid white;
+    border-radius: 3px;
+    padding-top: -100px;
+    padding-bottom: -10px;
+    padding-left: 4px;
+    padding-right: 8px;
+  } */
+
+.nav-language {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-language:hover {
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 8px;
+    padding-right: 18px;
+  }
+
+
+#nav-flag {
+    width: 20px;
+    height: 14px;
+    margin-bottom: -2px;
+}
+
+#nav-english {
+    font-family: Ember;
+    color: white;
+    font-weight: bolder;
+    margin-left: 5px;
+    font-size: 13.5px;
+}
+
+.nav-orders {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.nav-orders:hover {
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 8px;
+    opacity: 1;
+  }
+
+#text-returns {
+    margin: 0px;
+    margin-bottom: -1px;
+    font-family: Ember;
+    color: white;
+    font-size: 14px;
+}
+
+#text-orders {
+   margin: 0px;
+   font-family: Ember;
+   color: white;
+   font-weight: 1000;
+   font-size: 14px;
+}
+
+.nav-right-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 390px;
+    margin-left: 10px;
 }

@@ -90,7 +90,6 @@ const SignUpForm = () => {
                     <button className='continue-button' type='submit' onClick={handleClick}>Sign Up</button>
                 </form>
                     <p className='form-description'>By creating an account, you agree to David's Conditions of Use and Privacy Notice</p>
-                    {/* <span className='display-errors'>{errors.map((err, idx) => (<p key={idx}><li>{err}</li></p>))}</span> */}
             </div>
             <Footer></Footer>
         </>
