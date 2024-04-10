@@ -4,6 +4,7 @@ import './ReviewsIndex.css'
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from 'react'
 import profile from '../../assets/icons/profile.jpeg'
+import ReviewStars from './ReviewStars'
 
 const ReviewsIndex = () => {
     const dispatch = useDispatch()
@@ -34,12 +35,12 @@ const ReviewsIndex = () => {
                     <div key={index}>
                         
                         {<p id='review-owner-text'><img className='profile-pic' src={profile}/><span id='owner-text-positioning'>{review.owner}</span></p>}
+            
                         <p className='verified-purchase-text'>Verified Purchase</p>
-                        {<p id='review-rating-text'>{review.rating}</p>}
+                        <ReviewStars initialRating={review.rating}/>
                         {<p id='review-body-text'>{review.body}</p>}
                         <Link to={`edit_review/${review.id}`}><button className='edit-button'>Edit</button></Link>
                         <button onClick={() => dispatch(clearReview(review.id))} className='delete-button'>Delete</button>
-                        {/* onClick={() => dispatch(changeReview(review.id))} */}
                         <hr />
                     </div>
                 ))}

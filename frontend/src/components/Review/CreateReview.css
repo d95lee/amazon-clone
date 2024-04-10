@@ -8,3 +8,15 @@
     padding: 30px;
 }
 
+input[type = radio] {
+    display: none;
+}
+
+.review-stars {
+    cursor: pointer;
+}
+
+.review-stars-showpage {
+    margin-bottom: 10px;
+    margin-top: -10px;
+}

@@ -27,6 +27,7 @@ const ProductShow = () => {
     const handleAddToCart = (e) => {
         e.preventDefault()
             dispatch(createCartItem({ productId, userId, quantity: 1 }));
+            navigate('/cart_items')
     }
 
     return (

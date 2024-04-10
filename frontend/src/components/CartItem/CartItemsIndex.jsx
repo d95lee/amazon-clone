@@ -24,6 +24,7 @@ const CartItemsIndex = () => {
     const quantity = () => {
         const totalQuantity = cart_itemsArr.reduce((total, cart_item) => total + cart_item.quantity, 0)
         return totalQuantity
+        
     }
 
     const total = () => {
@@ -55,10 +56,10 @@ const CartItemsIndex = () => {
                                 <div className='cart-left-content-left'>
                                     {cart_item?.photoUrl && <img className='cart-photo' src={cart_item.photoUrl} /> }
                                 </div>
-
+                            
                                 <div className='cart-left-content-mid'>
                                     <p id='cart-name-text'>{cart_item.productName}</p>
-                                    <button onClick={() => dispatch(clearCartItem(cart_item.id))}>Delete</button>
+                                    <button onClick={() => dispatch(clearCartItem(cart_item.id))} className='cart-item-delete-button'>Delete</button>
                                     {/* <button onClick={handleDeleteClick()}>Delete</button> */}
                                 </div>
 
@@ -72,7 +73,7 @@ const CartItemsIndex = () => {
                 
                 <div className='cart-right'>
                     <div className='cart-right-content-top'>
-                        <p>Subtotal ({quantity()} items): <span id='cart-total-text'>${total()}</span></p>
+                        <p>Subtotal ({quantity()} items): <span id='cart-total-text'>${total().toFixed(2)}</span></p>
                         <button className='add-to-cart-button'>Proceed to checkout</button>
                     </div>
                 </div>

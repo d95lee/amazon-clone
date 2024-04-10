@@ -58,8 +58,8 @@
 }
 
 .edit-button {
-    background-color: #ffd814;
-    border-color: #FCD200;
+    background-color: #ffa41c;
+    border-color: #ffa41c;
     height: 18px;
     min-width: 8%;
     box-shadow: 0 2px 5px 0 rgba(255, 255, 255, 0.5);
@@ -76,8 +76,8 @@
 
 
 .delete-button {
-    background-color: #ffd814;
-    border-color: #FCD200;
+    background-color: #ffa41c;
+    border-color: #ffa41c;
     height: 18px;
     min-width: 8%;
     box-shadow: 0 2px 5px 0 rgba(255, 255, 255, 0.5);

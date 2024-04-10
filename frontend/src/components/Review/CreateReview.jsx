@@ -12,6 +12,8 @@ const CreateReview = () => {
     const navigate = useNavigate()
     const [formHeadline, setFormHeadline] = useState('')
     const [formBody, setFormBody] = useState('')
+    const [rating, setRating] = useState(null)
+    const [mouseHover, setMouseHover] = useState(null)
     const userId = useSelector(state => state.session.id)
     const userEmail = useSelector(state => state.session.email)
     const { productId } = useParams()
@@ -29,7 +31,7 @@ const CreateReview = () => {
             userId,
             body: formBody,
             productId: productId, // need to get this 
-            rating: '2 stars',
+            rating: rating,
             username: userEmail,
             owner: userEmail
         }))
@@ -63,7 +65,26 @@ const CreateReview = () => {
         <Layout>
             <div className="review-container">
             <form onSubmit={handleOnSubmit}>
-                <FaStar size={50}/>
+                <div>
+                    {[...Array(5)].map((star, index) => {     
+                        const currentStars = index + 1
+                        return (
+                    <label key={index}>
+                        <input type="radio"
+                            name='rating'
+                            value={currentStars}
+                            onClick={() => setRating(currentStars)}
+                            />
+                         <FaStar className='review-stars' size={50}
+                                color={currentStars <= (mouseHover || rating) ? "#ffc107" : "e4e5e9"}
+                                onMouseEnter={() => setMouseHover}
+                                onMouseLeave={() => setMouseHover(null)}
+                                />
+                    </label>
+                        )
+                       
+                    })}
+                </div>
             <br />
             <hr />
                 <label>Add a headline
