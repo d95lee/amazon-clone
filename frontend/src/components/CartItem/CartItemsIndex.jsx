@@ -4,14 +4,16 @@ import './CartItemsIndex.css'
 // import { selectCartItems } from '../../store/cartItemReducer'
 import Layout from '../Layout/Layout'
 import { fetchProduct, selectProduct } from '../../store/productReducer'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { useEffect } from 'react'
 import NavBanner from '../NavBanner/NavBanner'
 import { clearCartItem } from '../../store/cartItemReducer'
+import { selectCurrentUser } from '../../store/sessionReducer'
 
 const CartItemsIndex = () => {
     const dispatch = useDispatch()
-    // const product = useSelector(selectCartItem())
+    const navigate = useNavigate()
+    const currentUser = useSelector(selectCurrentUser)
 
     const cart_items = useSelector((state) => state.cart_item)
     const cart_itemsArr = Object.values(cart_items)
@@ -32,9 +34,14 @@ const CartItemsIndex = () => {
         return totalPrice
     }
 
-    // const handleDeleteClick = (productId) => {
-    //     dispatch(clearCartItem(productId))
-    // }
+   const handleCheckout = (e) => {
+    e.preventDefault()
+    if (currentUser) {
+        navigate('checkout')
+    } else {
+        navigate('/signin')
+    }
+   }
 
     return (
         <Layout>
@@ -60,7 +67,6 @@ const CartItemsIndex = () => {
                                 <div className='cart-left-content-mid'>
                                     <p id='cart-name-text'>{cart_item.productName}</p>
                                     <button onClick={() => dispatch(clearCartItem(cart_item.id))} className='cart-item-delete-button'>Delete</button>
-                                    {/* <button onClick={handleDeleteClick()}>Delete</button> */}
                                 </div>
 
                                 <div className='cart-left-content-right'>
@@ -74,7 +80,7 @@ const CartItemsIndex = () => {
                 <div className='cart-right'>
                     <div className='cart-right-content-top'>
                         <p>Subtotal ({quantity()} items): <span id='cart-total-text'>${total().toFixed(2)}</span></p>
-                        <button className='add-to-cart-button'>Proceed to checkout</button>
+                        <button className='add-to-cart-button' onClick={handleCheckout}>Proceed to checkout</button>
                     </div>
                 </div>
             </div>

@@ -6,6 +6,7 @@ import { createReview } from "../../store/reviewReducer"
 import { selectProduct } from "../../store/productReducer"
 import { useNavigate, useParams } from "react-router-dom"
 import { FaStar } from 'react-icons/fa6'
+import { selectCurrentUser } from "../../store/sessionReducer"
 
 const CreateReview = () => {
     const dispatch = useDispatch()
@@ -18,6 +19,7 @@ const CreateReview = () => {
     const userEmail = useSelector(state => state.session.email)
     const { productId } = useParams()
     const product = useSelector(selectProduct(productId))
+    const currentUser = useSelector(selectCurrentUser)
     
 
     const handleOnSubmit = (e) => {
@@ -25,12 +27,13 @@ const CreateReview = () => {
 
     }
     
+
     const handleOnClick = (e) => {
         e.preventDefault()
         dispatch(createReview({ 
             userId,
             body: formBody,
-            productId: productId, // need to get this 
+            productId: productId,
             rating: rating,
             username: userEmail,
             owner: userEmail
@@ -64,8 +67,14 @@ const CreateReview = () => {
     return (
         <Layout>
             <div className="review-container">
-            <form onSubmit={handleOnSubmit}>
-                <div>
+                <div className='review-title-container'>
+                    <h1 className='review-title'>Create Review</h1>
+                    <hr className='review-break'/>
+                </div>
+            <hr className='review-break-top'/>
+            
+            <form onSubmit={handleOnSubmit} className='review-form-main-container'>
+                
                     {[...Array(5)].map((star, index) => {     
                         const currentStars = index + 1
                         return (
@@ -84,26 +93,28 @@ const CreateReview = () => {
                         )
                        
                     })}
-                </div>
+                
             <br />
-            <hr />
-                <label>Add a headline
-                    <input type="text" 
+            <hr className='review-break'/>
+                <label><span className='review-headline-text'>Add a headline</span>
+                <br />
+                    <input type="text" className='custom-textbox'
                     value={formHeadline}
                     onChange={(e) => setFormHeadline(e.target.value)}
                     />
                 </label>
             <br />
-            <hr />
-                <label>Add a written review
-                    <textarea type="text" 
+            <hr className='review-break'/>
+                <label><span className='review-body-text'>Add a written review</span>
+                <br />
+                    <textarea className='custom-textarea' type="text"
                     value={formBody}
                     onChange={(e) => setFormBody(e.target.value)}                    
                     />
                 </label>
 
                 <hr />
-                <button className='add-to-cart-button' onClick={handleOnClick}>Submit</button>
+                <button className='review-submit-button' onClick={handleOnClick}><span className='review-submit-text'>Submit</span></button>
             </form>
             
             </div>

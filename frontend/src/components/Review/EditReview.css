@@ -1,0 +1,11 @@
+.review-edit-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-right: 580px;
+}
+
+.review-edit-text {
+   margin-right: 20px;
+   margin-top: 8px;
+}

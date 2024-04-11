@@ -6,7 +6,7 @@ const NavBanner = () => {
         <>
             <div className='navbanner-top'>
                 <div className='navbanner-top-content'>
-                    <a href="https://www.linkedin.com/in/david-lee-49959a20a/" target="_blank"><img className='banner' src={banner} alt="" /></a>
+                    <a href="https://github.com/d95lee" target="_blank"><img className='banner' src={banner} alt="" /></a>
                 </div>
             </div>
         </>

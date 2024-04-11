@@ -7,7 +7,7 @@ import flag from '../assets/icons/america-flag.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import DropDownMenu from './DropDownMenu'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { fetchProducts } from '../store/productReducer'
 
 
@@ -15,12 +15,37 @@ const NavBar = props => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const [input, setInput] = useState('')
+    const [cartCount, setCartCount] = useState(0)
+    const currentUser = useSelector(selectCurrentUser)
 
     // const fetchData = (value) => {
     //     dispatch(fetchProducts()) 
     //     const results = json.filter()
     // }
 
+    const cart_items = useSelector((state) => state.cart_item)
+    const cart_itemsArr = Object.values(cart_items)
+
+    // useEffect(() => {
+    //     if (currentUser) {
+    //             const totalQuantity = cart_itemsArr?.reduce((total, cart_item) => total + cart_item?.quantity, 0)
+    //             setCartCount(totalQuantity)
+    //         } else {
+    //             setCartCount(0)
+    //         }
+    // }, [currentUser])
+    
+    const quantity = () => {
+        const totalQuantity = cart_itemsArr.reduce((total, cart_item) => total + cart_item.quantity, 0)
+        return totalQuantity
+    }
+
+    
+
+    // useEffect(() => {
+    //     quantity
+    // }, [quantity])
+    
     const fetchData = (value) => {
         dispatch(fetchProducts())
             .then(() => {
@@ -92,7 +117,12 @@ const NavBar = props => {
             </div>
 
             <div className='nav-cart' onClick={cartClick}>
-                {/* <p className='nav-cart-logo'></p> */}
+                <p className='cart-quantity'>{quantity()}</p>
+                <p className='cart-text'>Cart</p>
+            </div>
+
+            <div>
+
             </div>
         </div>
         </nav>
