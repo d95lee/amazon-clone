@@ -23,13 +23,19 @@ const DropDownMenu = () => {
         }
     }
 
+    const handleSignout = (e) => {
+        e.preventDefault()
+        dispatch(logoutUser())
+        navigate('/')
+    }
+
     const sessionLinks = () => {
         if (currentUser) {
             return (
                 <>
                     <div className='nav-right'>
                         <span className='session-links'>
-                            <button onClick={() => dispatch(logoutUser())}>Sign Out</button>
+                            <button onClick={handleSignout}>Sign Out</button>
                         </span>
                     </div>
                 </>

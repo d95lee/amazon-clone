@@ -1,0 +1,79 @@
+
+.checkout-container {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.checkout-content {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 100px;
+    width: 70vw;
+    min-height: 400px;
+}
+
+.checkout-photo-container {
+    display: flex;
+}
+
+.checkout-photo {
+    display: flex;
+    width: 200px;
+    height: auto;
+}
+
+.order-text-container {
+    display: block;
+    margin-left: -900px;
+    margin-top: -100px;
+    /* position: fixed; */
+}
+
+.check-mark {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    margin-left: -45px;
+    margin-bottom: -35px;
+}
+
+.checkout-confirmation-text {
+    font-size: 25px;
+    color: rgb(43, 182, 115);
+    font-weight: bold;
+}
+
+.socials-container {
+    background-color: rgb(255, 255, 255);
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -150px;
+}
+
+.github-icon {
+    width: 80px;
+    height: auto;
+}
+
+.linkedin-icon {
+    width: 84px;
+    height: auto;
+}
+
+.line-gif {
+    width: 1000px;
+    height: 80px;
+}
+
+#socials-text {
+    font-size: 20px;
+    font-weight: bold;
+}

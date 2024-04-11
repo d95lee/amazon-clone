@@ -7,6 +7,7 @@ import Footer from './FooterEle'
 import logo from '../assets/logo/Amazon-Logo-PNG.png'
 
 
+
 const SignInForm = () => {
     const dispatch = useDispatch();
     const [email, setEmail] = useState('')
@@ -43,7 +44,7 @@ const SignInForm = () => {
     //     dispatch(loginUser({ email, password }))
     // }
     
-
+    
     const handleClick = (e) => {
         e.preventDefault()
         dispatch(loginUser({ email, password }))
@@ -58,6 +59,10 @@ const SignInForm = () => {
             setErrors(data.errors)
         })
     }
+
+    // useEffect(() => {
+    //     quantity()
+    // }, quantity())
 
     const demoUser = (e) => {
         e.preventDefault()

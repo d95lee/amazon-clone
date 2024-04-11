@@ -27,6 +27,14 @@ const CarouselEle = () => {
     const randomIndex5 = Math.floor(Math.random() * productsArr.length)
     const randomIndex6 = Math.floor(Math.random() * productsArr.length)
     
+    const zeroCase1 = (randomIndex1 === 0 || randomIndex1 === 19) ? 2 : randomIndex1 
+    const zeroCase2 = (randomIndex2 === (19)) ? 2 : randomIndex1
+    const zeroCase3 = (randomIndex3 === (19)) ? 2 : randomIndex1
+    const zeroCase4 = (randomIndex4 === (4 || 19)) ? 2 : randomIndex1
+    const zeroCase5 = (randomIndex5 === (5 || 19)) ? 2 : randomIndex1
+    const zeroCase6 = (randomIndex6 === (6 || 19)) ? 2 : randomIndex1
+    
+
     
     return (
         <>
@@ -38,7 +46,7 @@ const CarouselEle = () => {
                         </div>
                         {Array.from({ length:8 }).map((_, index) => (
                             <div className='box-content' key={index}>    
-                                <Link to={`products/${(randomIndex1 + index) % productsArr.length}`}>{products[(randomIndex1 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex1 + index) % productsArr.length].photoUrl} /> }</Link>
+                                <Link to={`products/${((randomIndex1 + index) % productsArr.length) === 0 ? 19 : ((randomIndex1 + index % productsArr.length))}`}>{products[((randomIndex1 + index) % productsArr.length) === 0 ? 19 : ((randomIndex1 + index % productsArr.length))]?.photoUrl && <img className='home-photo-single'src={products[((randomIndex1 + index) % productsArr.length) === 0 ? 19 : ((randomIndex1 + index % productsArr.length))].photoUrl} /> }</Link>
                             </div>
                             ))}
                     </div>
@@ -151,15 +159,6 @@ const CarouselEle = () => {
                                 </div>
                                 ))}
                         </div>
-
-                        <div className='carousel-photo'>One</div>
-                        <div className='carousel-photo'>Two</div>
-                        <div className='carousel-photo'>Three</div>
-                        <div className='carousel-photo'>Four</div>
-                        <div className='carousel-photo'>Five</div>
-                        <div className='carousel-photo'>Six</div>
-                        <div className='carousel-photo'>Seven</div>
-                        <div className='carousel-photo'>Eight</div>
                     </Carousel>
                 </div>
 
