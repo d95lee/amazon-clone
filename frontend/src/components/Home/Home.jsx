@@ -12,8 +12,8 @@ const Home = () => {
             <SubNav/>
             <div className='home-background'>
             <ProductsHome/>
-               
             </div>
+            <div className='home-background-body'></div>
         </>
     )
 }

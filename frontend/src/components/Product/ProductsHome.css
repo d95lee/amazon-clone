@@ -1,7 +1,6 @@
 .home-product-container {
     display: flex;
     flex-direction: column;
-    height: 160vh;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -9,7 +8,7 @@
 .home-product-box0 {
     background-color: transparent;
     min-width: 300px; 
-    height: 180px;
+    height: 380px;
     width: 95%;
     display: flex;
     justify-content: center;
@@ -45,16 +44,36 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 40px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#home-product-clothing-text {
+    font-size: 22px;
+    font-weight: bold;
+    position: absolute; 
+    top: -4%; 
+    left: 1%; 
 }
 
 .home-product-box2 {
     background-color: rgb(255, 255, 255);
+    min-width: 300px; 
     height: 250px;
     width: 95%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#home-product-electronics-text {
+    font-size: 22px;
+    font-weight: bold;
+    position: absolute; 
+    top: -4%; 
+    left: 1%; 
 }
 
 .home-product-box3 {

@@ -6,6 +6,7 @@ import { useEffect } from 'react'
 import ProductIndexItem from './ProductIndexItem'
 import Layout from '../Layout/Layout'
 import { Link } from 'react-router-dom'
+import CarouselEle from '../Carousel/CarouselEle'
 // import ProductShow from './ProductShow'
 
 const ProductsHome = () => {
@@ -14,9 +15,6 @@ const ProductsHome = () => {
     const products = useSelector((state) => state.product)
     const productsArr = Object.values(products)
     
-    const randomIndex1 = Math.floor(Math.random() * productsArr.length)
-    const randomIndex2 = Math.floor(Math.random() * productsArr.length)
-    const randomIndex3 = Math.floor(Math.random() * productsArr.length)
     // const products = useSelector(selectProductsArray)
    
    
@@ -30,45 +28,12 @@ const ProductsHome = () => {
                 <div className='home-product-box0'>
                 </div>
                 
-                <div className='home-product-box1'>
-                    {Array.from({ length:8 }).map((_, index) => (
-                        <div className='box-content' key={index}>    
-                            <Link to={`products/${(randomIndex1 + index) % productsArr.length}`}>{products[(randomIndex1 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex1 + index) % productsArr.length].photoUrl} /> }</Link>
-                        </div>
-                        ))}
-                </div>
-
-                <div className='home-product-box2'>
-                    {Array.from({ length:8 }).map((_, index) => (
-                        <div className='box-content' key={index}>
-                            <Link to={`products/${(randomIndex2 + index) % productsArr.length}`}>{products[(randomIndex2 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex2 + index) % productsArr.length].photoUrl} /> }</Link>
-                        </div>
-                    ))}
-                </div>
-
-                <div className='home-product-box3'>
-                    {Array.from({ length:8 }).map((_, index) => (
-                        <div className='box-content' key={index}>
-                            <Link to={`products/${(randomIndex3 + index) % productsArr.length}`}>{products[(randomIndex3 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex3 + index) % productsArr.length].photoUrl} /> }</Link>
-                        </div>
-                    ))}
-                </div>
+                <CarouselEle/>
+                    
+                
             </div>
         </>     
     )
 }
 
 export default ProductsHome
-
-
-{/* <div className='home-product-box1'>
-{Array.from({ length:5 }).map((_, index) => (
-    <div className='box-content' key={index}>
-        {productsArr.slice(index * 2, (index + 1) * 2).map((product, idx) => (
-            <div className='home-photo' key={idx}>
-                {product?.photoUrl && <img className='home-photo-single'src={product.photoUrl} /> }
-            </div>
-        ))}
-    </div>
-))}
-</div> */}

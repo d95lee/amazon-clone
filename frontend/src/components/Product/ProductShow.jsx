@@ -32,15 +32,6 @@ const ProductShow = () => {
 
     return (
         <Layout>
-            {/* <div className='product-show'>
-                {product && <p id='product-name'>{product.name}</p>}
-                {product && <p id='product-name'>{product.price}</p>} */}
-                {/* <Link to={`products/${productId}`}>
-
-                    {product && <p id='product-name'>{product.price}</p>}
-                </Link> */}
-            {/* </div> */}
-
             <div className='show-wrapper'>
                 <div className='show-left'>
                     <div id='show-left-content'>

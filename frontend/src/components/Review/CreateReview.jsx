@@ -64,8 +64,13 @@ const CreateReview = () => {
     return (
         <Layout>
             <div className="review-container">
-            <form onSubmit={handleOnSubmit}>
-                <div>
+                <div className='review-title-container'>
+                    <h1 className='revew-title-test'>Create Review</h1>
+                </div>
+            <hr className='review-break'/>
+            
+            <form onSubmit={handleOnSubmit} className='review-form-main-container'>
+                
                     {[...Array(5)].map((star, index) => {     
                         const currentStars = index + 1
                         return (
@@ -84,19 +89,21 @@ const CreateReview = () => {
                         )
                        
                     })}
-                </div>
+                
             <br />
-            <hr />
-                <label>Add a headline
-                    <input type="text" 
+            <hr className='review-break'/>
+                <label><span className='review-headline-text'>Add a headline</span>
+                <br />
+                    <input type="text" className='custom-textbox'
                     value={formHeadline}
                     onChange={(e) => setFormHeadline(e.target.value)}
                     />
                 </label>
             <br />
-            <hr />
-                <label>Add a written review
-                    <textarea type="text" 
+            <hr className='review-break'/>
+                <label><span className='review-body-text'>Add a written review</span>
+                <br />
+                    <textarea className='custom-textarea' type="text"
                     value={formBody}
                     onChange={(e) => setFormBody(e.target.value)}                    
                     />

@@ -2,9 +2,10 @@
 .review-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     width: 100vw;
-    height: 100vh;
+    height: 50vh;
     padding: 30px;
 }
 
@@ -19,4 +20,45 @@ input[type = radio] {
 .review-stars-showpage {
     margin-bottom: 10px;
     margin-top: -10px;
+}
+
+.review-title {
+    font-size: 300px;
+    color: red;
+}
+
+
+.review-headline-text {
+    font-size: 22px;
+}
+
+.review-body-text {
+    font-size: 22px;
+}
+
+/* .review-form-container {
+    margin-top: -100px;
+} */
+
+.review-title-test {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.custom-textbox {
+    width: 50vw;
+    height: 30px;
+    margin-top: 15px;
+}
+
+
+.custom-textarea {
+    width: 50vw;
+    height: 250px;
+    margin-top: 20px;
+}
+
+.review-break {
+    margin-top: 50px;
+    margin-bottom: 20px;
 }

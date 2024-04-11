@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
 import Layout from "../Layout/Layout"
 import { useEffect, useState } from "react"
-import './EditReview.css'
 import { changeReview, createReview } from "../../store/reviewReducer"
 import { selectProduct } from "../../store/productReducer"
 import { Link, useNavigate, useParams } from "react-router-dom"
