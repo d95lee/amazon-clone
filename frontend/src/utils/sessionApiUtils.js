@@ -1,7 +1,7 @@
 // import { csrfFetch } from "./csrfUtils"
 
 export const postUser = userInfo => (
-    fetch('api/users', {
+    fetch('/api/users', {
         method: 'POST',
         body: JSON.stringify(userInfo),
         headers: {

@@ -4,14 +4,18 @@ import { useEffect, useState } from "react"
 import { changeReview, createReview } from "../../store/reviewReducer"
 import { selectProduct } from "../../store/productReducer"
 import { Link, useNavigate, useParams } from "react-router-dom"
-
+import { FaStar } from 'react-icons/fa6'
+import './CreateReview.css'
+import './EditReview.css'
 
 
 const EditReview = () => {
     const dispatch = useDispatch()
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
     const [formHeadline, setFormHeadline] = useState('')
     const [formBody, setFormBody] = useState('')
+    const [rating, setRating] = useState(null)
+    const [mouseHover, setMouseHover] = useState(null)
     const userId = useSelector(state => state.session.id)
     const userEmail = useSelector(state => state.session.email)
     const { productId } = useParams()
@@ -19,9 +23,7 @@ const EditReview = () => {
     const product = useSelector(selectProduct(productId))
     
     const reviews = useSelector((state) => state.review)
-    console.log(reviews)
     const reviewsArr = Object.values(reviews)
-    console.log(reviewsArr)
 
     useEffect(() => {
         reviewsArr.map((review) => {
@@ -50,14 +52,13 @@ const EditReview = () => {
             id: reviewId,
             userId, 
             body: formBody,
-            productId: productId, // need to get this 
-            rating: '2 stars',
+            productId: productId,
+            rating: rating,
             username: userEmail,
             owner: userEmail
         
         }))
             setFormBody('')
-            navigate(`/products/${productId}`)
     }
     
     
@@ -65,29 +66,60 @@ const EditReview = () => {
     return (
         <Layout>
             <div className="review-container">
-            <form onSubmit={handleOnSubmit}>
-                <label>Add a headline
-                    <input type="text" 
+                <div className='review-title-container'>
+                    <h1 className='review-edit-title'>Edit Review</h1>
+                    <hr className='review-break'/>
+                </div>
+            <hr className='review-break-top'/>
+            
+            <form onSubmit={handleOnSubmit} className='review-form-main-container'>
+                
+                    {[...Array(5)].map((star, index) => {     
+                        const currentStars = index + 1
+                        return (
+                    <label key={index}>
+                        <input type="radio"
+                            name='rating'
+                            value={currentStars}
+                            onClick={() => setRating(currentStars)}
+                            />
+                         <FaStar className='review-stars' size={50}
+                                color={currentStars <= (mouseHover || rating) ? "#ffc107" : "e4e5e9"}
+                                onMouseEnter={() => setMouseHover}
+                                onMouseLeave={() => setMouseHover(null)}
+                                />
+                    </label>
+                        )
+                       
+                    })}
+                
+            <br />
+            <hr className='review-break'/>
+                <label><span className='review-headline-text'>Add a headline</span>
+                <br />
+                    <input type="text" className='custom-textbox'
                     value={formHeadline}
                     onChange={(e) => setFormHeadline(e.target.value)}
                     />
                 </label>
             <br />
-            <hr />
-                <label>Add a written review
-                    <textarea type="text" 
+            <hr className='review-break'/>
+                <label><span className='review-body-text'>Add a written review</span>
+                <br />
+                    <textarea className='custom-textarea' type="text"
                     value={formBody}
                     onChange={(e) => setFormBody(e.target.value)}                    
                     />
                 </label>
 
                 <hr />
-                <Link to={`/products/${productId}`}><button className='add-to-cart-button' onClick={handleOnEditClick}>Submit Edit</button></Link>
-            </form>
-            
+                <Link to={`/products/${productId}`} style={{ textDecoration: 'none' }}><button className='review-submit-button' onClick={handleOnEditClick}><span className='review-edit-text'>Edit</span></button></Link> 
+                </form>
             </div>
         </Layout>
     )
 }
 
 export default EditReview
+
+

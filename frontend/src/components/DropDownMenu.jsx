@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './DropDownMenu.css'
 import './NavBar.css'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectCurrentUser } from '../store/sessionReducer';
 
@@ -23,10 +23,6 @@ const DropDownMenu = () => {
         }
     }
 
-    const routeChange = () => {
-        navigate('/signin')
-    }
-
     const sessionLinks = () => {
         if (currentUser) {
             return (
@@ -42,7 +38,7 @@ const DropDownMenu = () => {
             return (
             <>
                  <div className='nav-right'>
-                    <button onClick={() => dispatch(routeChange())}>Sign In</button>
+                    <Link to={'/signin'}><button>Sign In</button></Link>
                     <p className='new-signup'> New Customer?  
                         <a href="http://localhost:5173/signup" className='text-start-here'> Start Here.</a>
                     </p>

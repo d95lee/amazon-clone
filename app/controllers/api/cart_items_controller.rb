@@ -2,9 +2,6 @@ class Api::CartItemsController < ApplicationController
     before_action :require_logged_in
     wrap_parameters include: CartItem.attribute_names + ['userId', 'productId']
 
-    # skip_before_action :require_logged_in
-    # skip_before_action :verify_authenticity_token
-
     def index
         @current_user = current_user 
         @cart_items = @current_user.cart_items

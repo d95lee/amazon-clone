@@ -8,6 +8,7 @@ import AddCartItem from '../CartItem/AddCartItem'
 import { createCartItem } from '../../store/cartItemReducer'
 // import ReviewShow from '../Review/ReviewShow'
 import ReviewsIndex from '../Review/ReviewsIndex'
+import { selectCurrentUser } from '../../store/sessionReducer'
 
 const ProductShow = () => {
     const dispatch = useDispatch()
@@ -15,7 +16,9 @@ const ProductShow = () => {
     // const productId = 2
     const { productId } = useParams()
     const product = useSelector(selectProduct(productId))
-    const userId = useSelector(state => state.session.id)
+    const userId = useSelector(state => state.session?.id)
+    const currentUser = useSelector(selectCurrentUser)
+
 
     const currentDate = new Date()
 
@@ -26,10 +29,15 @@ const ProductShow = () => {
 
     const handleAddToCart = (e) => {
         e.preventDefault()
+        if (!currentUser) {
+            return navigate('/signin')
+        }
             dispatch(createCartItem({ productId, userId, quantity: 1 }));
             navigate('/cart_items')
     }
-
+if (!product) {
+    return null
+}
     return (
         <Layout>
             <div className='show-wrapper'>
@@ -65,7 +73,7 @@ const ProductShow = () => {
                     <hr />
                     <h3>Review this Product</h3>
                     <p>Share your thoughts with other customers</p>
-                    <Link to={`/products/${productId}/create_review`}><button className='create-review-button'>Write a customer review</button></Link>
+                    <Link to={currentUser ? `/products/${productId}/create_review` : '/signin'}><button className='create-review-button'>Write a customer review</button></Link>
                     <hr />
                 </div>
                 <div className='show-bottom'>
