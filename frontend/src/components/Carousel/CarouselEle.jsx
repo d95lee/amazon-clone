@@ -132,7 +132,7 @@ const CarouselEle = () => {
                 <Carousel itemsToShow={1}>  
                     <div className='home-product-box1'>
                     <div className='carousel-text'>
-                            <p id='home-product-electronics-text'>Best Sellers in Electronics</p>
+                            <p id='home-product-electronics-text'>Best Sellers in Toys & Games</p>
                         </div>
                         {Array.from({ length:6 }).map((_, index) => (
                             <div className='box-content' key={index}>    
@@ -173,7 +173,7 @@ const CarouselEle = () => {
                 <Carousel itemsToShow={1}>  
                     <div className='home-product-box1'>
                     <div className='carousel-text'>
-                            <p id='home-product-electronics-text'>Best Sellers in Electronics</p>
+                            <p id='home-product-electronics-text'>Best Sellers in Furniture</p>
                         </div>
                         {Array.from({ length:5 }).map((_, index) => (
                             <div className='box-content' key={index}>    
@@ -214,7 +214,7 @@ const CarouselEle = () => {
                 <Carousel itemsToShow={1}>  
                     <div className='home-product-box1'>
                     <div className='carousel-text'>
-                            <p id='home-product-electronics-text'>Best Sellers in Electronics</p>
+                            <p id='home-product-electronics-text'>Best Sellers in Amazon</p>
                         </div>
                         {Array.from({ length:4 }).map((_, index) => (
                             <div className='box-content' key={index}>    
