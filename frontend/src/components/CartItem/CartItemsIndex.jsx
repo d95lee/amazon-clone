@@ -9,6 +9,7 @@ import { useEffect } from 'react'
 import NavBanner from '../NavBanner/NavBanner'
 import { clearCartItem } from '../../store/cartItemReducer'
 import { selectCurrentUser } from '../../store/sessionReducer'
+import Footer from '../FooterEle'
 
 const CartItemsIndex = () => {
     const dispatch = useDispatch()
@@ -84,6 +85,7 @@ const CartItemsIndex = () => {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </Layout>
     )
 }

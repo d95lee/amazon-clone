@@ -9,6 +9,7 @@ import { createCartItem } from '../../store/cartItemReducer'
 // import ReviewShow from '../Review/ReviewShow'
 import ReviewsIndex from '../Review/ReviewsIndex'
 import { selectCurrentUser } from '../../store/sessionReducer'
+import Footer from '../FooterEle'
 
 const ProductShow = () => {
     const dispatch = useDispatch()
@@ -83,6 +84,7 @@ if (!product) {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </Layout>
     )
 }

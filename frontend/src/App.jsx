@@ -1,4 +1,4 @@
-import { Navigate, Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { Navigate, Outlet, RouterProvider, createBrowserRouter, useLocation, useRoutes } from 'react-router-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 import './App.css'
 import SignInForm from './components/SignInForm'
@@ -11,6 +11,7 @@ import CreateReview from './components/Review/CreateReview'
 import ReviewsIndex from './components/Review/ReviewsIndex'
 import EditReview from './components/Review/EditReview'
 import Checkout from './components/Checkout/Checkout'
+import Footer from './components/FooterEle'
 
 const router = createBrowserRouter([
   {
@@ -38,11 +39,11 @@ const router = createBrowserRouter([
     element: <CartItemsIndex/>
   },
   {
-    path: '/products/:productId',   // Not 100% sure on this route
+    path: '/products/:productId', 
     element: <ReviewsIndex/>
   },
   {
-    path: '/products/:productId/:reviewsId', // Not 100% sure on this route
+    path: '/products/:productId/:reviewsId',
     element: <ReviewsIndex/>
   },
   {
@@ -69,7 +70,7 @@ function App() {
       <>
         <RouterProvider router={router}>
             <Home/>
-        </RouterProvider>
+        </RouterProvider>        
       </>
      
    

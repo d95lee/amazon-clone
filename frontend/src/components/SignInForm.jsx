@@ -3,9 +3,8 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from 'react-router-dom';
 import { loginUser, selectCurrentUser } from '../store/sessionReducer'
-import Footer from './FooterEle'
 import logo from '../assets/logo/Amazon-Logo-PNG.png'
-
+import FooterSign from './FooterSign'
 
 
 const SignInForm = () => {
@@ -112,7 +111,7 @@ const SignInForm = () => {
             </div>
             <p id='create-account-text'>New to Amazon?</p>
             <button className='create-account-button' type='submit' onClick={routeSignup}>Create your Amazon Account</button>
-            <Footer></Footer>
+            <FooterSign/>
         </>
     )
 }

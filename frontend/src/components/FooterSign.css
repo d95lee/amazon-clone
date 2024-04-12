@@ -1,6 +1,6 @@
-.footer {
+.footer-sign {
     font-family: Ember;
-    position: relative;
+    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -9,7 +9,7 @@
     text-align: center;
 }
 
-.top-footer {
+.top-footer-sign {
     background-color: rgb(35, 47, 62);
     height: 70px;
     color: white;
@@ -23,7 +23,7 @@
 
 }
 
-.footer-logo-container {
+.footer-sign-logo-container {
     background-color: rgb(19, 26, 34);
     height: 60px;
     display: flex;
@@ -31,7 +31,7 @@
     align-items: center;
 }
 
-.footer-logo {
+.footer-sign-logo {
     width: 50px;
     height: auto;
 }
@@ -40,12 +40,12 @@
     background-color: rgb(19, 26, 34);
 }
 
-.footer-socials-container {
+.footer-sign-socials-container {
     width: 80px;
     display: flex;
 }
 
-.footer-linkedin {
+.footer-sign-linkedin {
     width: auto;
     height: 22px;
     margin-top: -5px;
@@ -53,7 +53,7 @@
     cursor: pointer;
 }
 
-.footer-github {
+.footer-sign-github {
     width: auto;
     height: 22px;
     margin-top: -5px;
@@ -61,7 +61,7 @@
     cursor: pointer;
 }
 
-.footer-scroll {
+.footer-sign-scroll {
     background-color: rgb(55, 71, 90);
     scroll-behavior: smooth;
     display: block;
@@ -73,7 +73,9 @@
     cursor: pointer;
 }
 
-.footer-scroll:hover {
+.footer-sign-scroll:hover {
     background-color: rgb(88, 107, 131)
 }
 
+/* .footer-sign-wrapper {
+} */

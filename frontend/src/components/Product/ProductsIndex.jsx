@@ -5,7 +5,8 @@ import { useEffect } from 'react'
 import ProductIndexItem from './ProductIndexItem'
 import Layout from '../Layout/Layout'
 import { Link } from 'react-router-dom'
-// import ProductShow from './ProductShow'
+import Footer from '../FooterEle'
+
 
 const ProductsIndex = () => {
     const dispatch = useDispatch()
@@ -34,6 +35,7 @@ const ProductsIndex = () => {
                     ))}
                 </div>
             </div>
+            <Footer/>
         </Layout>     
     )
 }

@@ -187,6 +187,16 @@ ApplicationRecord.transaction do
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/connectfour.jpg')
       p20.photo.attach(io: file, filename: 'connectfour.jpg')
     
+
+      Review.create!(
+        owner: 'Owner Name', 
+        rating: 5, 
+        body: 'This product is amazing!', 
+        username: 'demo@user.io', 
+        user_id: 1, 
+        product_id: 3
+      )
+
       # More users
     10.times do 
       User.create!({

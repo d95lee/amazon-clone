@@ -7,6 +7,7 @@ import { Link, useNavigate, useParams } from "react-router-dom"
 import { FaStar } from 'react-icons/fa6'
 import './CreateReview.css'
 import './EditReview.css'
+import Footer from "../FooterEle"
 
 
 const EditReview = () => {
@@ -60,7 +61,6 @@ const EditReview = () => {
         }))
             setFormBody('')
     }
-    
     
 
     return (
@@ -116,6 +116,7 @@ const EditReview = () => {
                 <Link to={`/products/${productId}`} style={{ textDecoration: 'none' }}><button className='review-submit-button' onClick={handleOnEditClick}><span className='review-edit-text'>Edit</span></button></Link> 
                 </form>
             </div>
+            <Footer/>
         </Layout>
     )
 }
