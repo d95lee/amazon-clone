@@ -52,7 +52,7 @@ if (!product) {
                         {product && <p id='product-name'>{product.name}</p>}
                         {/* {product && <p id='product-name'>{product.rating}</p>} */}
                         <hr />
-                        {product && <p id='product-price'><span className='price-text'>Price:</span> ${(product.price.toFixed(2))}</p>}
+                        {product && <p id='product-price'><span className='price-text'>Price:</span> ${product.price}</p>}
                         {product && <p id='product-description'><span className='description-text'>About this item:</span> 
                         <br/>
                         <br/>
@@ -62,7 +62,7 @@ if (!product) {
 
                 <div className='show-right'>
                     <div id='show-right-content'>
-                        <p className='show-right-price'>${(product.price).toFixed(2)}</p>
+                        <p className='show-right-price'>${product.price}</p>
                         <p>FREE delivery &emsp;&emsp;&emsp;<span id='date'>{currentDate.toLocaleDateString()}</span> 
                         <br />on orders shipped by Amazon over $35</p>
                         <button className='add-to-cart-button' onClick={handleAddToCart}>Add to Cart</button>   
