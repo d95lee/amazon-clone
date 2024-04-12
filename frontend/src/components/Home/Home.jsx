@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import ProductsHome from '../Product/ProductsHome'
 import Footer from '../FooterEle'
 
+
 const Home = () => {
     return (
         <>
