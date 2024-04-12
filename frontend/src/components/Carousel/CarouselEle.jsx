@@ -26,15 +26,20 @@ const CarouselEle = () => {
     const randomIndex4 = Math.floor(Math.random() * productsArr.length)
     const randomIndex5 = Math.floor(Math.random() * productsArr.length)
     const randomIndex6 = Math.floor(Math.random() * productsArr.length)
+    const randomIndex7 = Math.floor(Math.random() * productsArr.length)
+    const randomIndex8 = Math.floor(Math.random() * productsArr.length)
+    const randomIndex9 = Math.floor(Math.random() * productsArr.length)
+    const randomIndex10 = Math.floor(Math.random() * productsArr.length)
+    const randomIndex11 = Math.floor(Math.random() * productsArr.length)
+    const randomIndex12 = Math.floor(Math.random() * productsArr.length)
     
-    const zeroCase1 = (randomIndex1 === 0 || randomIndex1 === 19) ? 2 : randomIndex1 
-    const zeroCase2 = (randomIndex2 === (19)) ? 2 : randomIndex1
-    const zeroCase3 = (randomIndex3 === (19)) ? 2 : randomIndex1
-    const zeroCase4 = (randomIndex4 === (4 || 19)) ? 2 : randomIndex1
-    const zeroCase5 = (randomIndex5 === (5 || 19)) ? 2 : randomIndex1
-    const zeroCase6 = (randomIndex6 === (6 || 19)) ? 2 : randomIndex1
+    // const zeroCase1 = (randomIndex1 === 0 || randomIndex1 === 19) ? 2 : randomIndex1 
+    // const zeroCase2 = (randomIndex2 === (19)) ? 2 : randomIndex1
+    // const zeroCase3 = (randomIndex3 === (19)) ? 2 : randomIndex1
+    // const zeroCase4 = (randomIndex4 === (4 || 19)) ? 2 : randomIndex1
+    // const zeroCase5 = (randomIndex5 === (5 || 19)) ? 2 : randomIndex1
+    // const zeroCase6 = (randomIndex6 === (6 || 19)) ? 2 : randomIndex1
     
-
     
     return (
         <>
@@ -46,7 +51,7 @@ const CarouselEle = () => {
                         </div>
                         {Array.from({ length:8 }).map((_, index) => (
                             <div className='box-content' key={index}>    
-                                <Link to={`products/${((randomIndex1 + index) % productsArr.length) === 0 ? 19 : ((randomIndex1 + index % productsArr.length))}`}>{products[((randomIndex1 + index) % productsArr.length) === 0 ? 19 : ((randomIndex1 + index % productsArr.length))]?.photoUrl && <img className='home-photo-single'src={products[((randomIndex1 + index) % productsArr.length) === 0 ? 19 : ((randomIndex1 + index % productsArr.length))].photoUrl} /> }</Link>
+                                <Link to={`products/${(randomIndex1 + index) % productsArr.length}`}>{products[(randomIndex1 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex1 + index) % productsArr.length].photoUrl} /> }</Link>
                             </div>
                             ))}
                     </div>
@@ -83,7 +88,7 @@ const CarouselEle = () => {
                     <div className='carousel-text'>
                             <p id='home-product-electronics-text'>Best Sellers in Electronics</p>
                         </div>
-                        {Array.from({ length:8 }).map((_, index) => (
+                        {Array.from({ length:4 }).map((_, index) => (
                             <div className='box-content' key={index}>    
                                 <Link to={`products/${(randomIndex6 + index) % productsArr.length}`}>{products[(randomIndex6 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex6 + index) % productsArr.length].photoUrl} /> }</Link>
                             </div>
@@ -91,7 +96,7 @@ const CarouselEle = () => {
                     </div>
 
                     <div className='home-product-box1'>
-                        {Array.from({ length:8 }).map((_, index) => (
+                        {Array.from({ length:4 }).map((_, index) => (
                             <div className='box-content' key={index}>    
                                 <Link to={`products/${(randomIndex5 + index) % productsArr.length}`}>{products[(randomIndex5 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex5 + index) % productsArr.length].photoUrl} /> }</Link>
                             </div>
@@ -99,7 +104,7 @@ const CarouselEle = () => {
                     </div>
 
                     <div className='home-product-box1'>
-                        {Array.from({ length:8 }).map((_, index) => (
+                        {Array.from({ length:4 }).map((_, index) => (
                             <div className='box-content' key={index}>    
                                 <Link to={`products/${(randomIndex4 + index) % productsArr.length}`}>{products[(randomIndex4 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex4 + index) % productsArr.length].photoUrl} /> }</Link>
                             </div>
@@ -107,7 +112,7 @@ const CarouselEle = () => {
                     </div>
 
                     <div className='home-product-box1'>
-                        {Array.from({ length:8 }).map((_, index) => (
+                        {Array.from({ length:4 }).map((_, index) => (
                             <div className='box-content' key={index}>    
                                 <Link to={`products/${(randomIndex3 + index) % productsArr.length}`}>{products[(randomIndex3 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex3 + index) % productsArr.length].photoUrl} /> }</Link>
                             </div>
@@ -115,6 +120,139 @@ const CarouselEle = () => {
                     </div>
                 </Carousel>
             </div>
+
+
+
+
+
+
+
+
+            <div className='carousel-container'>
+                <Carousel itemsToShow={1}>  
+                    <div className='home-product-box1'>
+                    <div className='carousel-text'>
+                            <p id='home-product-electronics-text'>Best Sellers in Electronics</p>
+                        </div>
+                        {Array.from({ length:6 }).map((_, index) => (
+                            <div className='box-content' key={index}>    
+                                <Link to={`products/${(randomIndex12 + index) % productsArr.length}`}>{products[(randomIndex12 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex12 + index) % productsArr.length].photoUrl} /> }</Link>
+                            </div>
+                            ))}
+                    </div>
+
+                    <div className='home-product-box1'>
+                        {Array.from({ length:6 }).map((_, index) => (
+                            <div className='box-content' key={index}>    
+                                <Link to={`products/${(randomIndex2 + index) % productsArr.length}`}>{products[(randomIndex2 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex2 + index) % productsArr.length].photoUrl} /> }</Link>
+                            </div>
+                            ))}
+                    </div>
+
+                    <div className='home-product-box1'>
+                        {Array.from({ length:6 }).map((_, index) => (
+                            <div className='box-content' key={index}>    
+                                <Link to={`products/${(randomIndex10 + index) % productsArr.length}`}>{products[(randomIndex10 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex10 + index) % productsArr.length].photoUrl} /> }</Link>
+                            </div>
+                            ))}
+                    </div>
+
+                    <div className='home-product-box1'>
+                        {Array.from({ length:6 }).map((_, index) => (
+                            <div className='box-content' key={index}>    
+                                <Link to={`products/${(randomIndex7 + index) % productsArr.length}`}>{products[(randomIndex7 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex7 + index) % productsArr.length].photoUrl} /> }</Link>
+                            </div>
+                            ))}
+                    </div>
+                </Carousel>
+            </div>
+
+
+
+            <div className='carousel-container'>
+                <Carousel itemsToShow={1}>  
+                    <div className='home-product-box1'>
+                    <div className='carousel-text'>
+                            <p id='home-product-electronics-text'>Best Sellers in Electronics</p>
+                        </div>
+                        {Array.from({ length:5 }).map((_, index) => (
+                            <div className='box-content' key={index}>    
+                                <Link to={`products/${(randomIndex5 + index) % productsArr.length}`}>{products[(randomIndex5 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex5 + index) % productsArr.length].photoUrl} /> }</Link>
+                            </div>
+                            ))}
+                    </div>
+
+                    <div className='home-product-box1'>
+                        {Array.from({ length:5 }).map((_, index) => (
+                            <div className='box-content' key={index}>    
+                                <Link to={`products/${(randomIndex1 + index) % productsArr.length}`}>{products[(randomIndex1 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex1 + index) % productsArr.length].photoUrl} /> }</Link>
+                            </div>
+                            ))}
+                    </div>
+
+                    <div className='home-product-box1'>
+                        {Array.from({ length:5 }).map((_, index) => (
+                            <div className='box-content' key={index}>    
+                                <Link to={`products/${(randomIndex9 + index) % productsArr.length}`}>{products[(randomIndex9 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex9 + index) % productsArr.length].photoUrl} /> }</Link>
+                            </div>
+                            ))}
+                    </div>
+
+                    <div className='home-product-box1'>
+                        {Array.from({ length:5 }).map((_, index) => (
+                            <div className='box-content' key={index}>    
+                                <Link to={`products/${(randomIndex2 + index) % productsArr.length}`}>{products[(randomIndex2 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex2 + index) % productsArr.length].photoUrl} /> }</Link>
+                            </div>
+                            ))}
+                    </div>
+                </Carousel>
+            </div>
+
+
+
+            <div className='carousel-container'>
+                <Carousel itemsToShow={1}>  
+                    <div className='home-product-box1'>
+                    <div className='carousel-text'>
+                            <p id='home-product-electronics-text'>Best Sellers in Electronics</p>
+                        </div>
+                        {Array.from({ length:4 }).map((_, index) => (
+                            <div className='box-content' key={index}>    
+                                <Link to={`products/${(index + 21)}`}>{products[(index + 21)]?.photoUrl && <img className='home-photo-single'src={products[(index + 21)].photoUrl} /> }</Link>
+                            </div>
+                            ))}
+                    </div>
+
+                    <div className='home-product-box1'>
+                        {Array.from({ length:4 }).map((_, index) => (
+                            <div className='box-content' key={index}>    
+                                <Link to={`products/${(index + 21)}`}>{products[(index + 21)]?.photoUrl && <img className='home-photo-single'src={products[(index + 21)].photoUrl} /> }</Link>
+                            </div>
+                            ))}
+                    </div>
+
+                    <div className='home-product-box1'>
+                        {Array.from({ length:4 }).map((_, index) => (
+                            <div className='box-content' key={index}>    
+                                <Link to={`products/${(randomIndex4 + index) % productsArr.length}`}>{products[(randomIndex4 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex4 + index) % productsArr.length].photoUrl} /> }</Link>
+                            </div>
+                            ))}
+                    </div>
+
+                    <div className='home-product-box1'>
+                        {Array.from({ length:4 }).map((_, index) => (
+                            <div className='box-content' key={index}>    
+                                <Link to={`products/${(randomIndex3 + index) % productsArr.length}`}>{products[(randomIndex3 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex3 + index) % productsArr.length].photoUrl} /> }</Link>
+                            </div>
+                            ))}
+                    </div>
+                </Carousel>
+            </div>
+
+
+
+
+
 
 
                 <div className='carousel-container-2'>

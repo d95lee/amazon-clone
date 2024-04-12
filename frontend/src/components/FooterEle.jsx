@@ -1,8 +1,9 @@
 import React from "react";
 import './FooterEle.css'
 import logo from '../assets/logo/white-logo.png'
-import white_linkedin from './../assets/icons/white_linkedin.png'
-import white_github from './../assets/icons/white_github.png'
+import white_linkedin from '../assets/icons/white_linkedin.png'
+import white_github from '../assets/icons/white_github.png'
+
 
 const Footer = () => {
     
@@ -27,7 +28,7 @@ const Footer = () => {
             
                 <div className="footer-logo-container">
                     <img src={logo} className='footer-logo'/>
-                </div>            
+                </div>                                   
         </footer>
     )
 }

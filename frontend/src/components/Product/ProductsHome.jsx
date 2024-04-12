@@ -26,11 +26,8 @@ const ProductsHome = () => {
         <>   
             <div className='home-product-container'>
                 <div className='home-product-box0'>
-                </div>
-                
-                <CarouselEle/>
-                    
-                
+            </div>
+                <CarouselEle/> 
             </div>
         </>     
     )

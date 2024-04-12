@@ -7,6 +7,7 @@ import check from '../../assets/icons/check.png'
 import linkedin from '../../assets/icons/linkedin.png'
 import github from '../../assets/icons/github.png'
 import line from '../../assets/gifs/line.gif'
+import Footer from '../FooterEle'
 
 const Checkout = () => {
     const dispatch = useDispatch()
@@ -42,8 +43,8 @@ const Checkout = () => {
                         <a href="https://www.linkedin.com/in/david-lee-49959a20a/" target="_blank"><img src={linkedin} alt="" className='linkedin-icon'/></a>
                 </div>
                 <em id='socials-text'>Your package will arrive in 2 business days</em>
-                
             </div>
+            <Footer/>
         </Layout>
         
     )

@@ -7,6 +7,7 @@ import { selectProduct } from "../../store/productReducer"
 import { useNavigate, useParams } from "react-router-dom"
 import { FaStar } from 'react-icons/fa6'
 import { selectCurrentUser } from "../../store/sessionReducer"
+import Footer from "../FooterEle"
 
 const CreateReview = () => {
     const dispatch = useDispatch()
@@ -21,13 +22,11 @@ const CreateReview = () => {
     const product = useSelector(selectProduct(productId))
     const currentUser = useSelector(selectCurrentUser)
     
-
     const handleOnSubmit = (e) => {
         e.preventDefault()
 
     }
     
-
     const handleOnClick = (e) => {
         e.preventDefault()
         dispatch(createReview({ 
@@ -42,27 +41,6 @@ const CreateReview = () => {
             setFormBody('')
             navigate(`/products/${productId}`)
     }
-    
-
-    // const handleOnEditClick = (e) => {
-    //     e.preventDefault()
-    //     dispatch(EditReview({ 
-    //         reviewId: reviewId,
-    //         userId, 
-    //         body: formBody,
-    //         productId: productId, // need to get this 
-    //         rating: '2 stars',
-    //         username: userEmail,
-    //         owner: userEmail
-    //     }))
-    //         setFormHeadline('')
-    //         setFormBody('')
-    //         navigate(`/products/${productId}`)
-    // }
-    
-    // useEffect(() => {
-    //     setFormBody(fetchReview(reviewId).body)
-    // }, [setFormBody])
 
     return (
         <Layout>
@@ -116,8 +94,8 @@ const CreateReview = () => {
                 <hr />
                 <button className='review-submit-button' onClick={handleOnClick}><span className='review-submit-text'>Submit</span></button>
             </form>
-            
             </div>
+            <Footer/>
         </Layout>
     )
 }
