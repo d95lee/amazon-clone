@@ -3,7 +3,7 @@ import './DropDownMenu.css'
 import './NavBar.css'
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectCurrentUser } from '../store/sessionReducer';
+import { logoutUser, selectCurrentUser } from '../store/sessionReducer';
 
 
 const DropDownMenu = () => {

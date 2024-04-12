@@ -1,5 +1,4 @@
 import { thunk } from 'redux-thunk'
-import logger from 'redux-logger'
 import { createStore, applyMiddleware, combineReducers } from 'redux'
 import sessionReducer from './sessionReducer'
 import productReducer from './productReducer'
@@ -13,8 +12,17 @@ const rootReducer = combineReducers({
     review: reviewReducer
 })
 
+// const temp = [thunk];
+
+// if (import.meta.env.DEV) {
+//     const logger = require('thunk-logger');
+//     temp.push(logger);
+// }
+
+const middleware = applyMiddleware(thunk);
+
 const configureStore = (initialState = {}) => (
-    createStore(rootReducer, initialState, applyMiddleware(thunk, logger))
+    createStore(rootReducer, initialState, middleware)
 )
 
 export default configureStore

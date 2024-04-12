@@ -52,9 +52,9 @@ export const fetchReviews = () => (dispatch, getState) => {
     .then(data => {
         dispatch(receiveReviews(data))
     })
-    .catch(error => {
-        console.log('Error fetching reviews:', error)
-    })
+    // .catch(error => {
+    //     console.log('Error fetching reviews:', error)
+    // })
 }
 
 export const fetchReview = (review_id) => (dispatch, getState) => {
@@ -70,9 +70,9 @@ export const fetchReview = (review_id) => (dispatch, getState) => {
     .then(data => {
         dispatch(receiveReview(data))
     })
-    .catch(error => {
-        console.log('Failed to fetch review:', error)
-    })
+    // .catch(error => {
+    //     console.log('Failed to fetch review:', error)
+    // })
 }
 
 export const createReview = (review) => (dispatch, getState) => {
@@ -87,9 +87,9 @@ export const createReview = (review) => (dispatch, getState) => {
     .then(data => {
         dispatch(newReview(data))
     })
-    .catch(error => {
-        console.log('Failed to create a review:', error)
-    })
+    // .catch(error => {
+    //     console.log('Failed to create a review:', error)
+    // })
 }
 
 export const changeReview = (reviewId) => (dispatch, getState) => {
@@ -104,9 +104,9 @@ export const changeReview = (reviewId) => (dispatch, getState) => {
     .then(data => {
         dispatch(updateReview(data))
     })
-    .catch(error => {
-        console.log('Failed to update review:', error)
-    })
+    // .catch(error => {
+    //     console.log('Failed to update review:', error)
+    // })
 }
 
 export const clearReview = reviewId => (dispatch, getState) => {
@@ -117,9 +117,9 @@ export const clearReview = reviewId => (dispatch, getState) => {
         }
         dispatch(removeReview(reviewId))
     })
-    .catch(error => {
-        console.log('Failed to delete review:', error)
-    })
+    // .catch(error => {
+    //     console.log('Failed to delete review:', error)
+    // })
 }
 
 export const selectReview = (review_id) => state => state.review[review_id]

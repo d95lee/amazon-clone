@@ -47,16 +47,14 @@ export const fetchCartItems = () => (dispatch, getState) => {
         }
     })
     .then(data => {
-        console.log(data)
         dispatch(receiveCartItems(data))
     })
-    .catch(error => {
-        console.log('Error fetching cart_items:', error)
-    })
+    // .catch(error => {
+    //     console.log('Error fetching cart_items:', error)
+    // })
 }
 
 export const fetchCartItem = (cart_itemId) => (dispatch, getState) => {
-    console.log(cart_itemId)
     fetch(`api/cart_items/${cart_itemId}`)
     .then(res => {
         if (res.ok) {
@@ -68,9 +66,9 @@ export const fetchCartItem = (cart_itemId) => (dispatch, getState) => {
     .then(data => {
         dispatch(receiveCartItem(data)) 
     })
-    .catch(error => {
-        console.log('Failed to fetch cart_item:', error)
-    })
+    // .catch(error => {
+    //     console.log('Failed to fetch cart_item:', error)
+    // })
 }
 
 //(userId, cart_item)
@@ -86,9 +84,9 @@ export const createCartItem = (cartItem) => (dispatch, getState) => {
     .then(data => {
         dispatch(newCartItem(data)) 
     })
-    .catch(error => {
-        console.log('Failed to create cart item:', error)
-    })
+    // .catch(error => {
+    //     console.log('Failed to create cart item:', error)
+    // })
 }
 
 export const changeCartItem = cart_item => (dispatch, getState) => {
@@ -103,9 +101,9 @@ export const changeCartItem = cart_item => (dispatch, getState) => {
     .then(data => {
         dispatch(updateCartItem(data))
     })
-    .catch(error => {
-        console.log('Failed to update cartitem:', error)
-    })
+    // .catch(error => {
+    //     console.log('Failed to update cartitem:', error)
+    // })
 }
 
 export const clearCartItem = cart_itemId => (dispatch, getState) => {
@@ -116,9 +114,9 @@ export const clearCartItem = cart_itemId => (dispatch, getState) => {
         }
         dispatch(removeCartItem(cart_itemId))
     })
-    .catch(error => {
-        console.log('Failed to delete cart item:', error)
-    })
+    // .catch(error => {
+    //     console.log('Failed to delete cart item:', error)
+    // })
 }
 
 export const selectCartItem = (cart_itemId) => state => state.cart_item[cart_itemId]

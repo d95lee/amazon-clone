@@ -7,7 +7,6 @@ import { selectProduct } from "../../store/productReducer"
 import { useNavigate, useParams } from "react-router-dom"
 import { FaStar } from 'react-icons/fa6'
 import { selectCurrentUser } from "../../store/sessionReducer"
-import Footer from "../FooterEle"
 
 const CreateReview = () => {
     const dispatch = useDispatch()
@@ -95,7 +94,6 @@ const CreateReview = () => {
                 <button className='review-submit-button' onClick={handleOnClick}><span className='review-submit-text'>Submit</span></button>
             </form>
             </div>
-            <Footer/>
         </Layout>
     )
 }

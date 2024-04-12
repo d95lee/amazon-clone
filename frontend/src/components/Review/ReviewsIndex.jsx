@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
-import { selectReview } from '../../store/reviewReducer'
+import { clearReview, fetchReviews, selectReview } from '../../store/reviewReducer'
 import './ReviewsIndex.css'
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from 'react'

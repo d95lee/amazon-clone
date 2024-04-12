@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import './Product.css'
 import { Link, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
-import { selectProduct } from '../../store/productReducer';
+import { fetchProduct, selectProduct } from '../../store/productReducer';
 
 
 const ProductIndexItem = () => {

@@ -17,33 +17,6 @@ import { changeReview, clearReview, createReview, fetchReview, fetchReviews } fr
 const initializeApp = () => {
   const store = configureStore();
 
-  window.store = store;
-  window.postUser = postUser;
-  window.postSession = postSession;
-  window.deleteSession = deleteSession;
-  window.createUser = createUser;
-  window.loginUser = loginUser;
-  window.logoutUser = logoutUser;
-
-  window.fetchProducts = fetchProducts
-  window.fetchProduct = fetchProduct
-
-  window.fetchCartItem = fetchCartItem
-  window.fetchCartItems = fetchCartItems
-  window.createCartItem = createCartItem
-  window.changeCartItem = changeCartItem
-  window.clearCartItem = clearCartItem
-
-  window.postCartItem = postCartItem
-  window.editCartItem = editCartItem
-  window.deleteCartItem = deleteCartItem
-
-  window.fetchReviews = fetchReviews
-  window.fetchReview = fetchReview
-  window.createReview = createReview
-  window.changeReview = changeReview
-  window.clearReview = clearReview
-
 
   ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>

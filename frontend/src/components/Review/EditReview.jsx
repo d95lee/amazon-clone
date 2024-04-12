@@ -3,16 +3,15 @@ import Layout from "../Layout/Layout"
 import { useEffect, useState } from "react"
 import { changeReview, createReview } from "../../store/reviewReducer"
 import { selectProduct } from "../../store/productReducer"
-import { Link, useNavigate, useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { FaStar } from 'react-icons/fa6'
 import './CreateReview.css'
 import './EditReview.css'
-import Footer from "../FooterEle"
 
 
 const EditReview = () => {
     const dispatch = useDispatch()
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
     const [formHeadline, setFormHeadline] = useState('')
     const [formBody, setFormBody] = useState('')
     const [rating, setRating] = useState(null)
@@ -59,7 +58,7 @@ const EditReview = () => {
             owner: userEmail
         
         }))
-            setFormBody('')
+            navigate(`/products/${productId}`)
     }
     
 
@@ -113,14 +112,11 @@ const EditReview = () => {
                 </label>
 
                 <hr />
-                <Link to={`/products/${productId}`} style={{ textDecoration: 'none' }}><button className='review-submit-button' onClick={handleOnEditClick}><span className='review-edit-text'>Edit</span></button></Link> 
+                <button className='review-submit-button' onClick={handleOnEditClick}><span className='review-edit-text'>Edit</span></button>
                 </form>
             </div>
-            <Footer/>
         </Layout>
     )
 }
 
 export default EditReview
-
-

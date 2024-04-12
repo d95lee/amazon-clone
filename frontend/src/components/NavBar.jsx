@@ -55,12 +55,10 @@ const NavBar = props => {
                 const filteredProducts = productsArr.filter(product => {
                     return product.name === value;
                 });
-    
-                console.log('Filtered products:', filteredProducts);
             })
-            .catch(error => {
-                console.error('Error fetching products:', error);
-            });
+            // .catch(error => {
+            //     console.error('Error fetching products:', error);
+            // });
     };
 
     const handleChange = (value) => {

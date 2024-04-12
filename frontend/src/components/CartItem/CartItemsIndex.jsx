@@ -7,7 +7,7 @@ import { fetchProduct, selectProduct } from '../../store/productReducer'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useEffect } from 'react'
 import NavBanner from '../NavBanner/NavBanner'
-import { clearCartItem } from '../../store/cartItemReducer'
+import { clearCartItem, fetchCartItems } from '../../store/cartItemReducer'
 import { selectCurrentUser } from '../../store/sessionReducer'
 import Footer from '../FooterEle'
 
