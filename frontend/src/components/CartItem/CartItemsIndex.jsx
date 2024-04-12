@@ -71,7 +71,7 @@ const CartItemsIndex = () => {
                                 </div>
 
                                 <div className='cart-left-content-right'>
-                                    <p id='cart-price-text'>${cart_item.productPrice}</p>
+                                    <p id='cart-price-text'>${(cart_item.productPrice).toFixed(2)}</p>
                                 </div>
                             </div>
                         </div>

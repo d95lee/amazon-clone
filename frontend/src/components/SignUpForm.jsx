@@ -91,7 +91,6 @@ const SignUpForm = () => {
                 </form>
                     <p className='form-description'>By creating an account, you agree to David's Conditions of Use and Privacy Notice</p>
             </div>
-            
             <FooterSign/>
         </>
     )

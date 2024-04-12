@@ -69,8 +69,8 @@ function App() {
     
       <>
         <RouterProvider router={router}>
-            <Home/>
-        </RouterProvider>        
+            <Home/>           
+        </RouterProvider>
       </>
      
    
