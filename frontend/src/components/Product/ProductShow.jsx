@@ -53,7 +53,7 @@ if (!product) {
                         {product && <p id='product-name'>{product.name}</p>}
                         {/* {product && <p id='product-name'>{product.rating}</p>} */}
                         <hr />
-                        {product && <p id='product-price'><span className='price-text'>Price:</span> ${product.price}</p>}
+                        {product && <p id='product-price'><span className='price-text'>Price:</span> ${(product.price.toFixed(2))}</p>}
                         {product && <p id='product-description'><span className='description-text'>About this item:</span> 
                         <br/>
                         <br/>
@@ -63,8 +63,19 @@ if (!product) {
 
                 <div className='show-right'>
                     <div id='show-right-content'>
-                        <p>FREE delivery {currentDate.toLocaleDateString()} on orders shipped by Amazon over $35</p>
+                        <p className='show-right-price'>${(product.price).toFixed(2)}</p>
+                        <p>FREE delivery &emsp;&emsp;&emsp;<span id='date'>{currentDate.toLocaleDateString()}</span> 
+                        <br />on orders shipped by Amazon over $35</p>
                         <button className='add-to-cart-button' onClick={handleAddToCart}>Add to Cart</button>   
+                    
+                        <br />
+                        <br />
+
+                        <p className='show-right-text'>Ships: &emsp; from Amazon.com</p>
+                        <p className='show-right-text'>Returns: &emsp; Eligible for Return</p>
+                        <p className='show-right-text'>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Refund or Replacement</p>
+                        <p className='show-right-text'>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;within 30 days of receipt</p>
+                        <p className='show-right-text'>Payment: &emsp;Secure Transaction</p>
                     </div>
                 </div>
             </div>
