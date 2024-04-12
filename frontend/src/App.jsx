@@ -11,6 +11,7 @@ import CreateReview from './components/Review/CreateReview'
 import ReviewsIndex from './components/Review/ReviewsIndex'
 import EditReview from './components/Review/EditReview'
 import Checkout from './components/Checkout/Checkout'
+import Footer from './components/FooterEle'
 
 const router = createBrowserRouter([
   {
@@ -69,6 +70,7 @@ function App() {
       <>
         <RouterProvider router={router}>
             <Home/>
+            <Footer/>
         </RouterProvider>
       </>
      

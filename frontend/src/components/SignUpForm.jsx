@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from 'react-router-dom';
 import { createUser, selectCurrentUser } from '../store/sessionReducer'
-import Footer from './FooterEle'
 import logo from '../assets/logo/Amazon-Logo-PNG.png'
+import FooterSign from './FooterSign'
 
 
 const SignUpForm = () => {
@@ -91,7 +91,7 @@ const SignUpForm = () => {
                 </form>
                     <p className='form-description'>By creating an account, you agree to David's Conditions of Use and Privacy Notice</p>
             </div>
-            <Footer></Footer>
+            <FooterSign/>
         </>
     )
 }
