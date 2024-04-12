@@ -27,7 +27,6 @@ const ProductShow = () => {
         dispatch(fetchProduct(productId))
     }, [productId])
 
-
     const handleAddToCart = (e) => {
         e.preventDefault()
         if (!currentUser) {
