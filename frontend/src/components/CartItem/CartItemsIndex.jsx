@@ -38,6 +38,9 @@ const CartItemsIndex = () => {
    const handleCheckout = (e) => {
     e.preventDefault()
     if (currentUser) {
+        cart_itemsArr.map((cart_item) => {
+            dispatch(clearCartItem(cart_item.id))
+        })
         navigate('checkout')
     } else {
         navigate('/signin')

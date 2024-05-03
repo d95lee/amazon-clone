@@ -22,7 +22,7 @@ const Footer = () => {
                     <p>Amazon Clone. Created by David Lee ©2024</p>
                     <div className='footer-socials-container'>
                     <a href="https://www.linkedin.com/in/david-lee-49959a20a/" target="_blank"><img src={white_linkedin} className='footer-linkedin'/></a>
-                    <a href="https://www.linkedin.com/in/david-lee-49959a20a/" target="_blank"><img src={white_github} className='footer-github' /></a>
+                    <a href="https://github.com/d95lee/amazon-clone" target="_blank"><img src={white_github} className='footer-github' /></a>
                     </div>
                 </div>
             

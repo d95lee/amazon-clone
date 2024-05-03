@@ -42,21 +42,6 @@ const NavBar = props => {
         return totalQuantity
     }
 
-    const fetchData = (value) => {
-        dispatch(fetchProducts())
-            .then(() => {
-                const products = useSelector((state) => state.product);
-                const productsArr = Object.values(products);
-                
-                const filteredProducts = productsArr.filter(product => {
-                    return product.name === value;
-                });
-            })
-            // .catch(error => {
-            //     console.error('Error fetching products:', error);
-            // });
-    };
-
     const filter = (e) => {
         e.preventDefault()
         setFilteredData(productsArr.filter(product => 
@@ -126,7 +111,7 @@ const NavBar = props => {
                             <div className='modal-content'>
                                 <ul>{filteredData.map(product => (
                                         <li key={product.id}>
-                                            <p><Link to={`product/${product.id}`}>{product.name}</Link></p>
+                                            <p><Link to={`products/${product.id}`}>{product.name}</Link></p>
                                         </li>
                                     ))}
                                 </ul>

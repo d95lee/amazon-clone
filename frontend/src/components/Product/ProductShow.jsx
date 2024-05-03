@@ -2,24 +2,34 @@ import { useDispatch, useSelector } from 'react-redux'
 import './Product.css'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { fetchProduct, selectProduct } from '../../store/productReducer'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Layout from '../Layout/Layout'
 import AddCartItem from '../CartItem/AddCartItem'
 import { createCartItem } from '../../store/cartItemReducer'
-// import ReviewShow from '../Review/ReviewShow'
 import ReviewsIndex from '../Review/ReviewsIndex'
 import { selectCurrentUser } from '../../store/sessionReducer'
 import Footer from '../FooterEle'
+import blue_logo from '../../assets/logo/amazon-blue.png'
+import { FaStar } from 'react-icons/fa6'
 
 const ProductShow = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    // const productId = 2
+    const [rating, setRating] = useState(null)
+    const [avergeStars, setAverageStars] = useState('')
+
     const { productId } = useParams()
     const product = useSelector(selectProduct(productId))
     const userId = useSelector(state => state.session?.id)
     const currentUser = useSelector(selectCurrentUser)
 
+    const productsRatingsArr = () => {
+
+    }
+
+
+    const selectCurrentProducts = useSelector(state => state.review.productId === productId)
+    console.log(selectCurrentProducts)
 
     const currentDate = new Date()
 
@@ -51,6 +61,25 @@ if (!product) {
                     <div className='show-middle-content'>
                         {product && <p id='product-name'>{product.name}</p>}
                         {/* {product && <p id='product-name'>{product.rating}</p>} */}
+                        <div>
+                            <p>Rating</p>
+                            {[...Array(5)].map((star, index) => {     
+                                const currentStars = index + 1
+                                return (
+                            <label key={index}>
+                                <input type="radio"
+                                    name='rating'
+                                    value={currentStars}
+                                    onClick={() => setRating(currentStars)}
+                                    />
+                                <FaStar className='review-stars' size={20}
+                                        color={currentStars <= (rating) ? "#ffc107" : "e4e5e9"}
+                                        />
+                            </label>
+                                )
+                            })}
+                        </div>
+                        
                         <hr />
                         {product && <p id='product-price'><span className='price-text'>Price:</span> ${product.price}</p>}
                         {product && <p id='product-description'><span className='description-text'>About this item:</span> 
@@ -62,6 +91,12 @@ if (!product) {
 
                 <div className='show-right'>
                     <div id='show-right-content'>
+                        <Link to={'/'}><img className='show-right-logo' src={blue_logo}/></Link>
+                        <p>Enjoy fast, free delivery, exclusive deals, and award-winning 
+                            movies & TV shows with Prime
+                        </p>
+                        
+                        <p className='show-right-price-text'>Buy new:</p>
                         <p className='show-right-price'>${product.price}</p>
                         <p>FREE delivery &emsp;&emsp;&emsp;<span id='date'>{currentDate.toLocaleDateString()}</span> 
                         <br />on orders shipped by Amazon over $35</p>

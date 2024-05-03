@@ -150,6 +150,19 @@
     cursor: pointer;
 }
 
+.show-right-logo {
+    width: 60px;
+    height: auto;
+    margin-right: 200px;
+    margin-top: -20px;
+}
+
+.show-right-price-text {
+    margin-right: 180px;
+    margin-bottom: -20px;
+    margin-left: -10px;
+}
+
 .show-right-price {
     font-size: 26px;
     color: rgb(177, 39, 4);
@@ -158,7 +171,7 @@
     justify-content: flex-end;
     align-items: center;
     text-align: right;
-    margin-right: 140px;
+    margin-right: 180px;
 }
 
 .show-right-text {

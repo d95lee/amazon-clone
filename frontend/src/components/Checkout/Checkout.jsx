@@ -6,7 +6,7 @@ import { fetchCartItems } from '../../store/cartItemReducer'
 import check from '../../assets/icons/check.png'
 import linkedin from '../../assets/icons/linkedin.png'
 import github from '../../assets/icons/github.png'
-import line from '../../assets/gifs/line.gif'
+import truck from '../../assets/gifs/shipping.gif'
 import Footer from '../FooterEle'
 
 const Checkout = () => {
@@ -30,19 +30,21 @@ const Checkout = () => {
             </div>
                 <div className='checkout-content'>
                 
-                    {cart_itemsArr.map((cart_item, index) => (
+                    {/* {cart_itemsArr.map((cart_item, index) => (
                             <div key={index}>           
                                 {cart_item?.photoUrl && <img className='checkout-photo' src={cart_item.photoUrl} /> }                                                      
                             </div>
-                        ))}
+                        ))} */}
                
                 </div>
-                <div className='socials-container'>
-                <a href="https://www.linkedin.com/in/david-lee-49959a20a/" target="_blank"><img src={github} alt="" className='github-icon'/></a>
-                        <img src={line} alt="" className='line-gif'/>
-                        <a href="https://www.linkedin.com/in/david-lee-49959a20a/" target="_blank"><img src={linkedin} alt="" className='linkedin-icon'/></a>
+                <div className='gif-container'>
+                        <img src={truck} alt="" className='truck-gif'/>
                 </div>
                 <em id='socials-text'>Your package will arrive in 2 business days</em>
+                <div className='socials-container'>
+                    <a href="https://github.com/d95lee/amazon-clone" target="_blank"><img src={github} className='github-icon'/></a>
+                    <a href="https://www.linkedin.com/in/david-lee-49959a20a/" target="_blank"><img src={linkedin} className='linkedin-icon'/></a>
+                </div>
             </div>
             <Footer/>
         </Layout>

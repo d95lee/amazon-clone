@@ -340,17 +340,16 @@ body {
 }
 
 .modal-content {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 25%;
     transform: translate(-30%, -30%);
 }
 
 .modal {
+    z-index: 1000;
     overflow-y: hidden;
     text-decoration: none;
-    z-index: 1000;
-    overflow-y: scroll;
 }
 
 .modal a {
@@ -367,7 +366,6 @@ ul {
     top: 40px; /* Move the search results below the search bar */
     left: 500;
     background-color: white; /* Ensure the search results are visible */
-    overflow-y: auto; /* Add vertical scroll if needed */
     width: 600px;
     border-radius: 1px;
     padding-left: 40px;
