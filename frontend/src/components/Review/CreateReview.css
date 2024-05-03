@@ -60,6 +60,7 @@ input[type = radio] {
     width: 50vw;
     height: 250px;
     margin-top: 20px;
+    font-family: Ember;
 }
 
 .review-break {

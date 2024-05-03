@@ -8,7 +8,7 @@ const SubNav = () => {
         <>
             <div className='subnav-bar'>
                 <Link to={'/products'}><p id='text-deals'>Today's Deals</p></Link>
-                <Link to={'/products'}><p id='text-deals'>Keep Shopping For</p></Link>
+                <Link to={'/products'}><p id='text-deals'>Keep Shopping</p></Link>
                 <Link to={'/products'}><p id='text-deals'>Livestreams</p></Link>
                 <Link to={'/products'}><p id='text-deals'>Music</p></Link>
                 <Link to={'/products'}><p id='text-deals'>Amazon Basics</p></Link>

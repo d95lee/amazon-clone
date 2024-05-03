@@ -75,7 +75,9 @@ const CreateReview = () => {
             <hr className='review-break'/>
                 <label><span className='review-headline-text'>Add a headline</span>
                 <br />
-                    <input type="text" className='custom-textbox'
+                    <input type="text" 
+                    className='custom-textbox'
+                    placeholder="What's most important to know?"
                     value={formHeadline}
                     onChange={(e) => setFormHeadline(e.target.value)}
                     />
@@ -84,7 +86,9 @@ const CreateReview = () => {
             <hr className='review-break'/>
                 <label><span className='review-body-text'>Add a written review</span>
                 <br />
-                    <textarea className='custom-textarea' type="text"
+                    <textarea type="text"
+                    className='custom-textarea'
+                    placeholder="What did you like or dislike? What did you use this product for?" 
                     value={formBody}
                     onChange={(e) => setFormBody(e.target.value)}                    
                     />

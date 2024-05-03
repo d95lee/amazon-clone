@@ -17,6 +17,8 @@ import { changeReview, clearReview, createReview, fetchReview, fetchReviews } fr
 const initializeApp = () => {
   const store = configureStore();
 
+  window.store = store
+  window.fetchProducts = fetchProducts
 
   ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>

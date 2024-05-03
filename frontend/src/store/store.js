@@ -4,6 +4,7 @@ import sessionReducer from './sessionReducer'
 import productReducer from './productReducer'
 import cartItemReducer from './cartItemReducer'
 import reviewReducer from './reviewReducer'
+import logger from 'redux-logger'
 
 const rootReducer = combineReducers({
     session: sessionReducer,
@@ -12,14 +13,16 @@ const rootReducer = combineReducers({
     review: reviewReducer
 })
 
-// const temp = [thunk];
+const temp = [thunk];
 
 // if (import.meta.env.DEV) {
 //     const logger = require('thunk-logger');
 //     temp.push(logger);
 // }
 
-const middleware = applyMiddleware(thunk);
+// const middleware = applyMiddleware(thunk);
+
+const middleware = applyMiddleware(...temp, logger);
 
 const configureStore = (initialState = {}) => (
     createStore(rootReducer, initialState, middleware)

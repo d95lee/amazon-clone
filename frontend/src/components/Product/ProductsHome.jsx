@@ -17,7 +17,6 @@ const ProductsHome = () => {
     
     // const products = useSelector(selectProductsArray)
    
-   
     useEffect(() => {
         dispatch(fetchProducts())
     }, [])

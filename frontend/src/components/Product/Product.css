@@ -77,7 +77,7 @@
 
 .show-right {
     background-color: rgb(255, 255, 255);
-    min-width: 200px; 
+    min-width: 300px; 
     width: 20%;
     display: flex;
     justify-content: center;
@@ -154,7 +154,11 @@
     font-size: 26px;
     color: rgb(177, 39, 4);
     position: relative;
-    margin-left: -180px;   
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+    margin-right: 140px;
 }
 
 .show-right-text {

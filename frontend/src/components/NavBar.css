@@ -324,3 +324,57 @@ body {
     margin-left: 36px;
     font-weight: 1000;
 }
+
+
+/* Search Modal */
+
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background: rgba(49, 49, 49, 0.5);
+}
+
+.modal-content {
+    position: absolute;
+    top: 0;
+    left: 25%;
+    transform: translate(-30%, -30%);
+}
+
+.modal {
+    overflow-y: hidden;
+    text-decoration: none;
+    z-index: 1000;
+    overflow-y: scroll;
+}
+
+.modal a {
+    text-decoration: none;
+    color: black;
+}
+
+.modal a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    position: absolute; /* Position the search results absolutely */
+    top: 40px; /* Move the search results below the search bar */
+    left: 500;
+    background-color: white; /* Ensure the search results are visible */
+    overflow-y: auto; /* Add vertical scroll if needed */
+    width: 600px;
+    border-radius: 1px;
+    padding-left: 40px;
+    padding-right: 20px;
+    list-style: none;
+}
+
+body.active-modal {
+    overflow-y: hidden;
+}

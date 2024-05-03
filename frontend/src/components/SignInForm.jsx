@@ -65,11 +65,7 @@ const SignInForm = () => {
 
     const demoUser = (e) => {
         e.preventDefault()
-        const demoEmail = 'demo@user.io'
-        const demoPassword = 'password'
-        // setEmail(demoEmail)
-        // setPassword(demoPassword)
-        dispatch(loginUser({ email: demoEmail, password: demoPassword }))
+        dispatch(loginUser({ email: 'demo@user.io', password: 'password' }))
         // routeChange()
     }
 
