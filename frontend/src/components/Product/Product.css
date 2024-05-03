@@ -75,6 +75,16 @@
     overflow: auto;
 }
 
+.show-product-rating-text {
+    margin-top: 0;
+    margin-right: 5px;
+}
+
+.show-product-rating {
+    display: flex;
+    
+}
+
 .show-right {
     background-color: rgb(255, 255, 255);
     min-width: 300px; 

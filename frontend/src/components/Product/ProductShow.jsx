@@ -11,27 +11,46 @@ import { selectCurrentUser } from '../../store/sessionReducer'
 import Footer from '../FooterEle'
 import blue_logo from '../../assets/logo/amazon-blue.png'
 import { FaStar } from 'react-icons/fa6'
+import { fetchReviews } from '../../store/reviewReducer'
 
 const ProductShow = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const [rating, setRating] = useState(null)
-    const [avergeStars, setAverageStars] = useState('')
+    const [averageStars, setAverageStars] = useState(0)
 
     const { productId } = useParams()
     const product = useSelector(selectProduct(productId))
     const userId = useSelector(state => state.session?.id)
     const currentUser = useSelector(selectCurrentUser)
 
-    const productsRatingsArr = () => {
+    
 
+    const reviews = useSelector((state) => state.review)
+    const reviewsArr = Object.values(reviews)
+
+    const currentProductArr = reviewsArr.filter(review => String(review.productId) === productId)
+    console.log(currentProductArr)
+
+    const productsRatingsArr = () => {
+        let avgRatingsCount = 0
+        currentProductArr.map((review) => {
+            avgRatingsCount += review.rating
+        })
+        
+        setAverageStars(avgRatingsCount / currentProductArr.length)
+        console.log(avgRatingsCount / currentProductArr.length)
     }
 
 
-    const selectCurrentProducts = useSelector(state => state.review.productId === productId)
-    console.log(selectCurrentProducts)
+    // const selectCurrentProducts = useSelector(state => state.review.productId === productId)
+    // console.log(selectCurrentProducts)
 
     const currentDate = new Date()
+
+    useEffect(() => {
+        productsRatingsArr()
+    }, [reviews, currentProductArr])
 
     useEffect(() => {
         dispatch(fetchProduct(productId))
@@ -61,23 +80,25 @@ if (!product) {
                     <div className='show-middle-content'>
                         {product && <p id='product-name'>{product.name}</p>}
                         {/* {product && <p id='product-name'>{product.rating}</p>} */}
-                        <div>
-                            <p>Rating</p>
-                            {[...Array(5)].map((star, index) => {     
-                                const currentStars = index + 1
-                                return (
-                            <label key={index}>
-                                <input type="radio"
-                                    name='rating'
-                                    value={currentStars}
-                                    onClick={() => setRating(currentStars)}
+                        <div className='show-product-rating'>
+                            <p className='show-product-rating-text'>
+                                {parseFloat(averageStars.toFixed(1))}
+                            </p>
+                                {[...Array(5)].map((star, index) => {     
+                                    const currentStars = index + 1
+                                    return (
+                                <label key={index}>
+                                    
+                                    <FaStar 
+                                        className='review-stars' 
+                                        size={20}
+                                        key={index}
+                                        color={currentStars <= (averageStars) ? "#ffc107" : "e4e5e9"}
                                     />
-                                <FaStar className='review-stars' size={20}
-                                        color={currentStars <= (rating) ? "#ffc107" : "e4e5e9"}
-                                        />
-                            </label>
-                                )
-                            })}
+                                </label>
+                                    )
+                                })}
+                                <p className='show-product-rating-text'>test</p>
                         </div>
                         
                         <hr />
