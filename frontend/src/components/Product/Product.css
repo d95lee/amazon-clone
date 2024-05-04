@@ -47,7 +47,7 @@
 #show-left-content {
     width: 70%;
     height: 70%;
-    padding: 50px;
+    padding-right: 50px;
     border: 3px solid rgb(255, 255, 255);
     display: flex;
     justify-content: center;
@@ -71,7 +71,7 @@
 .show-middle-content {
     width: 70%;
     height: 80%;
-    padding-left: 50px;
+    /* padding-left: 50px; */
     padding-right: 50px;
     overflow: auto;
 }
