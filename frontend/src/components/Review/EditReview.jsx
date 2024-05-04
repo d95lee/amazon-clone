@@ -50,7 +50,8 @@ const EditReview = () => {
         const review = reviewsArr.find(review => review.id === reviewId);
         dispatch(changeReview({
             id: reviewId,
-            userId, 
+            userId,
+            title: formHeadline,
             body: formBody,
             productId: productId,
             rating: rating,

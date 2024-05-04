@@ -44,6 +44,17 @@
     font-size: 15px;
 }
 
+.review-title-text {
+    margin-top: -10px;
+    margin-left: 10px;
+}
+
+.review-rating-title {
+    display: flex;
+    font-weight: bold;
+    font-size: 16px;
+}
+
 .verified-purchase-text {
     color: rgb(196, 85, 0);
     font-size: 14px;

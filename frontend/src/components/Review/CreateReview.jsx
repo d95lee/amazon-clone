@@ -30,6 +30,7 @@ const CreateReview = () => {
         e.preventDefault()
         dispatch(createReview({ 
             userId,
+            title: formHeadline,
             body: formBody,
             productId: productId,
             rating: rating,

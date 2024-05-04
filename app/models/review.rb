@@ -13,7 +13,7 @@
 #  updated_at :datetime         not null
 #
 class Review < ApplicationRecord
-    validates :owner, :rating, :body, :username, :user_id, :product_id, presence: true
+    validates :owner, :title, :rating, :body, :username, :user_id, :product_id, presence: true
     
     belongs_to :user
     belongs_to :product

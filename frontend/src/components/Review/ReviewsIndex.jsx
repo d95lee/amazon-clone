@@ -38,7 +38,10 @@ const ReviewsIndex = () => {
                         {<p id='review-owner-text'><img className='profile-pic' src={profile}/><span id='owner-text-positioning'>{review.owner}</span></p>}
             
                         <p className='verified-purchase-text'>Verified Purchase</p>
-                        <ReviewStars initialRating={review.rating}/>
+                        <div className='review-rating-title'>
+                            <ReviewStars initialRating={review.rating}/>
+                            {<p className='review-title-text'>{review.title}</p>}
+                        </div>
                         {<p id='review-body-text'>{review.body}</p>}
                         {(currentUser?.id === review.userId) ? <Link to={`edit_review/${review.id}`}><button className='edit-button'>Edit</button></Link> : ''}
                         {(currentUser?.id === review.userId) ? <button onClick={() => dispatch(clearReview(review.id))} className='delete-button'>Delete</button> : ''}
