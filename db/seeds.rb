@@ -748,8 +748,10 @@ ApplicationRecord.transaction do
 
 
 
-      Review.create!(
-  owner: 'John', 
+# Review for p1
+Review.create!(
+  title: "Powerhouse in a Compact Package",
+  owner: "John", 
   rating: 5, 
   body: 'This Lenovo X1 Thinkpad is a powerhouse in a compact package! It\'s incredibly lightweight yet delivers exceptional performance. Couldn\'t be happier with my purchase.', 
   username: 'demo@user.io', 
@@ -757,8 +759,10 @@ ApplicationRecord.transaction do
   product_id: 1
 )
 
+# Review for p2
 Review.create!(
-  owner: 'Emily', 
+  title: "Delicious Variety Pack",
+  owner: "Emily", 
   rating: 4, 
   body: 'I never knew coffee could taste this good until I tried Nespresso Capsules VertuoLine! The variety pack offers a great selection, and each cup is rich and flavorful.', 
   username: 'demo@user.io', 
@@ -766,8 +770,10 @@ Review.create!(
   product_id: 2
 )
 
+# Review for p3
 Review.create!(
-  owner: 'Michael', 
+  title: "Perfect Post-Workout Refuel",
+  owner: "Michael", 
   rating: 5, 
   body: 'Premier Protein Shake is my go-to after workouts. The chocolate flavor is delicious, and the protein content is just what I need to refuel.', 
   username: 'demo@user.io', 
@@ -775,8 +781,10 @@ Review.create!(
   product_id: 3
 )
 
+# Review for p4
 Review.create!(
-  owner: 'Sarah', 
+  title: "Mind-Blowing VR Experience",
+  owner: "Sarah", 
   rating: 5, 
   body: 'Quest 2 is a game-changer! The VR experience is mind-blowing, and the headset is comfortable to wear for extended gaming sessions. Highly recommend it to any gamer.', 
   username: 'demo@user.io', 
@@ -784,8 +792,10 @@ Review.create!(
   product_id: 4
 )
 
+# Review for p5
 Review.create!(
-  owner: 'Mark', 
+  title: "Worth Every Penny",
+  owner: "Mark", 
   rating: 5, 
   body: 'The Dyson V11 vacuum is worth every penny! It\'s powerful, versatile, and makes cleaning a breeze. Plus, the battery life is impressive.', 
   username: 'demo@user.io', 
@@ -793,8 +803,10 @@ Review.create!(
   product_id: 5
 )
 
+# Review for p6
 Review.create!(
-  owner: 'Jessica', 
+  title: "Sturdy and Reliable",
+  owner: "Jessica", 
   rating: 5, 
   body: 'DEWALT never disappoints, and this cordless drill is no exception. It\'s sturdy, reliable, and perfect for all my DIY projects around the house.', 
   username: 'demo@user.io', 
@@ -802,8 +814,10 @@ Review.create!(
   product_id: 6
 )
 
+# Review for p7
 Review.create!(
-  owner: 'Alex', 
+  title: "Lifesaver for New Parents",
+  owner: "Alex", 
   rating: 5, 
   body: 'HelloBaby Upgrade Monitor is a lifesaver for new parents! The picture quality is excellent, and the battery life lasts through the night. Peace of mind guaranteed.', 
   username: 'demo@user.io', 
@@ -811,8 +825,10 @@ Review.create!(
   product_id: 7
 )
 
+# Review for p8
 Review.create!(
-  owner: 'Michelle', 
+  title: "Perfect for Organizing Garage",
+  owner: "Michelle", 
   rating: 5, 
   body: 'Amazon Basics 5-Shelf Adjustable rack is perfect for organizing my garage. It\'s sturdy, easy to assemble, and holds a ton of stuff. Great value for the price!', 
   username: 'demo@user.io', 
@@ -820,8 +836,10 @@ Review.create!(
   product_id: 8
 )
 
+# Review for p9
 Review.create!(
-  owner: 'Kevin', 
+  title: "Maximizes Kitchen Space",
+  owner: "Kevin", 
   rating: 5, 
   body: 'MUDEELA Pots and Pans Organizer is a game-changer for my kitchen! It maximizes space and keeps everything neatly organized. Wish I\'d bought it sooner.', 
   username: 'demo@user.io', 
@@ -829,8 +847,10 @@ Review.create!(
   product_id: 9
 )
 
+# Review for p10
 Review.create!(
-  owner: 'Rachel', 
+  title: "New Favorite Summer Shirt",
+  owner: "Rachel", 
   rating: 5, 
   body: 'Amazon Essentials Men\'s Slim-Fit Vacation Shirt is my new favorite summer shirt! It\'s comfortable, stylish, and perfect for beach vacations. Will definitely buy more colors.', 
   username: 'demo@user.io', 
@@ -838,8 +858,9 @@ Review.create!(
   product_id: 10
 )
 
-
+# Review for p11
 Review.create!(
+  title: "Disappointing Ant Control",
   owner: "David", 
   rating: 2, 
   body: "Ants everywhere! Tried the TERRO T300B Liquid Ant Killer, but it didn't work. Waste of money.", 
@@ -848,7 +869,9 @@ Review.create!(
   product_id: 11
 )
 
+# Review for p12
 Review.create!(
+  title: "Adorable Succulent Pots",
   owner: "Sophia", 
   rating: 4, 
   body: "These succulent pots are adorable! They add a fun touch to my desk, and the drainage hole is convenient.", 
@@ -857,7 +880,9 @@ Review.create!(
   product_id: 12
 )
 
+# Review for p13
 Review.create!(
+  title: "Overpriced Tumbler",
   owner: "Daniel", 
   rating: 2, 
   body: "The Stanley Quencher tumbler is overpriced for what it offers. Not impressed with its insulation.", 
@@ -866,7 +891,9 @@ Review.create!(
   product_id: 13
 )
 
+# Review for p14
 Review.create!(
+  title: "Headache to Set Up",
   owner: "Jennifer", 
   rating: 1, 
   body: "The HP DeskJet printer is a headache to set up and prints slowly. Disappointed with the quality.", 
@@ -875,7 +902,9 @@ Review.create!(
   product_id: 14
 )
 
+# Review for p15
 Review.create!(
+  title: "Sluggish Performance",
   owner: "Brian", 
   rating: 3, 
   body: "SAMSUNG Galaxy Tab A9+ is sluggish and freezes often. Not worth the money.", 
@@ -884,7 +913,9 @@ Review.create!(
   product_id: 15
 )
 
+# Review for p16
 Review.create!(
+  title: "Flimsy Pickleball Paddles",
   owner: "Jessica", 
   rating: 2, 
   body: "These pickleball paddles feel flimsy and cheap. Not suitable for serious players.", 
@@ -893,7 +924,9 @@ Review.create!(
   product_id: 16
 )
 
+# Review for p17
 Review.create!(
+  title: "Poor Quality Cables",
   owner: "Andrew", 
   rating: 2, 
   body: "The USB C to USB C cables stopped working after a week. Poor quality.", 
@@ -902,7 +935,9 @@ Review.create!(
   product_id: 17
 )
 
+# Review for p18
 Review.create!(
+  title: "Flimsy Magnetic Tiles",
   owner: "Rachel", 
   rating: 1, 
   body: "The magnetic tiles are flimsy and don't stick together well. Not worth the money.", 
@@ -911,7 +946,9 @@ Review.create!(
   product_id: 18
 )
 
+# Review for p19
 Review.create!(
+  title: "Sticky and Short-Lasting",
   owner: "Michael", 
   rating: 4, 
   body: "NYX Butter Gloss is too sticky and doesn't last long. Disappointed with the quality.", 
@@ -920,7 +957,9 @@ Review.create!(
   product_id: 19
 )
 
+# Review for p20
 Review.create!(
+  title: "Boring and Outdated",
   owner: "Emily", 
   rating: 2, 
   body: "Connect 4 game is boring and outdated. Not fun for kids or adults.", 
@@ -929,11 +968,9 @@ Review.create!(
   product_id: 20
 )
 
-
-
-
 # Review for p21
 Review.create!(
+  title: "Tricky to Set Up But Works Well",
   owner: "Sophia", 
   rating: 3, 
   body: "I was excited to try out this label maker, but I found it a bit tricky to set up initially. Once I got the hang of it, though, it worked well for basic labeling needs.", 
@@ -944,6 +981,7 @@ Review.create!(
 
 # Review for p22
 Review.create!(
+  title: "Fantastic Sound Quality",
   owner: "Michael", 
   rating: 4, 
   body: "These AirPods are fantastic! The sound quality is amazing, and they're so easy to set up with my iPhone. My only complaint is that they're a bit pricey.", 
@@ -954,6 +992,7 @@ Review.create!(
 
 # Review for p23
 Review.create!(
+  title: "Disappointing Sound Quality",
   owner: "Emma", 
   rating: 2, 
   body: "I was disappointed with this Bluetooth speaker. The sound quality was not as good as I expected, and the LED lights were more distracting than enjoyable.", 
@@ -964,6 +1003,7 @@ Review.create!(
 
 # Review for p24
 Review.create!(
+  title: "Lifesaver for Outdoor Adventures",
   owner: "Alex", 
   rating: 5, 
   body: "This solar charger is a lifesaver! I take it with me on all my outdoor adventures, and it never lets me down. The built-in flashlight is a handy bonus too.", 
@@ -974,6 +1014,7 @@ Review.create!(
 
 # Review for p25
 Review.create!(
+  title: "Stylish but Lacking Sound Quality",
   owner: "Olivia", 
   rating: 3, 
   body: "These headphones are stylish and comfortable to wear, but I found the sound quality to be lacking. They're decent for everyday use, but not great for audiophiles.", 
@@ -984,6 +1025,7 @@ Review.create!(
 
 # Review for p26
 Review.create!(
+  title: "Shorter Lifespan Than Expected",
   owner: "Daniel", 
   rating: 2, 
   body: "These batteries didn't last as long as I expected. I had to replace them much sooner than other brands I've used in the past.", 
@@ -994,6 +1036,7 @@ Review.create!(
 
 # Review for p27
 Review.create!(
+  title: "Easy to Transfer Photos",
   owner: "Sophie", 
   rating: 4, 
   body: "I love this digital picture frame! It's so easy to transfer photos to it from my phone, and the touch screen interface is intuitive to use.", 
@@ -1004,6 +1047,7 @@ Review.create!(
 
 # Review for p28
 Review.create!(
+  title: "Beautiful Display but Poor Speakers",
   owner: "Ethan", 
   rating: 3, 
   body: "This gaming monitor has a beautiful display, but the speakers are not very good. I had to use external speakers to get decent sound quality.", 
@@ -1014,6 +1058,7 @@ Review.create!(
 
 # Review for p29
 Review.create!(
+  title: "Exceeds Expectations for Flying Fun",
   owner: "Ava", 
   rating: 5, 
   body: "This drone exceeded my expectations! It's easy to fly, and the camera quality is impressive. Plus, the extra battery means I can fly for longer.", 
@@ -1024,6 +1069,7 @@ Review.create!(
 
 # Review for p30
 Review.create!(
+  title: "Great Tool for Tracking Fitness Goals",
   owner: "destroyer231@user.io", 
   rating: 4, 
   body: "I've been using this smart scale for a few weeks now, and it's been a great tool for tracking my fitness goals. The app is easy to use, and the measurements seem accurate.", 
@@ -1032,10 +1078,9 @@ Review.create!(
   product_id: 30
 )
 
-
-
 # Review for p31
 Review.create!(
+  title: "Great Addition to Bedroom",
   owner: "Sophia", 
   rating: 4, 
   body: "This dresser is a great addition to my bedroom! It was easy to assemble, and the fabric drawers are surprisingly sturdy. It's perfect for keeping my clothes organized.", 
@@ -1046,6 +1091,7 @@ Review.create!(
 
 # Review for p32
 Review.create!(
+  title: "Flimsy Shoe Rack",
   owner: "Michael", 
   rating: 2, 
   body: "I had high hopes for this shoe rack, but it turned out to be quite flimsy. The covers don't stay in place very well, and it's not as stable as I would like.", 
@@ -1056,6 +1102,7 @@ Review.create!(
 
 # Review for p33
 Review.create!(
+  title: "Excellent Quality Furniture Cover",
   owner: "Emma", 
   rating: 5, 
   body: "This furniture cover is a lifesaver! It fits my outdoor sectional sofa perfectly and keeps it protected from the elements. The quality is excellent for the price.", 
@@ -1066,6 +1113,7 @@ Review.create!(
 
 # Review for p34
 Review.create!(
+  title: "Convenient but Lid Issues",
   owner: "Alex", 
   rating: 3, 
   body: "These small trash cans are convenient for tight spaces, but the pop-up lids tend to get stuck sometimes. Overall, they do the job, but they could be improved.", 
@@ -1076,6 +1124,7 @@ Review.create!(
 
 # Review for p35
 Review.create!(
+  title: "Rustic Addition to Bathroom Decor",
   owner: "Olivia", 
   rating: 4, 
   body: "I love this bathroom furniture set! It adds a rustic touch to my bathroom decor, and the shelves are perfect for storing toiletries. The only downside is that it was a bit tricky to assemble.", 
@@ -1086,6 +1135,7 @@ Review.create!(
 
 # Review for p36
 Review.create!(
+  title: "Game-Changer for Moving Furniture",
   owner: "Daniel", 
   rating: 5, 
   body: "This furniture dolly set is a game-changer! It made moving my heavy furniture so much easier, and the extra accessories were a nice bonus. Highly recommend!", 
@@ -1096,6 +1146,7 @@ Review.create!(
 
 # Review for p37
 Review.create!(
+  title: "Convenient End Tables with Charging",
   owner: "Sophie", 
   rating: 3, 
   body: "These end tables with charging stations are a convenient addition to my living room, but the cords could be longer. I had to rearrange my furniture to reach the nearest outlet.", 
@@ -1106,6 +1157,7 @@ Review.create!(
 
 # Review for p38
 Review.create!(
+  title: "Comfortable Sectional Sofa",
   owner: "Ethan", 
   rating: 4, 
   body: "This sectional sofa is so comfortable! It's perfect for lounging and watching TV. The only downside is that it took longer to assemble than expected.", 
@@ -1116,6 +1168,7 @@ Review.create!(
 
 # Review for p39
 Review.create!(
+  title: "Disappointing Fabric Quality",
   owner: "Ava", 
   rating: 2, 
   body: "I was disappointed with this recliner chair. It looked great in the pictures, but the fabric feels cheap and uncomfortable. Not worth the price in my opinion.", 
@@ -1126,6 +1179,7 @@ Review.create!(
 
 # Review for p40
 Review.create!(
+  title: "Stylish and Functional Sleeper Sofa",
   owner: "William", 
   rating: 5, 
   body: "I absolutely love this sleeper sectional sofa! It's stylish, comfortable, and the storage chaise is a genius design. Assembly was a breeze too. Highly recommend!", 
@@ -1134,12 +1188,9 @@ Review.create!(
   product_id: 40
 )
 
-
-
-
-
 # Review for p41
 Review.create!(
+  title: "Fun Twist on Classic Tic Tac Toe",
   owner: "Sophia", 
   rating: 4, 
   body: "This Toss Across game is a blast! It's a fun twist on classic Tic Tac Toe and perfect for family game nights. The only downside is that the bean bags are a bit lightweight.", 
@@ -1150,6 +1201,7 @@ Review.create!(
 
 # Review for p42
 Review.create!(
+  title: "Entertaining but Fast-Paced Gameplay",
   owner: "Michael", 
   rating: 3, 
   body: "The Bop It! Extreme game is entertaining, but it can be frustratingly fast-paced. It's definitely not for everyone, especially if you're not a fan of rapid-fire gameplay.", 
@@ -1160,6 +1212,7 @@ Review.create!(
 
 # Review for p43
 Review.create!(
+  title: "Fantastic Mess-Free Drawing Tool",
   owner: "Emma", 
   rating: 5, 
   body: "This LCD writing tablet is fantastic! My kids love doodling on it, and I appreciate that it's mess-free. It's also great for practicing writing and drawing skills.", 
@@ -1170,6 +1223,7 @@ Review.create!(
 
 # Review for p44
 Review.create!(
+  title: "Fun Tabletop Basketball Game",
   owner: "Alex", 
   rating: 4, 
   body: "The basketball shooting game is a fun way to pass the time! It's compact and easy to set up on any tabletop. The only downside is that the mini basketballs are a bit flimsy.", 
@@ -1180,6 +1234,7 @@ Review.create!(
 
 # Review for p45
 Review.create!(
+  title: "Hit with Kids",
   owner: "Olivia", 
   rating: 5, 
   body: "These dinosaur toys are a hit with my kids! They love taking them apart and putting them back together. It's a great way to encourage STEM learning and creativity.", 
@@ -1190,6 +1245,7 @@ Review.create!(
 
 # Review for p46
 Review.create!(
+  title: "Inaccurate and Boring",
   owner: "Daniel", 
   rating: 2, 
   body: "I was disappointed with the digital shooting toy. It's not very accurate, and the targets don't always reset properly. My kids lost interest in it pretty quickly.", 
@@ -1200,6 +1256,7 @@ Review.create!(
 
 # Review for p47
 Review.create!(
+  title: "Fun Build with Colorful Bricks",
   owner: "Sophie", 
   rating: 4, 
   body: "The LEGO Creator parrot set is a fun build! My kids enjoyed transforming it into different animals, and the colorful bricks are great for sparking creativity.", 
@@ -1210,33 +1267,37 @@ Review.create!(
 
 # Review for p48
 Review.create!(
+  title: "Cool Set but Overpriced",
   owner: "Ethan", 
   rating: 3, 
-  body: "The LEGO Super Mario Piranha Plant set is cool, but it's a bit overpriced for what you get. The build was straightforward, but it lacks some of the play features of other LEGO sets.", 
-  username: "sova421@gmail.com", 
-  user_id: 3, 
+  body: "The LEGO Star Wars set is cool, but I think it's overpriced for what you get. My son enjoyed building it, but I'm not sure it was worth the high price tag.", 
+  username: "destroyer231@user.io", 
+  user_id: 4, 
   product_id: 48
 )
 
 # Review for p49
 Review.create!(
+  title: "Great Starter Set for Kids",
   owner: "Ava", 
   rating: 5, 
-  body: "This flying orb ball toy is amazing! It's so much fun to play with, and the different flight modes keep it interesting. It's also surprisingly durable.", 
-  username: "sova421@gmail.com", 
-  user_id: 3, 
+  body: "This watercolor paint set is a great starter kit for kids! The colors are vibrant, and the brushes are easy for little hands to hold. It's perfect for sparking their creativity.", 
+  username: "destroyer231@user.io", 
+  user_id: 4, 
   product_id: 49
 )
 
 # Review for p50
 Review.create!(
+  title: "Easy-to-Follow Recipes",
   owner: "William", 
-  rating: 3, 
-  body: "The dancing cactus toy is cute and entertaining, but the music can get a bit repetitive. It's a fun novelty item for a while, but it loses its charm after a bit.", 
-  username: "destroyer231@user.io", 
+  rating: 4, 
+  body: "This cookbook is fantastic! The recipes are easy to follow, and the pictures make everything look delicious. My only complaint is that there aren't enough vegetarian options.", 
+  username: "will_fitness", 
   user_id: 4, 
   product_id: 50
 )
+
 
 
       # More users

@@ -30,6 +30,12 @@ const EditReview = () => {
             if (setFormBody(review.body) === review.body) {
                 return setFormBody(review.body)
             }
+            if (setFormHeadline(review.title) === review.title) {
+                return setFormHeadline(review.title)
+            }
+            if (setRating(review.rating) === review.rating) {
+                return setRating(review.rating)
+            }
         })
     }, [])
 
@@ -50,7 +56,8 @@ const EditReview = () => {
         const review = reviewsArr.find(review => review.id === reviewId);
         dispatch(changeReview({
             id: reviewId,
-            userId, 
+            userId,
+            title: formHeadline,
             body: formBody,
             productId: productId,
             rating: rating,
@@ -67,6 +74,8 @@ const EditReview = () => {
             <div className="review-container">
                 <div className='review-title-container'>
                     <h1 className='review-edit-title'>Edit Review</h1>
+                    {product?.photoUrl && <img className='review-photo' src={product.photoUrl} /> }
+                    {product?.name}
                     <hr className='review-break'/>
                 </div>
             <hr className='review-break-top'/>

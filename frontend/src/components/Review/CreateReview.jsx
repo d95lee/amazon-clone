@@ -30,6 +30,7 @@ const CreateReview = () => {
         e.preventDefault()
         dispatch(createReview({ 
             userId,
+            title: formHeadline,
             body: formBody,
             productId: productId,
             rating: rating,
@@ -46,6 +47,8 @@ const CreateReview = () => {
             <div className="review-container">
                 <div className='review-title-container'>
                     <h1 className='review-title'>Create Review</h1>
+                    {product?.photoUrl && <img className='review-photo' src={product.photoUrl} /> }
+                    {product?.name}
                     <hr className='review-break'/>
                 </div>
             <hr className='review-break-top'/>

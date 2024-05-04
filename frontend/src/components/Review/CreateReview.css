@@ -25,12 +25,13 @@ input[type = radio] {
 
 .review-title {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
     margin-right: 750px;
 }
 
-
+.review-photo {
+    width: 50px;
+    height: auto;
+}
 
 .review-headline-text {
     font-size: 22px;
