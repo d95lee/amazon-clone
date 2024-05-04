@@ -50,7 +50,7 @@ const ProductShow = () => {
 
     useEffect(() => {
         productsRatingsArr()
-    }, [reviews, currentProductArr])
+    }, [reviews])
 
     useEffect(() => {
         dispatch(fetchProduct(productId))
@@ -98,7 +98,7 @@ if (!product) {
                                 </label>
                                     )
                                 })}
-                                <p className='show-product-rating-text'>test</p>
+                                <p className='show-product-review-total-text'>{currentProductArr.length} ratings</p>
                         </div>
                         
                         <hr />
@@ -111,7 +111,7 @@ if (!product) {
                 </div>
 
                 <div className='show-right'>
-                    <div id='show-right-content'>
+                    <div className='show-right-content'>
                         <Link to={'/'}><img className='show-right-logo' src={blue_logo}/></Link>
                         <p>Enjoy fast, free delivery, exclusive deals, and award-winning 
                             movies & TV shows with Prime

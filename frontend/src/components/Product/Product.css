@@ -70,8 +70,10 @@
 
 .show-middle-content {
     width: 70%;
-    height: 70%;
-    padding: 50px;
+    height: 80%;
+    padding-left: 50px;
+    padding-right: 50px;
+    /* margin-top: -80px; */
     overflow: auto;
 }
 
@@ -81,8 +83,12 @@
 }
 
 .show-product-rating {
-    display: flex;
-    
+    display: flex;    
+}
+
+.show-product-review-total-text {
+    margin-top: 0;
+    margin-left: 20px;
 }
 
 .show-right {
@@ -94,9 +100,10 @@
     align-items: center;
 }
 
-#show-right-content {
+.show-right-content {
     width: 70%;
     height: 70%;
+    min-width: 270px;
     padding: 30px;
     border: 2px solid rgb(213, 217, 217);
     display: flex;
