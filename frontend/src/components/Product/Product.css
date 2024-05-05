@@ -79,6 +79,7 @@
 .show-product-rating-text {
     margin-top: 0;
     margin-right: 5px;
+    font-weight: bolder;
 }
 
 .show-product-rating {
@@ -88,6 +89,11 @@
 .show-product-review-total-text {
     margin-top: 0;
     margin-left: 20px;
+}
+
+.show-product-category-text {
+    margin-top: -5px;
+    margin-left: 10px;
 }
 
 .show-right {

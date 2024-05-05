@@ -100,7 +100,7 @@ if (!product) {
                                 })}
                                 <p className='show-product-review-total-text'>{currentProductArr.length} ratings</p>
                         </div>
-                                <p>{product.category}</p>
+                                <p className='show-product-category-text'>in {product.category}</p>
                         
                         <hr />
                         {product && <p id='product-price'><span className='price-text'>Price:</span> ${product.price}</p>}

@@ -551,7 +551,124 @@ ApplicationRecord.transaction do
 
 
 
+      p51 = Product.create!(
+        name: "adidas Men's Essentials Warm-up 3-Stripes Track Top",
+        price: 28.22,
+        category: "Clothing",
+        description: "Men's adidas track jacket designed for comfort. Regular fit is not tight and not loose, the perfect in-between fit. Full zip with stand-up collar lets you adjust your temperature. Front pockets for storage; Ribbed cuffs and hem for a snug fit. This product is made with Primegreen, a series of high-performance recycled materials."
+      )
+      file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p51.jpg')
+      p51.photo.attach(io: file, filename: 'p51.jpg')
 
+
+      p52 = Product.create!(
+        name: "Nike mens NSW Club Joggers",
+        price: 39.50,
+        category: "Clothing",
+        description: "Nike joggers combining comfort with a classic look for everyday wear. Brushed-back fleece sweatpants for men that feel soft and smooth. Men's jogger sweatpants with ribbed cuffs giving you the classic jogger look to show off your kicks. These joggers for men let you personalize the fit with an elastic waistband and adjustable drawcord. Machine wash, imported, Body: 80-82% cotton/18-20% polyester. Side pocket knuckle side/back pocket: 100% cotton."
+      )
+      file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p52.jpg')
+      p52.photo.attach(io: file, filename: 'p52.jpg')
+
+
+      p53 = Product.create!(
+        name: "Dokotoo Womens Color Block Fashion Short Sleeve Crewneck Knitted Spring Summer Casual Loose T Shirts Tops",
+        price: 19.98,
+        category: "Clothing",
+        description: "Material: Dokotoo womens's elastic knit striped T shirts, Crafted from ultra-soft, skin-friendly fabric that resists pilling for lasting comfort. Features: Featuring a bold combination of colors, a classic round neckline, a loose fit, and short sleeves, this garment allows you to stand out and showcase your daring sense of fashion. Versatile: Perfect for the spring and summer seasons. It pairs seamlessly with pants, jeans, casual trousers. Occasions: Suitable for everyday wear, office, street fashion, dating, and outdoor activities. Cleaning: Wash Recommended With Cold Water/Do Not Bleach/Hang Or Line Dry/Wash with like colours,that will increase the durability of your clothes."
+      )
+      file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p53.jpg')
+      p53.photo.attach(io: file, filename: 'p53.jpg')
+
+
+      p54 = Product.create!(
+        name: "Lee Women's Legendary Mid Rise Flare Jean",
+        price: 18.78,
+        category: "Clothing",
+        description: "MID RISE. Show the world a thing or two about being the fashionable legend you already know you are with these mid rise flares. Hitting comfortably at the waist that gives way to a flare leg, these jeans are flattering and on-trend. LEGENDARY DETAILS. These flare jeans are finished with our iconic logo patch, spade pockets and hardware that make Lee jeans unique. STRETCH DENIM. Strut with confidence in these flattering flare jeans. Made from authentic stretch denim, they move with you for all-day comfort. A LIFETIME OF QUALITY. For over 100 years, Lee has produced quality apparel with durability and long-lasting construction in mind. Lee is committed to designing clothing that conforms to your body, allowing you to move through life freely. SPECIFICATIONS. 5 pockets. Zipper fly with button closure. Inseam: 31\" short, 33\" medium, 35\" long. Rise: 9.5\". Bottom Leg Opening: 23\". Destruction details may vary by colorway."
+      )
+      file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p54.jpg')
+      p54.photo.attach(io: file, filename: 'p54.jpg')
+
+      p55 = Product.create!(
+        name: "Trendy Queen Womens Oversized Hoodies Fleece Sweatshirts Long Sleeve Sweaters Pullover Fall Clothes with Pocket",
+        price: 36.99,
+        category: "Clothing",
+        description: "Material: Made of 50% polyester 50% cotton, these materials are thick and comfortable, keep you warm in the fall and winter. Design: Oversized hoodie, pullover sweatshirts, drop shoulder collar, long sleeve sweater with pocket, fall outfits for women, winter fashion clothes, aesthetic clothing, y2k fleece casual style. Match: This fall fashion hoodie is the ideal choice in your wardrobe, one of the best choices for autumn and winter outfits. Easy to match with pants, jeans, joggers, sweatpants, and you can match anything you like inside, like underscrub shirts, tank top, crop top, vest, etc. Occasion: This pullover sweatshirt is suitable for casual, office, party, school, running, sport, gym, dancing, skating, hiking, biking, yoga, spring, fall, and winter. Machine washable, hand wash cold water. Do not bleach."
+      )
+      file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p55.jpg')
+      p55.photo.attach(io: file, filename: 'p55.jpg')
+
+
+      p56 = Product.create!(
+        name: "Amazon Essentials Women's French Terry Fleece Crewneck Sweatshirt (Available in Plus Size)",
+        price: 7.70,
+        category: "Clothing",
+        description: "REGULAR FIT: Close but comfortable fit through chest, waist, and hips. COZY BRUSHED BACK FLEECE: Buttery soft and comfy midweight cotton blend fleece with brushed interior. CLASSIC SWEATSHIRT: Perfect for layering with your favorite t-shirt or pair back to matching sweatpants for a head-to-toe comfy look. Designed to be both your on the go and lounging essential. DETAILS: Flattering open crewneck, long sleeves and soft rib detail at neck, cuffs, and hem for enhanced stretch and recovery."
+      )
+      file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p56.jpg')
+      p56.photo.attach(io: file, filename: 'p56.jpg')
+
+      p57 = Product.create!(
+        name: "Blowfish Women's Marley Slip On Sneaker",
+        price: 21.95,
+        category: "Clothing",
+        description: "Slip on Entry. Decorative Elastic Detail. Insole Made Using Bloom Foam."
+      )
+      file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p57.jpg')
+      p57.photo.attach(io: file, filename: 'p57.jpg')
+      
+
+      p58 = Product.create!(
+        name: "Dr. Martens Leona Boot",
+        price: 150.62,
+        category: "Clothing",
+        description: "Made with Vintage Smooth, a retro version of signature smooth leather with subtle grained effect and contrast base color. Built on the rebelliously comfortable Dr. Martens Airwair air-cushioned sole. Sole is slip-resistant with superior abrasion, and is oil and fat resistant, too. Classic Doc's DNA is in full effect, with visible stitching, grooved sides and a scripted heel-loop. Platform height is 1.5\", and heel height is 2\"."
+      )
+      file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p58.jpg')
+      p58.photo.attach(io: file, filename: 'p58.jpg')
+      
+      p59 = Product.create!(
+        name: "Crocs Unisex-Adult Classic Clogs",
+        price: 36.14,
+        category: "Clothing",
+        description: "Crocs For Women And Men: The Crocs Classic Clogs Are Not Only The Most Comfortable Shoes For Women And Men But Also Easy To Clean Just Using Soap And Water And Allowing For A Quick Dry. Lightweight And Fun: The Crocs For Men And Women Feature Lightweight Iconic Crocs Comfort. Ventilation Ports Add Breathability And Help Shed Water And Debris Quickly. What Size Should I Buy?: These Men'S And Women'S Crocs Offer A Roomy Fit And We Recommend Ordering A Size Down To The Next Largest Whole Size. Designed To Fit: These Slip-On Clogs Are Easy To Take On And Off, While Being Extremely Durable. These Crocs Even Offer Pivoting Heel Straps For A More Secure Fit. Shop with Confidence: Crocs products are backed by our 90-day manufacturer's warranty for high quality and authenticity. Terms and conditions apply."
+      )
+      file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p59.jpg')
+      p59.photo.attach(io: file, filename: 'p59.jpg')
+
+
+      p60 = Product.create!(
+        name: "Merrell Men's, Moab 3 Hiking Shoe",
+        price: "71.00 - 120.00",
+        category: "Clothing",
+        description: "Pigskin leather and mesh upper 100% recycled laces and webbing Bellows tongue keeps out debris Protective toe cap 100% recycled mesh lining Kinetic Fit ADVANCED removable contoured insole with reinforced heel cushioning for medium support Molded nylon arch shankLightweight EVA foam midsole for stability and comfort Vibram TC5+ rubber sole. Merrell is focused on merging performance, styling, and comfort to empower all people to confidently explore the outdoors. Merrell Air Cushion in the heel absorbs shock and adds stability."
+      )
+      file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p60.jpg')
+      p60.photo.attach(io: file, filename: 'p60.jpg')
+
+      
+      p61 = Product.create!(
+        name: "New Balance Men's Fresh Foam Arishi V4 Running Shoe",
+        price: 40.20,
+        category: "Clothing",
+        description: "Fresh Foam midsole cushioning is precision engineered to deliver an ultra-cushioned, lightweight ride. Mesh upper with suede and knit hits. Upper features no-sew overlays for a sleek fit and feel. Textured logo and embroidered details. Durable rubber outsole."
+      )
+      file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p61.jpg')
+      p61.photo.attach(io: file, filename: 'p61.jpg')
+
+      
+      p62 = Product.create!(
+        name: "Womens Classic Coat Lapel Collar Open Front Belted Long Jacket",
+        price: 79.99,
+        category: "Clothing",
+        description: "Classic coat with lapel collar, open front, and belted design. Made of 80% polyester and 20% cotton. Features a tie closure. Hand wash only."
+      )
+      file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p62.jpg')
+      p62.photo.attach(io: file, filename: 'p62.jpg')
+      
+
+      
       # p51 = Product.create!(
       #   name: '',
       #   price: '',
