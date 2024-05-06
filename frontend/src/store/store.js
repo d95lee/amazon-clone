@@ -30,7 +30,7 @@ const configureStore = (initialState = {}) => (
 )
 
 // Bottom is for dev mode
-
+test
 // const temp = [thunk];
 // const middleware = applyMiddleware(...temp, logger);
 
