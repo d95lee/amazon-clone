@@ -30,7 +30,6 @@ const ProductShow = () => {
     const reviewsArr = Object.values(reviews)
 
     const currentProductArr = reviewsArr.filter(review => String(review.productId) === productId)
-    console.log(currentProductArr)
 
     const productsRatingsArr = () => {
         let avgRatingsCount = 0
@@ -39,7 +38,6 @@ const ProductShow = () => {
         })
         
         setAverageStars(avgRatingsCount / currentProductArr.length)
-        console.log(avgRatingsCount / currentProductArr.length)
     }
 
 
