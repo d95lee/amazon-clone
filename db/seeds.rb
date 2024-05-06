@@ -44,17 +44,23 @@ ApplicationRecord.transaction do
       email: 'destroyer231@user.io',
       password: '123456'
     )
+    #Categories
+    # Electronics, Clothing, Furniture, Toys & Games, Office Products
+    # Baby, Books, Sports & Outdoors, Beauty, Instruments, Pet Supplies
+    # Food, Appliances, Garden, Kitchen Supplies
 
     p1 = Product.create!(
       name: 'Lenovo X1 Thinkpad', 
-      price: '799.99', 
+      price: '799.99',
+      category: 'Electronics', 
       description: 'Ultralight starting weight of just 1.12kg / 2.48lb')
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/lenovo.jpg')
       p1.photo.attach(io: file, filename: 'lenovo.jpg')
 
     p2 = Product.create!(
       name: 'Nespresso Capsules VertuoLine, Medium and Dark Roast Coffee, Variety Pack, Stormio, Odacio, Melozio, 30 Count, Brews 7.77 Fl Oz (Pack of 3 )', 
-      price: '37.50', 
+      price: '37.50',
+      category: 'Food', 
       description: 'NESPRESSO VERTUOLINE VARIETY PACK ASSORTMENT: This Nespresso coffee assortment offers 30 Nespresso Pods in a variety of 3 best-selling coffee blends for the Nespresso VertuoLine System.10 Stormio, 10 Odacio, 10 Melozio
       ')
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/nespresso.jpg')
@@ -62,14 +68,16 @@ ApplicationRecord.transaction do
       
     p3 = Product.create!(
       name: 'Premier Protein Shake, Chocolate, 30g Protein 1g Sugar 24 Vitamins Minerals Nutrients to Support Immune Health, 11.50 fl oz (Pack of 12)', 
-      price: '28.48', 
+      price: '28.48',
+      category: 'Food', 
       description: 'Chocolately goodness: Smooth and creamy, rich chocolate flavored shake; Winner of American Masters of Taste Gold Medal for SUPERIOR TASTING ready-to-drink protein beverages.')
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/premier_protein.jpg')
       p3.photo.attach(io: file, filename: 'premier_protein.jpg')
 
     p4 = Product.create!(
       name: 'Quest 2 — Advanced All-In-One Virtual Reality Headset — 128 GB', 
-      price: '199.00', 
+      price: '199.00',
+      category: 'Electronics', 
       description: 'Experience total immersion with 3D positional audio, hand tracking and easy-to-use controllers working together to make virtual worlds feel real.
       Explore an expanding universe of over 500 titles across gaming, fitness, social/multiplayer and entertainment, including exclusive releases and totally unique VR experiences.
       Enjoy fast, smooth gameplay and immersive graphics as high-speed action unfolds around you with a fast processor and immersive graphics.')
@@ -78,7 +86,8 @@ ApplicationRecord.transaction do
 
     p5 = Product.create!(
       name: 'Dyson V11 Extra Cordless Vacuum Cleaner - Nickel/Red, Large', 
-      price: '449.99', 
+      price: '449.99',
+      category: 'Appliances', 
       description: 'Versatile, powerful and cordless for whole-home deep cleaning.
       60% more suction² and up to 60 minutes of run time.¹ Battery-saving trigger helps maximize energy-efficiency, only using power when you need it.
       LED screen displays remaining run time countdown to the second, 3 cleaning modes, and maintenance alerts for complete control of your clean.
@@ -88,7 +97,8 @@ ApplicationRecord.transaction do
     
     p6 = Product.create!(
       name: 'DEWALT 20V Max Cordless Drill/Driver Kit, Compact, 1/2-Inch (DCD771C2), Yellow', 
-      price: '99.00', 
+      price: '99.00',
+      category: 'Electronics', 
       description: 'Dewalt drill has compact and lightweight design that fits into tight areas.NEW 18V XR Li-Ion compact drill driver featuring XR 1.3Ah Li-Ion battery technology, Clutch Positions : 16.
       High performance motor of the power drill delivers 300 unit watts out (UWO) of power ability completing a wide range of applications')
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/dewalt_drill.jpg')
@@ -97,6 +107,7 @@ ApplicationRecord.transaction do
     p7 = Product.create!(
       name: 'HelloBaby Upgrade Monitor, 5''Sreen with 30-Hour Battery, Pan-Tilt-Zoom Video Baby Monitor with Camera and Audio, Night Vision, VOX, 2-Way Talk, 8 Lullabies and 1000ft Range No WiFi, Ideal Gifts', 
       price: '67.99', 
+      category: 'Baby',
       description: '💖【REMOTE 355° PAN and TILT BABY MONITOR & 5" COLOR DISPLAY】: Enjoy a 5" Big Screen on this baby camera monitor. Remote control camera rotate 355° in horizontal and 120° vertical gives you a larger view of your baby\'s room. 2X zoom function ensures clear visuals. Noiseless camera rotation for a peaceful environment.')    
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/hello_baby_monitor.jpg')
       p7.photo.attach(io: file, filename: 'hello_baby_monitor.jpg')
@@ -104,6 +115,7 @@ ApplicationRecord.transaction do
     p8 = Product.create!(
       name: 'Amazon Basics 5-Shelf Adjustable, Heavy Duty Storage Shelving Unit (350 lbs loading capacity per shelf), Steel Organizer Wire Rack, Black, 36" L x 14" W x 72" H', 
       price: '66.65', 
+      category: 'Furniture',
       description: '5 shelf wire rack offers handy storage space and easy access to tools and supplies
       Durable steel construction with a Black finish; each shelf holds up to 350 pounds, evenly distributed; 1750 pound total weight capacity')
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/amazon_shelf.jpg')
@@ -111,7 +123,8 @@ ApplicationRecord.transaction do
 
     p9 = Product.create!(
       name: 'MUDEELA Pots and Pans Organizer : Rack under Cabinet, 8-Tier Kitchen Cabinet Organizers and Storage, Light-Duty Adjustable Pot Racks, Pot Organizers inside Cabinet with 3 DIY Methods', 
-      price: '21.99', 
+      price: '21.99',
+      category: 'Appliances', 
       description: '【Maximize Space Efficiently】Be sure to measure the (width / height / depth) size of your cabinet before purchasing the MUDEELA pan rack to ensure that the size of our pot rack suits your cabinet. Minimum Cabinet Size Required: Width≥22'' ; Height≥16.96''. NOTICE: NOT for Heavy-duty cookware. MUDEELA compact pots and pans organizer frees up space without taking up additional. 8-tier ample space allows our pan organizer rack for cabinet to fit frying pans, baking pans, cutting boards, pot lids, etc. Suits kitchen, countertop, cabinet, and pantry.')
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/pot_organizer.jpg')
       p9.photo.attach(io: file, filename: 'pot_organizer.jpg')
@@ -119,6 +132,7 @@ ApplicationRecord.transaction do
     p10 = Product.create!(
       name: 'Amazon Essentials Men\'s Slim-Fit Vacation Shirt', 
       price: '20.90', 
+      category: 'Clothing',
       description: 'SLIM FIT: Slim fit through the shoulders, chest, and waist.
       STRETCH POPLIN: Lightweight yet durable washed poplin with 2% stretch for comfort and mobility.
       VACATION SHIRTING: This short sleeve poplin shirt is the warm weather solution. With a camp collar and shirttail hem, wear it untucked with shorts for laid-back comfort all vacation long.')
@@ -128,6 +142,7 @@ ApplicationRecord.transaction do
     p11 = Product.create!(
       name: 'TERRO T300B Liquid Ant Killer, 12 Bait Stations', 
       price: '14.98', 
+      category: 'Garden',
       description: 'Attracts & Kills – Kills common household ants including acrobat, crazy, ghost, little black, odorous house, pavement, and other sweet-eating ants
       Kills the Ants You See & the Ones You Don\'t – As worker ants discover the bait, they share it with the rest of the colony to eliminate them all')
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/ant.jpg')
@@ -135,7 +150,8 @@ ApplicationRecord.transaction do
       
     p12 = Product.create!(
       name: 'Succulent Plant Pots, Turtle Planter Flower Pots with Drainage Hole, Cute Planting Pots for Cactus, Succulent Planters for Indoor Plants Home Office Garden Flower Pot Gifts for Plants Lover', 
-      price: '13.97', 
+      price: '13.97',
+      category: 'Garden',
       description: 'Unique Plant Pot: Our succulent pots have a cute turtle shape with smiling faces and colourful plant decor that can relax you in your daily life, lift your spirits after a tiring day at work
       Drainage Design: Cute succulent planter made from resin, easy to maintain. Drainage hole of indoor pot prevents overwatering and maintains moisture balance for healthy plant roots')
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/turtle.jpg')
@@ -143,7 +159,8 @@ ApplicationRecord.transaction do
 
     p13 = Product.create!(
       name: 'Stanley Quencher H2.0 FlowState Stainless Steel Vacuum Insulated Tumbler with Lid and Straw for Water, Iced Tea or Coffee', 
-      price: '35.00', 
+      price: '35.00',
+      category: 'Kitchen Supplies',
       description: 'YOUR DREAM TUMBLER: Whichever way your day flows, the H2.0 FlowState tumbler keeps you refreshed with fewer refills. Double wall vacuum insulation means drinks stay cold, iced or hot for hours. Choose between our 14oz, 20oz, 30oz,40oz and 64oz options depending on your hydration needs. The narrow base on all sizes (except 64oz) fits just about any car cup holder, keeping it right by your side.')
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/stanley.jpg')
       p13.photo.attach(io: file, filename: 'stanley.jpg')
@@ -151,6 +168,7 @@ ApplicationRecord.transaction do
     p14 = Product.create!(
       name: 'HP DeskJet 2755e Wireless Color inkjet-printer, Print, scan, copy, Easy setup, Mobile printing, Best-for home, Instant Ink with HP+,white', 
       price: '84.89', 
+      category: 'Electronics',
       description: '1. FROM AMERICA\'S MOST TRUSTED PRINTER BRAND – Best for home printing, including basic color documents like recipes, forms and travel documents. Print speeds up to 7.5 pages per minute in black or 5.5 pages per minute in color
       2. KEY FEATURES – Print, copy and scan in color, plus mobile and wireless printing')
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/tablet.jpg')
@@ -159,6 +177,7 @@ ApplicationRecord.transaction do
     p15 = Product.create!(
       name: 'SAMSUNG Galaxy Tab A9+ Tablet 11” 64GB Android Tablet, Big Screen, Quad Speakers, Upgraded Chipset, Multi Window Display, Slim, Light, Durable Design, US Version, 2024, Graphite', 
       price: '169.99', 
+      category: 'Electronics',
       description: 'BIG SCREEN. FAMILY-SIZED FUN: Bring fun home to everyone with a bright, engaging 11" screen¹ ; A refresh rate of up to 90Hz makes every experience feel smooth — great for videos, games or fun time for the kids
       RICH SOUND ALL AROUND: Your music; Your shows; Your games; Hear them all loud and clear, thanks to quad speakers powered by Dolby Atmos; Galaxy Tab A9+ delivers a cinema-like audio experience your ears will love')
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/printer.jpg')
@@ -167,6 +186,7 @@ ApplicationRecord.transaction do
     p16 = Product.create!(
       name: 'Pickleball Paddles, USAPA Approved Fiberglass Surface Pickleball Set with 2 Pickleball Rackets,4 Pickleball Balls,1 Portable Carry Bag,Pickle Ball Paddle Set ​for Men Women', 
       price: '35.99', 
+      category: 'Sports & Outdoors',
       description: '【USAPA approve pickleball paddle】The paddles are USA pickleball approved & with USAPA approval lable ith high safety and professionalism, and can be used in tournaments.
       【Premium quality pickleball paddles】The pickleball paddles set is designed with unique fiberglass and polypropylene honeycomb core technology. Provides exceptional power and control. Polypropylene honeycomb technology reduces vibration and achieves stable speed, resulting in optimal ball strike feel. The fiberglass surface provides excellent rotational performance.The pickleball racket lightweight,strong and durable.')
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/pickleball.jpg')
@@ -175,6 +195,7 @@ ApplicationRecord.transaction do
     p17 = Product.create!(
       name: '3-Pack [3.3FT+6.6FT+10FT] 60W USB C to USB C Cable, Type C to Type C Cable,Fast Charging Cable Compatible with iPhone 15/Plus/15 Pro/Pro Max，Samsung Galaxy S23 S22, iPad Pro, MacBook Air and More', 
       price: '9.83', 
+      category: 'Electronics',
       description: 'Universal Compatibility】This c to c type fast charging cable Compatible with 65W/61W/45W/35W/30W/25W/22.5W/20W/18W/15W/12W/5W All USB C charger. iPhone 15/iPhone15 Plus/iPhone15 Pro/iPhone15 Pro Max，MacBook Pro 13 inch, Macbook Air 13 /m1 Inch, MacBook 12 inch, iPad Pro 12.9/11 inch, iPad Air 4/5, iPad Mini 6, Google Pixel 6/6 Pro/5/5a, Samsung Galaxy S23/S22/S22/ S21/S21+/S21 Ultra/ S20/S20+/S20 Ultra, Galaxy A53/A73/A71,Galaxy Note 10/10+/20 Ultra, Switch, PS5 and other USB-C port devices.')
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/cords.jpg')
       p17.photo.attach(io: file, filename: 'cords.jpg')
@@ -182,6 +203,7 @@ ApplicationRecord.transaction do
     p18 = Product.create!(
       name: 'Magnetic Tiles Kids Toys STEM Magnet Toys for Toddler Magnetic Blocks Building Toys Preschool Learning Sensory Montessori Toys for 3+ Year Old Boys and Girls, Safe Creativity Toddler Kids Toys', 
       price: '19.99', 
+      category: 'Toys & Games',
       description: '【GREAT STARTER SETS OF MAGNETIC TILES】Encourage STEM learning and creativity with Coodoo Magnetic Tiles Starter Pack! This pack features 40 magnetic tiles in a variety of shapes and rainbow colors. It is the perfect option to start your Magnetic Tiles collection, build big and gain confidence in magnetic tile play. A carrying bag is included for easy, stress-free storage. It also allows kids to take the learning tiles with them easily from room to room.')
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/toy.jpg')
       p18.photo.attach(io: file, filename: 'toy.jpg')
@@ -189,6 +211,7 @@ ApplicationRecord.transaction do
     p19 = Product.create!(
       name: 'NYX PROFESSIONAL MAKEUP Butter Gloss, Non-Sticky Lip Gloss - Sugar Glass (Clear)', 
       price: '5.97', 
+      category: 'Beauty',
       description: 'Butter Gloss: Buttery soft and silky smooth, our decadent Butter Gloss is available in a wide variety of sumptuous shades; Each glossy color delivers sheer to medium coverage that melts onto your lips
       Cruelty Free Cosmetics: We believe animals belong in our arms, not in a lab; All of our makeup is certified and acknowledged by PETA as a cruelty free brand; We don\'t test any of our products on animals')
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/makeup.jpg')
@@ -197,6 +220,7 @@ ApplicationRecord.transaction do
     p20 = Product.create!(
       name: 'Hasbro Gaming Connect 4 Classic Grid,4 in a Row Game,Strategy Board Games for Kids,2 Player .for Family and Kids,Ages 6 and Up', 
       price: '9.99', 
+      category: 'Toys & Games',
       description: 'Choose yellow or red discs. For 2 players
       Classic Connect 4 game is disc dropping fun
       Includes grid, 2 legs, slider bar, 21 red discs, 21 yellow discs and instructions
@@ -217,6 +241,7 @@ ApplicationRecord.transaction do
     p21 = Product.create!(
       name: 'Label Maker Machine with Tape, P21 Bluetooth Label Printer, Wireless Mini Label Makers with Multiple Templates for Organizing Office Home, White',
       price: '19.98',
+      category: 'Electronics',
       description: '✅【2024 New Version】Compared with the traditional label makers, half weight and size of the traditional label maker, smaller, smarter and convenient for users to carry. Wireless bluetooth label maker can slip into your pocket, allow printing anytime, anywhere. We recommend using our NELKO thermal label paper for good printing quality.')
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p21.jpg')
       p21.photo.attach(io: file, filename: 'p21.jpg')
@@ -225,6 +250,7 @@ ApplicationRecord.transaction do
       p22 = Product.create!(
         name: 'Apple AirPods (2nd Generation) Wireless Ear Buds, Bluetooth Headphones with Lightning Charging Case Included, Over 24 Hours of Battery Life, Effortless Setup for iPhone',
         price: '89.00',
+        category: 'Electronics',
         description: 'HIGH-QUALITY SOUND — Powered by the Apple H1 headphone chip, AirPods (2nd generation) deliver rich, vivid sound.
         EFFORTLESS SETUP — After a simple one-tap setup, AirPods are automatically on and always connected. They sense when they’re in your ears and pause when you take them out. And sound seamlessly switches between your iPhone, Apple Watch, Mac, iPad, and Apple TV.'
       )
@@ -235,6 +261,7 @@ ApplicationRecord.transaction do
       p23 = Product.create!(
         name: 'Bluetooth Speaker, Cool Portable Wireless Speaker, Stereo Sound with Multi Dazzling LED Light Modes, IPX4 Waterproof, BT5.3, TWS Surround Pairing, Electronics Gadgets for Party Camping Birthday Gifts',
         price: '21.99',
+        category: 'Electronics',
         description: 'Immersive Clear Sound & Dual Playing : Crafted for distortion-free sound, this wireless Bluetooth speaker uses unparalleled 15W HiFi sound quality and advanced technology to deliver powerful, balanced sound with minimal distortion. You can connect two speakers together to create an immersive, high-fidelity stereo experience, filling any room with up to 30W(15W*2) of powerful sound. Perfect for gaming, music and movie playback.'
       )
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p23.jpg')
@@ -243,6 +270,7 @@ ApplicationRecord.transaction do
       p24 = Product.create!(
         name: 'Solar Charger Power Bank, 38800mAh Portable Charger Fast Charger Dual USB Port Built-in Led Flashlight and Compass for All Cell Phone and Electronic Devices',
         price: '22.99',
+        category: 'Electronics',
         description: '【38800mAh Huge Capacity】Solar Charger is equipped with a solar charging panel and 5V/2.1A dual USB output. You can charge your mobile phone when and where, it is convenient and easy to carry, and you don’t have to worry about running out of power on your mobile phone.'
       )
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p24.jpg')
@@ -251,6 +279,7 @@ ApplicationRecord.transaction do
       p25 = Product.create!(
         name: 'Beats Solo3 Wireless On-Ear Headphones - Apple W1 Headphone Chip, Class 1 Bluetooth, 40 Hours of Listening Time, Built-in Microphone - Silver',
         price: '199.95',
+        category: 'Electronics',
         description: 'High-performance wireless Bluetooth headphones
         Features the Apple W1 chip and Class 1 wireless Bluetooth connectivity
         With up to 40 hours of battery life, Beats Solo3 wireless is your perfect everyday headphone
@@ -264,7 +293,8 @@ ApplicationRecord.transaction do
       p26 = Product.create!(
         name: 'Duracell Coppertop AA Batteries 28 Count Pack Double A Battery with Power Boost Ingredients, Long-lasting Power Alkaline AA Battery for Household Devices',
         price: '24.24',
-        description: ''
+        category: 'Electronics',
+        description: '28 Count pack, Double A Battery for any device'
       )
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p26.jpg')
       p26.photo.attach(io: file, filename: 'p26.jpg')
@@ -272,6 +302,7 @@ ApplicationRecord.transaction do
       p27 = Product.create!(
         name: 'Uhale 10.1 inch Digital Picture Frame with 32GB Storage Support SD card, Electronic Photo Frames with 1280*800 HD IPS Touch Screen',
         price: '49.97',
+        category: 'Electronics',
         description: '【Instant and Private Photo-sharing】Download the free Uhale APP for Android or iOS mobile phones. After connecting the digital photo frame to wifi and pairing it with your mobile phone,you can use your mobile phone or computer to transfer photos and videos to the digital photo frame no matter where you are in the world.'
       )
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p27.jpg')
@@ -280,7 +311,10 @@ ApplicationRecord.transaction do
       p28 = Product.create!(
         name: 'Sceptre New 27-inch Gaming Monitor 100Hz 1ms DisplayPort HDMI x2 100% sRGB AMD FreeSync Build-in Speakers, Eye Care Frameless Machine Black 2024 (E275W-FW100T)',
         price: '109.97',
-        description: ''
+        category: 'Electronics',
+        description: 'Blue Light Shift: Blue Light Shift reduces blue light, allowing you to comfortably work, watch, or play applications without straining your eyes.
+        Up to 75Hz Refresh Rate: With 75Hz refresh rate, images change faster and smoother than the standard, reducing screen tearing
+        AMD FreeSync: With AMD FreeSync, gamers enjoy smooth video & seamless on the spot movement in fast-paced games. The graphic card and monitor refresh rates are synchronized to eliminate tearing and stuttering.'
       )
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p28.jpg')
       p28.photo.attach(io: file, filename: 'p28.jpg')
@@ -288,8 +322,8 @@ ApplicationRecord.transaction do
       p29 = Product.create!(
         name: 'Drone with Camera for Adults, 1080P FPV Drones for kids Beginners with Upgrade Altitude Hold, Voice Control, Gestures Selfie, 90° Adjustable Lens, 3D Flips, 2 Batteries',
         price: '59.99',
-        description: '【User-friendly and Versatile】Loiley drones are perfect for beginners and children, offering features like one-key takeoff/landing, altitude hold, emergency stop, and headless mode. It also provides smart app control (APP name: Loiley Fly), allowing users to define flight routes, use voice control and gesture selfies, and enjoy various functions like 360° flips, gravity sensing, and adding music and filters.
-        '
+        category: 'Electronics',
+        description: '【User-friendly and Versatile】Loiley drones are perfect for beginners and children, offering features like one-key takeoff/landing, altitude hold, emergency stop, and headless mode. It also provides smart app control (APP name: Loiley Fly), allowing users to define flight routes, use voice control and gesture selfies, and enjoy various functions like 360° flips, gravity sensing, and adding music and filters.'
       )
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p29.jpg')
       p29.photo.attach(io: file, filename: 'p29.jpg')
@@ -297,6 +331,7 @@ ApplicationRecord.transaction do
       p30 = Product.create!(
         name: 'Etekcity Smart Scale for Body Weight, Digital Bathroom Weighing Machine Fat Percentage BMI Muscle, Accurate Composition Analyzer People, Bluetooth Electronic Measurement Tool, 400lb',
         price: '24.99',
+        category: 'Electronics',
         description: '𝙁𝙞𝙧𝙨𝙩-𝙍𝙖𝙩𝙚 𝙌𝙪𝙖𝙡𝙞𝙩𝙮: Don\'t settle for less. As the selling brand of body weight scales in the US, Etekcity is known for innovative and high-performing products. (Source: Stackline/Retail Intelligence, U.S. Amazon Data Market Share, February 2019-2021)'
       )
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p30.jpg')
@@ -312,6 +347,7 @@ ApplicationRecord.transaction do
       p31 = Product.create!(
         name: 'WLIVE Dresser for Bedroom with 5 Drawers, Wide Chest of Drawers, Fabric Dresser',
         price: '52.99',
+        category: 'Furniture',
         description: 'MULTIFUNCTION DRESSER: Match perfectly with other WLIVE storage towers; This chest of drawers is great for bedroom, closet, living room, hallway, dorm and office.'
       )
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p31.jpg')
@@ -320,6 +356,7 @@ ApplicationRecord.transaction do
       p32 = Product.create!(
         name: 'VTRIN Narrow Shoe Rack with Covers 10 Tiers Tall Shoe Rack for Closet Entryway Sturdy Shoe Rack Organizer',
         price: '29.99',
+        category: 'Furniture',
         description: 'Large Capacity yet Space Saving -- This 10 tier narrow shoe rack is ideal for small space. Its dimensions are of 17.7"L x 11.8"W x 68.9"H yet it’s able to hold up to 20-22 pairs of shoes, making it a great tall shoe rack for closet, cabinet, wardrobe, entryway and bedroom. It can also be a great closet storage organizer for your books and other stuff.'
       )
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p32.jpg')
@@ -328,6 +365,7 @@ ApplicationRecord.transaction do
       p33 = Product.create!(
         name: 'Patio Furniture Set Cover Waterproof, Heavy Duty 600D Funiture Covers for Outdoor Sectional Sofa Set Wicker Rattan Table Chair Rectangular 108" L × 82" W × 28" H',
         price: '26.97',
+        category: 'Furniture',
         description: '【Size】108" L × 82" W × 28" H. The universal design fits up to outdoor sectional furniture sets, rectangular table and chair sets. The patio furniture cover is large enough that can hold 6-8 chairs, 1-2 rectangular tables, or 6-8 double couches. Please measure the furniture size before purchasing.'
       )
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p33.jpg')
@@ -336,6 +374,7 @@ ApplicationRecord.transaction do
       p34 = Product.create!(
         name: '3 Pack Bathroom Small Trash Can with Lid,10L / 2.6 Gallon Slim Garbage Bin Wastebasket with Pop-Up Lid',
         price: '24.99',
+        category: 'Appliances',
         description: 'MAXIMIZE YOUR SPACE- AIDMTONG our ultra-slim and narrow 3-pack bathroom trash can is designed to fit into tight spaces, such as small kitchens, bedrooms, and bathrooms. Measuring 9.4*6.3*11.6 inches, our small garbage can is the perfect size for tight spaces.'
       )
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p34.jpg')
@@ -344,6 +383,7 @@ ApplicationRecord.transaction do
       p35 = Product.create!(
         name: 'Bathroom Furniture Sets, Shelves Over Toilet Bathroom Decor Farmhouse Decorations Aesthetic Décor',
         price: '39.82',
+        category: 'Furniture',
         description: '✅ PATENT DESIGN: Create a farmhouse oasis in your bathroom with decor sets! Includes 2 floating shelves, 1 basket, and 1 decorative sign
         ✅ DURABLE MATERIAL: Medium Density Fiberboard, outlasts wood in damp bathroom environments
         ✅ AMPLE DEPTH: 6.7"D x 15.7"W x 1.5"H. 6.7" depth suitable for toiletries, basket or bath towels. 15.7" width metal basket can hold 4 toilet paper rolls'
@@ -354,6 +394,7 @@ ApplicationRecord.transaction do
       p36 = Product.create!(
         name: 'Furniture Dolly,Furniture Movers with 5 Wheels,Carbon Steel Panel Heavy Duty Dolly,Furniture Lifter with 5 360° Rotatable Rubber Universal Wheels',
         price: '49.99',
+        category: 'Furniture',
         description: '[SURPRISE GIFT PACKAGE]:Upgraded large panel furniture dolly set, including four 6.5 x 6.5 in moving dolly,1 x pry bar,4 x heightening spacers,4 x flannel non-slip mats,2 x rubber anti-slip mats,1 x pair of safety gloves,1 drawstring storage bag.'
       )
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p36.jpg')
@@ -362,6 +403,7 @@ ApplicationRecord.transaction do
       p37 = Product.create!(
         name: 'VASAGLE End Table with Charging Station, Set of 2, Small Side Tables for Living Room, Bedroom, Nightstand with Outlets and USB Ports',
         price: '49.99',
+        category: 'Furniture',
         description: '[Side Tables with Charging Stations] Low battery? Charge your devices with these small tables featuring two AC outlets, two USB ports, and a 6.5 ft cord each. Also, the proper distances between outlets ensure you can use all of them at the same time'
       )
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p37.jpg')
@@ -370,6 +412,7 @@ ApplicationRecord.transaction do
       p38 = Product.create!(
         name: 'HONBAY Reversible Sectional Sofa L-Shape Sofa Convertible Couch 4-Seater Sofas Sectional for Apartment Dark Grey',
         price: '399.99',
+        category: 'Furniture',
         description: 'Comfortable Sofa Couch: The cushions you sit on are nice and firm; You\'ll never have to worry about sinking in; The more you sit in it the better
         Fashionable Appearance: HONBAY 4-seat sectional couch sofa with nail-head trim and storage bag'
       )
@@ -379,6 +422,7 @@ ApplicationRecord.transaction do
       p39 = Product.create!(
         name: 'JUMMICO Recliner Chair Adjustable Home Theater Single Fabric Recliner Sofa Furniture with Thick Seat Cushion and Backrest Modern Living Room Recliners (Aurora Grey)',
         price: '109.99',
+        category: 'Furniture',
         description: 'Material: The Recliner covered by high quality breathable fabric with thick padding provide better comfort, High quality and high breathability for better enjoyment of your favorite TV show or break.'
       )
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p39.jpg')
@@ -387,6 +431,7 @@ ApplicationRecord.transaction do
       p40 = Product.create!(
         name: 'Lilola Home Lexi Synthetic Leather Modern Reversible Sleeper Sectional Sofa with Storage Chaise',
         price: '417.34',
+        category: 'Furniture',
         description: 'Enhanced Comfort of Synthetic Leather- Experience the luxurious feel of synthetic leather, providing unparalleled comfort for your relaxation and leisure.; Assembly Required Yes; Product Dimensions 83.50" L x 53.00" W x 34.00" H; Brand Lilola Home; Pull out sleeper area 71.50" W x 41.00" D; Product Weight (Lb) 192.00'
       )
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p40.jpg')
@@ -399,6 +444,7 @@ ApplicationRecord.transaction do
       p41 = Product.create!(
         name: 'Mattel Games Toss Across Kids Outdoor Game, Bean Bag Toss for Camping and Family Night, Get Three-in-a-Row for 2-4 Players',
         price: '21.97',
+        category: 'Toys & Games',
         description: 'We took classic Tic Tac Toe and added some action!​
         ​Place the Toss Across unit on a floor, turn all targets blank side up, grab your three bean bags, and get ready to toss! ​
         ​Players try to get the rotating triangles to flip to show either X or O. Three in a row wins!'
@@ -410,6 +456,7 @@ ApplicationRecord.transaction do
       p42 = Product.create!(
         name: 'Hasbro Gaming Bop It! Extreme Electronic Game for 1 or More Players',
         price: '27.99',
+        category: 'Toys & Games',
         description: 'RAPID-FIRE GAMEPLAY: It\'s the ultimate action-reaction challenge . The Bop It . Extreme electronic game features 4 different modes of play: Solo, Pass It, Party, and One-on-One Challenges
         2-PLAYER GAME: The Bop It . Extreme game lets players experience a 2-player rapid-fire gaming experience as 2 opponents hold the unit and go head-to-head at the same time'
       )
@@ -421,6 +468,7 @@ ApplicationRecord.transaction do
       p43 = Product.create!(
         name: 'LCD Writing Tablet for Kids, Colorful Toddlers Toys Drawing Board, Educational Kid Toys, Doodle Pad Dinosaur Toys for 2 3 4 5 6 7 8 Year Old Boys Girls Birthday Party, 8.5inch',
         price: '9.99',
+        category: 'Toys & Games',
         description: 'Multi-functional Kids Toys: The LCD Writing Tablet is an educational learning toy for kids. It exercises your child\'s writing and drawing skills, inspire kids\' creativity, develop concentration, imagination, patience. In addition, babies use tablet to doodle, drawing, spelling, math, notes, writing, playing games, vibrant colors and free creative ways can stimulate interest in art, It can let your kids freely release their natural instincts provides endless entertainment for little artists.'
       )
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p43.jpg')
@@ -430,6 +478,7 @@ ApplicationRecord.transaction do
       p44 = Product.create!(
         name: 'Basketball Shooting Game,Desktop Arcade Basketball Game,Tabletop Desk Game Set for Kids Adults',
         price: '9.99',
+        category: 'Toys & Games',
         description: 'Super Value Pack:You will receive a basketball shooting game set,including 2 basketball boards,2 basketball hoops,3 fences,24 mini basketballs and 1 sticker.After assembly,it measures about 8.1×8.9×11 in/21×23×28 cm,which can easily fit in most desks.'
       )
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p44.jpg')
@@ -439,6 +488,7 @@ ApplicationRecord.transaction do
       p45 = Product.create!(
         name: 'Laradola Dinosaur Toys for 3 4 5 6 7 8 Year Old Boys, Kids Take Apart STEM Construction Building Kids Toys with Electric Drill, Party Christmas Birthday Gifts Boys Girls',
         price: '20.59',
+        category: 'Toys & Games',
         description: '✅【2024 Newest Take Apart Dinosaur Toys】Our building toys include 3 kinds of dinosaur: blue Tyrannosaurus Rex, green Triceratops, brown Velociraptor. Kids can open this dinosaur Kit box and start playing immediately. The multi-color design helps attract children\'s attention to creative assembly and promotes children\'s teamwork.'
       )
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p45.jpg')
@@ -448,6 +498,7 @@ ApplicationRecord.transaction do
       p46 = Product.create!(
         name: 'Digital Shooting Toy for Kids, Fun Shooting Games, 5 Target Electronic Scoring Auto Reset',
         price: '34.99',
+        category: 'Toys & Games',
         description: 'Electronic shooting game: After all 5 shooting targets are hit, they will automatically bounce back to their original position within 3 seconds. The hit target will be displayed on the digital screen at one point, with flashing lights and encouraging message sounds. Designed for children ages 4-12. 6 tracks can move targets left and right and can be disassembled and assembled at will. Toy gun adds a lot of fun to children\'s games.'
       )
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/pp46.jpg')
@@ -457,6 +508,7 @@ ApplicationRecord.transaction do
       p47 = Product.create!(
         name: 'LEGO Creator 3 in 1 Exotic Parrot Building Toy Set, Transforms to 3 Different Animal Figures - from Colorful Parrot, to Swimming Fish, to Cute Frog, Creative Toys for Kids Ages 7 and Up, 31136',
         price: '15.99',
+        category: 'Toys & Games',
         description: 'This LEGO Creator 3 in 1 animal toy set features 3 animals for kids 7+ years old: a parrot toy perched on a branch, a playful frog and a toy fish
         The toy parrot is richly colored and comes with jointed parts that allow it to rotate its body on the branch and move its wings and tail'
       )
@@ -467,6 +519,7 @@ ApplicationRecord.transaction do
       p48 = Product.create!(
         name: 'EGO Super Mario Piranha Plant, Build and Display Super Mario Brothers Collectible for Adults and Teens',
         price: '58.88',
+        category: 'Toys & Games',
         description: 'Buildable display model of a Super Mario Piranha Plant (71426) – Celebrate Mario Day with a building adventure as you capture the finer details of an iconic character from the Super Mario universe in LEGO style
         Create iconic poses – Pose the head, mouth, stalk and leaves of the Super Mario Piranha Plant figure'
       )
@@ -477,6 +530,7 @@ ApplicationRecord.transaction do
       p49 = Product.create!(
         name: 'Upgraded Flying Orb Ball Toy, Hand Controlled Boomerang Hover Ball, Cosmic Globe Flying Spinner with Endless Tricks',
         price: '28.80',
+        category: 'Toys & Games',
         description: '【Design Concept of The Flying Orb Ball】Spherical appearance, powerful engine, function based on aviation flight principle, which can realize a variety of flight modes. This girl toys not only brings fun to play but also helps to improve children\'s hands-on ability, operating skills, intelligence, and creativity.'
       )
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p49.jpg')
@@ -486,6 +540,7 @@ ApplicationRecord.transaction do
       p50 = Product.create!(
         name: 'Pbooo Dancing Cactus Mimicking Toy,Talking Repeat Singing Sunny Cactus Toy',
         price: '18.99',
+        category: 'Toys & Games',
         description: '[Update Adjustable Volume] The dancing cactus adds a volume adjustment function for different scenes. The volume can be adjusted when your child needs loud music for dancing and when your child needs to sleep at a low volume. You can easily adjust the volume, just press and hold the music button. You just hold it down for a few seconds. You can easily adjust the volume by just holding down the music button.'
       )
       file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p50.jpg')
@@ -496,7 +551,124 @@ ApplicationRecord.transaction do
 
 
 
+      p51 = Product.create!(
+        name: "adidas Men's Essentials Warm-up 3-Stripes Track Top",
+        price: 28.22,
+        category: "Clothing",
+        description: "Men's adidas track jacket designed for comfort. Regular fit is not tight and not loose, the perfect in-between fit. Full zip with stand-up collar lets you adjust your temperature. Front pockets for storage; Ribbed cuffs and hem for a snug fit. This product is made with Primegreen, a series of high-performance recycled materials."
+      )
+      file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p51.jpg')
+      p51.photo.attach(io: file, filename: 'p51.jpg')
 
+
+      p52 = Product.create!(
+        name: "Nike mens NSW Club Joggers",
+        price: 39.50,
+        category: "Clothing",
+        description: "Nike joggers combining comfort with a classic look for everyday wear. Brushed-back fleece sweatpants for men that feel soft and smooth. Men's jogger sweatpants with ribbed cuffs giving you the classic jogger look to show off your kicks. These joggers for men let you personalize the fit with an elastic waistband and adjustable drawcord. Machine wash, imported, Body: 80-82% cotton/18-20% polyester. Side pocket knuckle side/back pocket: 100% cotton."
+      )
+      file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p52.jpg')
+      p52.photo.attach(io: file, filename: 'p52.jpg')
+
+
+      p53 = Product.create!(
+        name: "Dokotoo Womens Color Block Fashion Short Sleeve Crewneck Knitted Spring Summer Casual Loose T Shirts Tops",
+        price: 19.98,
+        category: "Clothing",
+        description: "Material: Dokotoo womens's elastic knit striped T shirts, Crafted from ultra-soft, skin-friendly fabric that resists pilling for lasting comfort. Features: Featuring a bold combination of colors, a classic round neckline, a loose fit, and short sleeves, this garment allows you to stand out and showcase your daring sense of fashion. Versatile: Perfect for the spring and summer seasons. It pairs seamlessly with pants, jeans, casual trousers. Occasions: Suitable for everyday wear, office, street fashion, dating, and outdoor activities. Cleaning: Wash Recommended With Cold Water/Do Not Bleach/Hang Or Line Dry/Wash with like colours,that will increase the durability of your clothes."
+      )
+      file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p53.jpg')
+      p53.photo.attach(io: file, filename: 'p53.jpg')
+
+
+      p54 = Product.create!(
+        name: "Lee Women's Legendary Mid Rise Flare Jean",
+        price: 18.78,
+        category: "Clothing",
+        description: "MID RISE. Show the world a thing or two about being the fashionable legend you already know you are with these mid rise flares. Hitting comfortably at the waist that gives way to a flare leg, these jeans are flattering and on-trend. LEGENDARY DETAILS. These flare jeans are finished with our iconic logo patch, spade pockets and hardware that make Lee jeans unique. STRETCH DENIM. Strut with confidence in these flattering flare jeans. Made from authentic stretch denim, they move with you for all-day comfort. A LIFETIME OF QUALITY. For over 100 years, Lee has produced quality apparel with durability and long-lasting construction in mind. Lee is committed to designing clothing that conforms to your body, allowing you to move through life freely. SPECIFICATIONS. 5 pockets. Zipper fly with button closure. Inseam: 31\" short, 33\" medium, 35\" long. Rise: 9.5\". Bottom Leg Opening: 23\". Destruction details may vary by colorway."
+      )
+      file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p54.jpg')
+      p54.photo.attach(io: file, filename: 'p54.jpg')
+
+      p55 = Product.create!(
+        name: "Trendy Queen Womens Oversized Hoodies Fleece Sweatshirts Long Sleeve Sweaters Pullover Fall Clothes with Pocket",
+        price: 36.99,
+        category: "Clothing",
+        description: "Material: Made of 50% polyester 50% cotton, these materials are thick and comfortable, keep you warm in the fall and winter. Design: Oversized hoodie, pullover sweatshirts, drop shoulder collar, long sleeve sweater with pocket, fall outfits for women, winter fashion clothes, aesthetic clothing, y2k fleece casual style. Match: This fall fashion hoodie is the ideal choice in your wardrobe, one of the best choices for autumn and winter outfits. Easy to match with pants, jeans, joggers, sweatpants, and you can match anything you like inside, like underscrub shirts, tank top, crop top, vest, etc. Occasion: This pullover sweatshirt is suitable for casual, office, party, school, running, sport, gym, dancing, skating, hiking, biking, yoga, spring, fall, and winter. Machine washable, hand wash cold water. Do not bleach."
+      )
+      file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p55.jpg')
+      p55.photo.attach(io: file, filename: 'p55.jpg')
+
+
+      p56 = Product.create!(
+        name: "Amazon Essentials Women's French Terry Fleece Crewneck Sweatshirt (Available in Plus Size)",
+        price: 7.70,
+        category: "Clothing",
+        description: "REGULAR FIT: Close but comfortable fit through chest, waist, and hips. COZY BRUSHED BACK FLEECE: Buttery soft and comfy midweight cotton blend fleece with brushed interior. CLASSIC SWEATSHIRT: Perfect for layering with your favorite t-shirt or pair back to matching sweatpants for a head-to-toe comfy look. Designed to be both your on the go and lounging essential. DETAILS: Flattering open crewneck, long sleeves and soft rib detail at neck, cuffs, and hem for enhanced stretch and recovery."
+      )
+      file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p56.jpg')
+      p56.photo.attach(io: file, filename: 'p56.jpg')
+
+      p57 = Product.create!(
+        name: "Blowfish Women's Marley Slip On Sneaker",
+        price: 21.95,
+        category: "Clothing",
+        description: "Slip on Entry. Decorative Elastic Detail. Insole Made Using Bloom Foam."
+      )
+      file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p57.jpg')
+      p57.photo.attach(io: file, filename: 'p57.jpg')
+      
+
+      p58 = Product.create!(
+        name: "Dr. Martens Leona Boot",
+        price: 150.62,
+        category: "Clothing",
+        description: "Made with Vintage Smooth, a retro version of signature smooth leather with subtle grained effect and contrast base color. Built on the rebelliously comfortable Dr. Martens Airwair air-cushioned sole. Sole is slip-resistant with superior abrasion, and is oil and fat resistant, too. Classic Doc's DNA is in full effect, with visible stitching, grooved sides and a scripted heel-loop. Platform height is 1.5\", and heel height is 2\"."
+      )
+      file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p58.jpg')
+      p58.photo.attach(io: file, filename: 'p58.jpg')
+      
+      p59 = Product.create!(
+        name: "Crocs Unisex-Adult Classic Clogs",
+        price: 36.14,
+        category: "Clothing",
+        description: "Crocs For Women And Men: The Crocs Classic Clogs Are Not Only The Most Comfortable Shoes For Women And Men But Also Easy To Clean Just Using Soap And Water And Allowing For A Quick Dry. Lightweight And Fun: The Crocs For Men And Women Feature Lightweight Iconic Crocs Comfort. Ventilation Ports Add Breathability And Help Shed Water And Debris Quickly. What Size Should I Buy?: These Men'S And Women'S Crocs Offer A Roomy Fit And We Recommend Ordering A Size Down To The Next Largest Whole Size. Designed To Fit: These Slip-On Clogs Are Easy To Take On And Off, While Being Extremely Durable. These Crocs Even Offer Pivoting Heel Straps For A More Secure Fit. Shop with Confidence: Crocs products are backed by our 90-day manufacturer's warranty for high quality and authenticity. Terms and conditions apply."
+      )
+      file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p59.jpg')
+      p59.photo.attach(io: file, filename: 'p59.jpg')
+
+
+      p60 = Product.create!(
+        name: "Merrell Men's, Moab 3 Hiking Shoe",
+        price: "71.00 - 120.00",
+        category: "Clothing",
+        description: "Pigskin leather and mesh upper 100% recycled laces and webbing Bellows tongue keeps out debris Protective toe cap 100% recycled mesh lining Kinetic Fit ADVANCED removable contoured insole with reinforced heel cushioning for medium support Molded nylon arch shankLightweight EVA foam midsole for stability and comfort Vibram TC5+ rubber sole. Merrell is focused on merging performance, styling, and comfort to empower all people to confidently explore the outdoors. Merrell Air Cushion in the heel absorbs shock and adds stability."
+      )
+      file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p60.jpg')
+      p60.photo.attach(io: file, filename: 'p60.jpg')
+
+      
+      p61 = Product.create!(
+        name: "New Balance Men's Fresh Foam Arishi V4 Running Shoe",
+        price: 40.20,
+        category: "Clothing",
+        description: "Fresh Foam midsole cushioning is precision engineered to deliver an ultra-cushioned, lightweight ride. Mesh upper with suede and knit hits. Upper features no-sew overlays for a sleek fit and feel. Textured logo and embroidered details. Durable rubber outsole."
+      )
+      file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p61.jpg')
+      p61.photo.attach(io: file, filename: 'p61.jpg')
+
+      
+      p62 = Product.create!(
+        name: "Womens Classic Coat Lapel Collar Open Front Belted Long Jacket",
+        price: 79.99,
+        category: "Clothing",
+        description: "Classic coat with lapel collar, open front, and belted design. Made of 80% polyester and 20% cotton. Features a tie closure. Hand wash only."
+      )
+      file = URI.open('https://amazon-clone-aa-seeds.s3.us-west-1.amazonaws.com/p62.jpg')
+      p62.photo.attach(io: file, filename: 'p62.jpg')
+      
+
+      
       # p51 = Product.create!(
       #   name: '',
       #   price: '',

@@ -1,0 +1,104 @@
+.homecard-layout {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    margin-right: 200px;
+    background-color: white;
+}
+
+.homecard-layout-right {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.homecard-text {
+    color: black;
+}
+
+.homecard-photo {
+    width: auto;
+    height: 150px;
+    
+}
+
+.homecard-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    
+}
+
+.homecard-text {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 20px;
+}
+
+.homecard-photo-columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.testcard {
+    width: 100px;
+    height: 200px;
+    background-color: white;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.testcard-container {
+    display: flex;
+    
+}
+
+/* Clothing */
+.homecard-layout1 {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    /* margin-right: 1200px; */
+    margin-right: 75%;
+    background-color: white;
+    margin-top: -170px;
+}
+
+/* Furniture */
+.homecard-layout2 {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    /* margin-left: 1200px; */
+    margin-left: 75%;
+    background-color: white;
+    margin-top: -400px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+/* Electronics */
+.homecard-layout3 {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    background-color: white;
+    margin-bottom: -230px;
+    margin-top: 30px;
+    margin-left: 25%;
+}
+
+.homecard-layout4 {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    background-color: white;
+    margin-bottom: 20px;
+    margin-top: -420px;
+    margin-right: 25%;
+}

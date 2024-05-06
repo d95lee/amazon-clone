@@ -49,8 +49,24 @@ const NavBar = props => {
         ))  
     }
 
+
+    // const filter = (e) => {
+    //     e.preventDefault();
+    //     const selectedCategory = e.target.value.toLowerCase();
+    //     if (selectedCategory === 'all') {
+    //         // If 'All' is selected, show all products
+    //         setFilteredData(productsArr.filter(product => 
+    //                     product.name.toLowerCase().includes(e.target.value.toLowerCase())
+    //                 ))  
+    //     } else {
+    //         // Filter products based on the selected category
+    //         setFilteredData(productsArr.filter(product => 
+    //             product.category.toLowerCase() === selectedCategory
+    //         ));
+    //     }
+    // }
+
     const filteredProduct = (word) => {
-        e.preventDefault()
         setFilteredInput(productsArr.filter(product => {
             product.name.toLowerCase().includes(e.target.value.toLowerCase())
         return product.name
@@ -96,8 +112,27 @@ const NavBar = props => {
         </div>
         
             <div className='nav-search-container'>
-                <select className='nav-search-left'>
+                <select className='nav-search-left'
+                onClick={filter}
+                >
                     <option>All</option>
+                    <option value="Electronics">Electronic</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Toys & Games">Toys & Games</option>
+                    <option value="Office Products">Office Products</option>
+                    <option value="Baby">Baby</option>
+                    <option value="Books">Books</option>
+                    <option value="Sports & Outdoors">Sports & Outdoors</option>
+                    <option value="Beauty">Beauty</option>
+                    <option value="Instruments">Instruments</option>
+                    <option value="Pet Supplies">Pet Supplies</option>
+                    <option value="Food">Food</option>
+                    <option value="Appliances">Appliances</option>
+                    <option value="Garden">Garden</option>
+                    <option value="Kitchen Supplies">Kitchen Supplies</option>
+
+
                 </select>
                 <input type="search" 
                     className='nav-search-middle'

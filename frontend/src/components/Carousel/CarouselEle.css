@@ -17,7 +17,7 @@ body {
     width: 96%;
     height: 260px;
     overflow: hidden;
-    background-color: white; /* Set the background color */
+    background-color: white;
     margin: 20px;
 }
 
@@ -56,4 +56,19 @@ body {
 .carousel-container-2 {
     width: 30%;
     height: 250px;
+}
+
+
+/* HomeCard Container */
+
+.homecard-container {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.homecard-container-one {
+    background-color: white;
 }
