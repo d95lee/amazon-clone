@@ -5,6 +5,7 @@ import ProductShow from '../Product/ProductShow'
 import { Link } from 'react-router-dom'
 import ProductsHome from '../Product/ProductsHome'
 import Footer from '../FooterEle'
+import HomeCard from '../HomeCard/HomeCard'
 
 
 const Home = () => {
@@ -13,7 +14,7 @@ const Home = () => {
             <NavBar/>
             <SubNav/>
             <div className='home-background'>
-            <ProductsHome/>
+                <ProductsHome/>
             </div>
             <div className='home-background-body'></div>
             <Footer/>

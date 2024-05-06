@@ -7,16 +7,13 @@ import ProductIndexItem from './ProductIndexItem'
 import Layout from '../Layout/Layout'
 import { Link } from 'react-router-dom'
 import CarouselEle from '../Carousel/CarouselEle'
-// import ProductShow from './ProductShow'
 
 const ProductsHome = () => {
     const dispatch = useDispatch()
 
     const products = useSelector((state) => state.product)
     const productsArr = Object.values(products)
-    
-    // const products = useSelector(selectProductsArray)
-   
+       
     useEffect(() => {
         dispatch(fetchProducts())
     }, [])
