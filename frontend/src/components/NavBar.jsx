@@ -21,13 +21,12 @@ const NavBar = props => {
     const [modal, setModal] = useState(false)
     const currentUser = useSelector(state => !!state.session)
 
-    // const fetchData = (value) => {
-    //     dispatch(fetchProducts()) 
-    //     const results = json.filter()
-    // }
+    
 
     useEffect(() => {
-        dispatch(fetchCartItems())
+        if (currentUser && cart_itemsArr.length !== 0) {
+            dispatch(fetchCartItems())
+        }
         dispatch(fetchProducts())
     }, [])
     
@@ -49,29 +48,6 @@ const NavBar = props => {
         ))  
     }
 
-
-    // const filter = (e) => {
-    //     e.preventDefault();
-    //     const selectedCategory = e.target.value.toLowerCase();
-    //     if (selectedCategory === 'all') {
-    //         // If 'All' is selected, show all products
-    //         setFilteredData(productsArr.filter(product => 
-    //                     product.name.toLowerCase().includes(e.target.value.toLowerCase())
-    //                 ))  
-    //     } else {
-    //         // Filter products based on the selected category
-    //         setFilteredData(productsArr.filter(product => 
-    //             product.category.toLowerCase() === selectedCategory
-    //         ));
-    //     }
-    // }
-
-    const filteredProduct = (word) => {
-        setFilteredInput(productsArr.filter(product => {
-            product.name.toLowerCase().includes(e.target.value.toLowerCase())
-        return product.name
-        }))
-    }
 
     const handleSearch = (e) => {
         e.preventDefault()

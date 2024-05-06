@@ -13,19 +13,29 @@ const rootReducer = combineReducers({
     review: reviewReducer
 })
 
-const temp = [thunk];
+// const temp = [thunk];
 
 // if (import.meta.env.DEV) {
 //     const logger = require('thunk-logger');
 //     temp.push(logger);
 // }
 
-// const middleware = applyMiddleware(thunk);
 
-const middleware = applyMiddleware(...temp, logger);
+// Below is for prod
+
+const middleware = applyMiddleware(thunk);
 
 const configureStore = (initialState = {}) => (
     createStore(rootReducer, initialState, middleware)
 )
+
+// Bottom is for dev mode
+
+// const temp = [thunk];
+// const middleware = applyMiddleware(...temp, logger);
+
+// const configureStore = (initialState = {}) => (
+//     createStore(rootReducer, initialState, middleware)
+// )
 
 export default configureStore

@@ -12,6 +12,8 @@ import Footer from '../FooterEle'
 import blue_logo from '../../assets/logo/amazon-blue.png'
 import { FaStar } from 'react-icons/fa6'
 import { fetchReviews } from '../../store/reviewReducer'
+import NavBar from '../NavBar'
+import SubNav from '../SubNav/SubNav'
 
 const ProductShow = () => {
     const dispatch = useDispatch()
@@ -33,11 +35,20 @@ const ProductShow = () => {
 
     const productsRatingsArr = () => {
         let avgRatingsCount = 0
-        currentProductArr.map((review) => {
-            avgRatingsCount += review.rating
+        let validReviewsCount = 0
+    
+        currentProductArr.forEach((review) => {
+            if (!isNaN(review.rating)) {
+                avgRatingsCount += review.rating
+                validReviewsCount++
+            }
         })
-        
-        setAverageStars(avgRatingsCount / currentProductArr.length)
+    
+        if (validReviewsCount > 0) {
+            setAverageStars(avgRatingsCount / validReviewsCount)
+        } else {
+            setAverageStars(0)
+        }
     }
 
 
@@ -66,7 +77,11 @@ if (!product) {
     return null
 }
     return (
-        <Layout>
+        // <Layout>
+        <>
+            <NavBar></NavBar>
+                <SubNav></SubNav>
+            
             <div className='show-wrapper'>
                 <div className='show-left'>
                     <div id='show-left-content'>
@@ -77,7 +92,6 @@ if (!product) {
                 <div className='show-middle'>
                     <div className='show-middle-content'>
                         {product && <p id='product-name'>{product.name}</p>}
-                        {/* {product && <p id='product-name'>{product.rating}</p>} */}
                         <div className='show-product-rating'>
                             <p className='show-product-rating-text'>
                                 {parseFloat(averageStars.toFixed(1))}
@@ -150,7 +164,8 @@ if (!product) {
                 </div>
             </div>
             <Footer/>
-        </Layout>
+            {/* </Layout> */}
+        </>
     )
 }
 

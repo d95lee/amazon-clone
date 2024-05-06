@@ -53,7 +53,8 @@ const productReducer = (state = {}, action) => {
             return action.products
 
         case RECEIVE_CARTITEMS:
-            return action.data.products
+            return action.data.products 
+            // return action.data.products !== undefined ? action.data.cartItems : null;
       
         case RECEIVE_CARTITEM:
             nextState[action.data.cartItem.id] = action.data.cartItem

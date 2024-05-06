@@ -44,6 +44,7 @@ const CarouselEle = () => {
     const electronicsArray = []
     const clothingArray = []
     const furnitureArray = []
+    const toysArray = []
     
     productsArr.map((product) => {
         if (product.category === 'Electronics') {
@@ -52,6 +53,8 @@ const CarouselEle = () => {
             clothingArray.push(product)
         } else if ((product.category === 'Furniture')) { 
             furnitureArray.push(product)
+        } else if ((product.category === 'Toys & Games')) { 
+            toysArray.push(product)
         }
     })
 
@@ -134,7 +137,7 @@ const CarouselEle = () => {
                 </div> */}
 
                     <div className='homecard-layout3'>
-                        <p className='homecard-text'>Best Value Furniture</p>
+                        <p className='homecard-text'>Deals in Elecontrics</p>
                             <div className='homecard-photo-columns'>
                                 {electronicsArray.map((eProduct, idx) => (
                                     <div className='homecard-content' key={idx}>
@@ -145,9 +148,9 @@ const CarouselEle = () => {
                     </div>
 
                     <div className='homecard-layout1'>
-                        <p className='homecard-text'>Best Value Furniture</p>
+                        <p className='homecard-text'>Top Rated Games</p>
                             <div className='homecard-photo-columns'>
-                                {clothingArray.map((eProduct, idx) => (
+                                {toysArray.map((eProduct, idx) => (
                                     <div className='homecard-content' key={idx}>
                                         {eProduct?.photoUrl && <Link to={`products/${eProduct.id}`}><img className='homecard-photo' src={eProduct.photoUrl}/></Link> }
                                     </div>
@@ -156,9 +159,9 @@ const CarouselEle = () => {
                     </div>
 
                     <div className='homecard-layout2'>
-                        <p className='homecard-text'>Best Value Furniture</p>
+                        <p className='homecard-text'>Style</p>
                             <div className='homecard-photo-columns'>
-                                {furnitureArray.map((eProduct, idx) => (
+                                {clothingArray.map((eProduct, idx) => (
                                     <div className='homecard-content' key={idx}>
                                         {eProduct?.photoUrl && <Link to={`products/${eProduct.id}`}><img className='homecard-photo' src={eProduct.photoUrl}/></Link> }
                                     </div>
