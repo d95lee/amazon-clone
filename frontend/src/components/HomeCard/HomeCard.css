@@ -64,7 +64,7 @@
     height: 400px;
     overflow: hidden;
     /* margin-right: 1200px; */
-    margin-right: 1400px;
+    margin-right: 75%;
     background-color: white;
     margin-top: -170px;
 }
@@ -75,10 +75,11 @@
     height: 400px;
     overflow: hidden;
     /* margin-left: 1200px; */
-    margin-left: 1400px;
+    margin-left: 75%;
     background-color: white;
     margin-top: -400px;
     margin-bottom: 20px;
+    overflow: hidden;
 }
 
 /* Electronics */
@@ -89,7 +90,7 @@
     background-color: white;
     margin-bottom: -230px;
     margin-top: 30px;
-    margin-left: 470px;
+    margin-left: 25%;
 }
 
 .homecard-layout4 {
@@ -99,5 +100,5 @@
     background-color: white;
     margin-bottom: 20px;
     margin-top: -420px;
-    margin-right: 470px;
+    margin-right: 25%;
 }

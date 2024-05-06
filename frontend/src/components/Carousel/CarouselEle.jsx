@@ -138,7 +138,7 @@ const CarouselEle = () => {
                             <div className='homecard-photo-columns'>
                                 {electronicsArray.map((eProduct, idx) => (
                                     <div className='homecard-content' key={idx}>
-                                        {eProduct?.photoUrl && <img className='homecard-photo' src={eProduct.photoUrl} /> }
+                                        {eProduct?.photoUrl && <Link to={`products/${eProduct.id}`}><img className='homecard-photo' src={eProduct.photoUrl}/></Link> }
                                     </div>
                                 ))}
                             </div>
@@ -149,7 +149,7 @@ const CarouselEle = () => {
                             <div className='homecard-photo-columns'>
                                 {clothingArray.map((eProduct, idx) => (
                                     <div className='homecard-content' key={idx}>
-                                        {eProduct?.photoUrl && <img className='homecard-photo' src={eProduct.photoUrl} /> }
+                                        {eProduct?.photoUrl && <Link to={`products/${eProduct.id}`}><img className='homecard-photo' src={eProduct.photoUrl}/></Link> }
                                     </div>
                                 ))}
                             </div>
@@ -160,7 +160,7 @@ const CarouselEle = () => {
                             <div className='homecard-photo-columns'>
                                 {furnitureArray.map((eProduct, idx) => (
                                     <div className='homecard-content' key={idx}>
-                                        {eProduct?.photoUrl && <img className='homecard-photo' src={eProduct.photoUrl} /> }
+                                        {eProduct?.photoUrl && <Link to={`products/${eProduct.id}`}><img className='homecard-photo' src={eProduct.photoUrl}/></Link> }
                                     </div>
                                 ))}
                             </div>
@@ -171,7 +171,7 @@ const CarouselEle = () => {
                             <div className='homecard-photo-columns'>
                                 {furnitureArray.map((eProduct, idx) => (
                                     <div className='homecard-content' key={idx}>
-                                        {eProduct?.photoUrl && <img className='homecard-photo' src={eProduct.photoUrl} /> }
+                                        {eProduct?.photoUrl && <Link to={`products/${eProduct.id}`}><img className='homecard-photo' src={eProduct.photoUrl}/></Link> }
                                     </div>
                                 ))}
                             </div>
@@ -232,7 +232,7 @@ const CarouselEle = () => {
                             <div className='homecard-photo-columns'>
                                 {electronicsArray.map((eProduct, idx) => (
                                     <div className='homecard-content' key={idx}>
-                                        {eProduct?.photoUrl && <img className='homecard-photo' src={eProduct.photoUrl} /> }
+                                        {eProduct?.photoUrl && <Link to={`products/${eProduct.id}`}><img className='homecard-photo' src={eProduct.photoUrl}/></Link> }
                                     </div>
                                 ))}
                             </div>
@@ -243,7 +243,7 @@ const CarouselEle = () => {
                             <div className='homecard-photo-columns'>
                                 {clothingArray.map((eProduct, idx) => (
                                     <div className='homecard-content' key={idx}>
-                                        {eProduct?.photoUrl && <img className='homecard-photo' src={eProduct.photoUrl} /> }
+                                        {eProduct?.photoUrl && <Link to={`products/${eProduct.id}`}><img className='homecard-photo' src={eProduct.photoUrl}/></Link> }
                                     </div>
                                 ))}
                             </div>
@@ -254,7 +254,7 @@ const CarouselEle = () => {
                             <div className='homecard-photo-columns'>
                                 {furnitureArray.map((eProduct, idx) => (
                                     <div className='homecard-content' key={idx}>
-                                        {eProduct?.photoUrl && <img className='homecard-photo' src={eProduct.photoUrl} /> }
+                                        {eProduct?.photoUrl && <Link to={`products/${eProduct.id}`}><img className='homecard-photo' src={eProduct.photoUrl}/></Link> }
                                     </div>
                                 ))}
                             </div>
@@ -385,13 +385,6 @@ const CarouselEle = () => {
                     </div>
                 </Carousel>
             </div>
-
-
-
-
-               
-
-            
         </>
     )
 }
