@@ -1,11 +1,8 @@
 import './Home.css'
 import NavBar from '../NavBar'
 import SubNav from '../SubNav/SubNav'
-import ProductShow from '../Product/ProductShow'
-import { Link } from 'react-router-dom'
 import ProductsHome from '../Product/ProductsHome'
 import Footer from '../FooterEle'
-import HomeCard from '../HomeCard/HomeCard'
 
 
 const Home = () => {

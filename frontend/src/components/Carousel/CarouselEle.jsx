@@ -98,7 +98,7 @@ const CarouselEle = () => {
                 </Carousel>
             </div>
         
-                <div className='homecard-container'>
+                {/* <div className='homecard-container'>
                     <div className='homecard-layout'>
                         <p className='homecard-text'>Deals in Electronics</p>
                             <div className='homecard-photo-columns'>
@@ -121,7 +121,7 @@ const CarouselEle = () => {
                             </div>
                     </div>
 
-                    <div className='homecard-layout'>
+                    <div className='homecard-layout-right'>
                         <p className='homecard-text'>Best Value Furniture</p>
                             <div className='homecard-photo-columns'>
                                 {furnitureArray.map((eProduct, idx) => (
@@ -131,7 +131,7 @@ const CarouselEle = () => {
                                 ))}
                             </div>
                     </div>
-                </div>
+                </div> */}
 
                     <div className='homecard-layout3'>
                         <p className='homecard-text'>Best Value Furniture</p>
@@ -156,6 +156,17 @@ const CarouselEle = () => {
                     </div>
 
                     <div className='homecard-layout2'>
+                        <p className='homecard-text'>Best Value Furniture</p>
+                            <div className='homecard-photo-columns'>
+                                {furnitureArray.map((eProduct, idx) => (
+                                    <div className='homecard-content' key={idx}>
+                                        {eProduct?.photoUrl && <img className='homecard-photo' src={eProduct.photoUrl} /> }
+                                    </div>
+                                ))}
+                            </div>
+                    </div>
+
+                    <div className='homecard-layout4'>
                         <p className='homecard-text'>Best Value Furniture</p>
                             <div className='homecard-photo-columns'>
                                 {furnitureArray.map((eProduct, idx) => (
@@ -215,7 +226,40 @@ const CarouselEle = () => {
             </div>
 
 
+            <div className='homecard-container'>
+                    <div className='homecard-layout'>
+                        <p className='homecard-text'>Deals in Electronics</p>
+                            <div className='homecard-photo-columns'>
+                                {electronicsArray.map((eProduct, idx) => (
+                                    <div className='homecard-content' key={idx}>
+                                        {eProduct?.photoUrl && <img className='homecard-photo' src={eProduct.photoUrl} /> }
+                                    </div>
+                                ))}
+                            </div>
+                    </div>
 
+                    <div className='homecard-layout'>
+                        <p className='homecard-text'>Trendy Clothing</p>
+                            <div className='homecard-photo-columns'>
+                                {clothingArray.map((eProduct, idx) => (
+                                    <div className='homecard-content' key={idx}>
+                                        {eProduct?.photoUrl && <img className='homecard-photo' src={eProduct.photoUrl} /> }
+                                    </div>
+                                ))}
+                            </div>
+                    </div>
+
+                    <div className='homecard-layout-right'>
+                        <p className='homecard-text'>Best Value Furniture</p>
+                            <div className='homecard-photo-columns'>
+                                {furnitureArray.map((eProduct, idx) => (
+                                    <div className='homecard-content' key={idx}>
+                                        {eProduct?.photoUrl && <img className='homecard-photo' src={eProduct.photoUrl} /> }
+                                    </div>
+                                ))}
+                            </div>
+                    </div>
+                </div>
 
 
 
@@ -345,53 +389,7 @@ const CarouselEle = () => {
 
 
 
-
-
-
-                <div className='carousel-container-2'>
-                    <Carousel itemsToShow={1}>
-                        <div className='home-product-box1'>
-                            {Array.from({ length:2 }).map((_, index) => (
-                                <div className='box-content' key={index}>    
-                                    <Link to={`products/${(randomIndex1 + index) % productsArr.length}`}>{products[(randomIndex1 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex1 + index) % productsArr.length].photoUrl} /> }</Link>
-                                </div>
-                                ))}
-                        </div>
-
-                        <div className='home-product-box1'>
-                            {Array.from({ length:2 }).map((_, index) => (
-                                <div className='box-content' key={index}>    
-                                    <Link to={`products/${(randomIndex2 + index) % productsArr.length}`}>{products[(randomIndex2 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex2 + index) % productsArr.length].photoUrl} /> }</Link>
-                                </div>
-                                ))}
-                        </div>
-
-
-                        <div className='home-product-box1'>
-                            {Array.from({ length:2 }).map((_, index) => (
-                                <div className='box-content' key={index}>    
-                                    <Link to={`products/${(randomIndex3 + index) % productsArr.length}`}>{products[(randomIndex3 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex3 + index) % productsArr.length].photoUrl} /> }</Link>
-                                </div>
-                                ))}
-                        </div>
-
-                        <div className='home-product-box1'>
-                            {Array.from({ length:2 }).map((_, index) => (
-                                <div className='box-content' key={index}>    
-                                    <Link to={`products/${(randomIndex4 + index) % productsArr.length}`}>{products[(randomIndex4 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex4 + index) % productsArr.length].photoUrl} /> }</Link>
-                                </div>
-                                ))}
-                        </div>
-
-                        <div className='home-product-box1'>
-                            {Array.from({ length:2 }).map((_, index) => (
-                                <div className='box-content' key={index}>    
-                                    <Link to={`products/${(randomIndex5 + index) % productsArr.length}`}>{products[(randomIndex5 + index) % productsArr.length]?.photoUrl && <img className='home-photo-single'src={products[(randomIndex5 + index) % productsArr.length].photoUrl} /> }</Link>
-                                </div>
-                                ))}
-                        </div>
-                    </Carousel>
-                </div>
+               
 
             
         </>
