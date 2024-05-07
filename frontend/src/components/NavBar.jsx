@@ -24,7 +24,7 @@ const NavBar = props => {
     
 
     useEffect(() => {
-        if (currentUser && cart_itemsArr.length !== 0) {
+        if (currentUser) {
             dispatch(fetchCartItems())
         }
         dispatch(fetchProducts())
