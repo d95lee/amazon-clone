@@ -18,6 +18,9 @@ body {
     align-items: center;
     background-color: rgba(19, 25, 33, 1);
     height: 65px;
+    position:relative;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 /* .nav-bar > * {
@@ -323,6 +326,7 @@ body {
     margin-top: -3px;
     font-weight: bold;
     color: rgb(240, 136, 4);
+    display: flex;
 }
 
 .cart-text {

@@ -6,6 +6,8 @@
     align-items: center;
     /* background: linear-gradient(to bottom, rgba(255, 255 ,255 ,0), rgba(230, 232, 231)), url('https://m.media-amazon.com/images/I/61q5KKn2p9L._SX1500_.jpg') no-repeat -10px -340px;
     background: rgb(230, 232, 231); */
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 .home-background-body {
