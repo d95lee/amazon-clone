@@ -23,7 +23,7 @@
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 3px;
-    /* overflow-y: hidden; */
+    overflow-y: hidden;
     z-index: 1000;
   }
   
