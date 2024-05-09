@@ -1,7 +1,6 @@
 import './NavBar.css'
-import { selectCurrentUser } from '../store/sessionReducer'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link, Route, useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import logo from '../assets/logo/white-logo.png'
 import flag from '../assets/icons/america-flag.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,7 +9,6 @@ import DropDownMenu from './DropDownMenu'
 import { useEffect, useState } from 'react'
 import { fetchProducts } from '../store/productReducer'
 import { fetchCartItems } from '../store/cartItemReducer'
-import SearchModal from './SearchModal/SearchModal'
 
 
 const NavBar = props => {
