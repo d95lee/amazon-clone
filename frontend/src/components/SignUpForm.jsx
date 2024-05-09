@@ -62,7 +62,7 @@ const SignUpForm = () => {
                         onChange={(e) => setEmail(e.target.value)}
                         />
                     </label>
-                    <span className='display-email-errors'>{errors.map((err, idx) => {
+                    <span className='display-email-errors'>{errors?.map((err, idx) => {
                         if (err.includes('Email')) {
                             return (
                                 <p key={idx}><li>{err}</li></p>
