@@ -73,7 +73,7 @@ const EditReview = () => {
         <Layout>
             <div className="review-container">
                 <div className='review-title-container'>
-                    <h1 className='review-edit-title'>Edit Review</h1>
+                    <h1 className='review-title'>Edit Review</h1>
                     {product?.photoUrl && <img className='review-photo' src={product.photoUrl} /> }
                     {product?.name}
                     <hr className='review-break'/>
