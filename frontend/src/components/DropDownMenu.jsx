@@ -46,7 +46,7 @@ const DropDownMenu = () => {
                  <div className='nav-right'>
                     <Link to={'/signin'}><button>Sign In</button></Link>
                     <p className='new-signup'> New Customer?  
-                        <a href="http://localhost:5173/signup" className='text-start-here'> Start Here.</a>
+                        <Link to={'/signup'}><a className='text-start-here'> Start Here.</a></Link>
                     </p>
                 </div>
             </>
