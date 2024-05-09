@@ -17,6 +17,7 @@ class User < ApplicationRecord
     validates :email, :session_token, uniqueness: true 
     validates :email, length: { in: 3..100 }, allow_nil: true
     validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP }
+    validates :email, presence: true, format: { with: /\A[^@]+@[^@]+\.[^@.]{2,}\z/ }
     validates :password, length: { in: 6..40 }, allow_nil: true
 
     has_many :cart_items
