@@ -34,13 +34,6 @@ const CarouselEle = () => {
     const randomIndex11 = Math.floor(Math.random() * productsArr.length)
     const randomIndex12 = Math.floor(Math.random() * productsArr.length)
     
-    // const zeroCase1 = (randomIndex1 === 0 || randomIndex1 === 19) ? 2 : randomIndex1 
-    // const zeroCase2 = (randomIndex2 === (19)) ? 2 : randomIndex1
-    // const zeroCase3 = (randomIndex3 === (19)) ? 2 : randomIndex1
-    // const zeroCase4 = (randomIndex4 === (4 || 19)) ? 2 : randomIndex1
-    // const zeroCase5 = (randomIndex5 === (5 || 19)) ? 2 : randomIndex1
-    // const zeroCase6 = (randomIndex6 === (6 || 19)) ? 2 : randomIndex1
-    
     const electronicsArray = []
     const clothingArray = []
     const furnitureArray = []
