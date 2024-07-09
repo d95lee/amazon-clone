@@ -71,7 +71,6 @@
 .show-middle-content {
     width: 70%;
     height: 80%;
-    /* padding-left: 50px; */
     padding-right: 50px;
     overflow: auto;
 }
