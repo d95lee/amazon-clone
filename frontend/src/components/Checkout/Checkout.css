@@ -16,7 +16,6 @@
     justify-content: space-around;
     margin: 100px;
     width: 70vw;
-    /* min-height: 400px; */
 }
 
 .checkout-photo-container {
@@ -31,9 +30,6 @@
 
 .order-text-container {
     display: block;
-    /* margin-left: -350px; */
-    /* margin-top: -100px; */
-    /* position: fixed; */
 }
 
 .check-mark {
