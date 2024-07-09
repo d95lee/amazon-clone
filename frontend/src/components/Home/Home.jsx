@@ -1,6 +1,4 @@
 import './Home.css'
-// import NavBar from '../NavBar'
-// import SubNav from '../SubNav/SubNav'
 import ProductsHome from '../Product/ProductsHome'
 import Footer from '../Footer/FooterEle'
 import Layout from '../Layout/Layout'
