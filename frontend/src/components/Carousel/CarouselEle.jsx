@@ -48,10 +48,6 @@ const CarouselEle = () => {
             toysArray.push(product)
         }
     })
-    
-    randomNumber = Random.new
-    console.log(randomNumber.rand)
-
 
     return (
         <>

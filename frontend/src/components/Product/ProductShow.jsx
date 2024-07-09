@@ -12,7 +12,7 @@ import Footer from '../FooterEle'
 import blue_logo from '../../assets/logo/amazon-blue.png'
 import { FaStar } from 'react-icons/fa6'
 import { fetchReviews } from '../../store/reviewReducer'
-import NavBar from '../NavBar'
+import NavBar from '../NavBar/NavBar'
 import SubNav from '../SubNav/SubNav'
 
 const ProductShow = () => {

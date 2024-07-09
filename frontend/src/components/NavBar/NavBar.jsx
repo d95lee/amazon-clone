@@ -1,14 +1,14 @@
 import './NavBar.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
-import logo from '../assets/logo/white-logo.png'
-import flag from '../assets/icons/america-flag.png'
+import logo from '../../assets/logo/white-logo.png'
+import flag from '../../assets/icons/america-flag.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import DropDownMenu from './DropDownMenu'
+import DropDownMenu from '../DropDownMenu/DropDownMenu'
 import { useEffect, useState } from 'react'
-import { fetchProducts } from '../store/productReducer'
-import { fetchCartItems } from '../store/cartItemReducer'
+import { fetchProducts } from '../../store/productReducer'
+import { fetchCartItems } from '../../store/cartItemReducer'
 
 
 const NavBar = props => {
