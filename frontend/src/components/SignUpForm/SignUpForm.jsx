@@ -21,10 +21,6 @@ const SignUpForm = () => {
         }
     }
 
-    // const handleSubmit = (e) => {
-    //     dispatch(createUser({ email, password }))
-    // }
-    
     useEffect(() => {
         if (currentUser) {
             navigate('/')
