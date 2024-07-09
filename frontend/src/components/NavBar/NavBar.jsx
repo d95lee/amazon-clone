@@ -129,18 +129,10 @@ const NavBar = props => {
                     </div>
                 )}
                 
-                {/* <SearchModal modalState={modalState} setModalState={setModalState}/> */}
-                {/* <ul>{filteredData.map(product => (
-                    <li key={product.id}>
-                        <p><Link to={`product/${product.id}`}>{product.name}</Link></p>
-                    </li>
-                ))}
-                </ul> */}
         
                 <div className='nav-search-right'>
                     <FontAwesomeIcon icon={faMagnifyingGlass} id='search-icon'
                     onClick={handleSearch}
-                    // onClick={(e)=>fetchData(input)}
                     />
                 </div>
             </div>

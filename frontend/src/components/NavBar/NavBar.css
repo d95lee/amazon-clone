@@ -21,14 +21,8 @@ body {
     height: 65px;
     position:relative;
     max-width: 100vw;
-    /* overflow-x: hidden; */
-    /* overflow-y: hidden;  */
     z-index: 1;
 }
-
-/* .nav-bar > * {
-    position: fixed;
-} */
 
 .session-links {
     display: flex;
@@ -119,20 +113,8 @@ body {
     font-size: 16px;
     font-family: Ember;
     color: white;
-    /* cursor: pointer; */
     margin-left: 10px;
 }
-
-
-/* .nav-location:hover {
-    border: 1px solid white;
-    border-radius: 3px;
-    padding-left: 24px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-right: 6px;
-  } */
-
 
 #text-city {
     color: #ccc;
@@ -147,25 +129,6 @@ body {
     margin: 0px;
     font-size: 14px;
 }
-
-/* #nav-search {
-
-} */
-
-/* #nav-search-icon {
-    height: 100%;
-    width: 100%;
-    font-size: 14px;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    outline: 0;
-    color: #fff;
-    background: 0 0;
-    border: none;
-    text-indent: -1000px;
-    line-height: 1px;
-} */
 
 .nav-search-container {
     background-color: rgb(255, 255, 255);
@@ -212,7 +175,6 @@ body {
 }
 
 .nav-search-right {
-    /* background-color: ; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -245,31 +207,13 @@ body {
     cursor: pointer;
 }
 
-/* .nav-cart:hover {
-    border: 1px solid white;
-    border-radius: 3px;
-    padding-top: -100px;
-    padding-bottom: -10px;
-    padding-left: 4px;
-    padding-right: 8px;
-  } */
-
 .nav-language {
     width: 30px;
     height: 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* cursor: pointer; */
 }
-
-/* .nav-language:hover {
-    border: 1px solid white;
-    border-radius: 3px;
-    padding: 8px;
-    padding-right: 18px;
-  } */
-
 
 #nav-flag {
     width: 20px;
@@ -289,15 +233,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* cursor: pointer; */
 }
-
-/* .nav-orders:hover {
-    border: 1px solid white;
-    border-radius: 3px;
-    padding: 8px;
-    opacity: 1;
-  } */
 
 #text-returns {
     margin: 0px;
