@@ -8,8 +8,6 @@
     height: 50vh;
 }
 
-
-
 input[type = radio] {
     display: none;
 }
@@ -41,10 +39,6 @@ input[type = radio] {
     font-size: 22px;
 }
 
-/* .review-form-container {
-    margin-top: -100px;
-} */
-
 .review-title-test {
     display: flex;
     justify-content: flex-start;
@@ -55,7 +49,6 @@ input[type = radio] {
     height: 30px;
     margin-top: 15px;
 }
-
 
 .custom-textarea {
     width: 50vw;

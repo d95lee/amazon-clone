@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux"
 import Layout from "../Layout/Layout"
 import { useEffect, useState } from "react"
-import { changeReview, createReview } from "../../store/reviewReducer"
+import { changeReview } from "../../store/reviewReducer"
 import { selectProduct } from "../../store/productReducer"
 import { useNavigate, useParams } from "react-router-dom"
 import { FaStar } from 'react-icons/fa6'
@@ -38,14 +38,6 @@ const EditReview = () => {
             }
         })
     }, [])
-
-    // useEffect(() => {
-    //     const review = reviewsArr.find((review) => review.id === reviewsArr.id)
-    //     console.log(review)
-    //     if (review) {
-    //         setFormBody(review.body)
-    //     }
-    // }, [productId])
 
     const handleOnSubmit = (e) => {
         e.preventDefault()

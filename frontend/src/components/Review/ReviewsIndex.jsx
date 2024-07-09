@@ -16,19 +16,11 @@ const ReviewsIndex = () => {
     const reviewsArr = Object.values(reviews)
 
     const productArr = reviewsArr.filter(review => String(review.productId) === productId)
-   
 
     useEffect(() => {
         dispatch(fetchReviews())
     }, [])
     
-    // review.productId === productId ? review.productId : ''
-
-    // const handleDelete = (e) => {
-    //     e.preventDefault()
-    //     dispatch(clearReview(productId))
-    // }
-// if ownerId === review.ownerId then dispatch(clearReview(review.owner))
     return (
         <>
             <div className='product-reviews'>

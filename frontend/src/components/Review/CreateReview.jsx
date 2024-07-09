@@ -19,7 +19,6 @@ const CreateReview = () => {
     const userEmail = useSelector(state => state.session.email)
     const { productId } = useParams()
     const product = useSelector(selectProduct(productId))
-    const currentUser = useSelector(selectCurrentUser)
     
     const handleOnSubmit = (e) => {
         e.preventDefault()
