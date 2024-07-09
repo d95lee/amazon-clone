@@ -1,8 +1,7 @@
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import './HomeCard.css'
 
 const HomeCard = () => {
-    const dispatch = useDispatch()
 
     const products = useSelector((state) => state.product)
     const productsArr = Object.values(products)
