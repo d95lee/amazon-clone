@@ -1,10 +1,10 @@
-import './SignInForm.css'
+import '../SignInForm/SignInForm.css'
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from 'react-router-dom';
-import { createUser, selectCurrentUser } from '../store/sessionReducer'
-import logo from '../assets/logo/Amazon-Logo-PNG.png'
-import FooterSign from './FooterSign'
+import { createUser, selectCurrentUser } from '../../store/sessionReducer'
+import logo from '../../assets/logo/Amazon-Logo-PNG.png'
+import FooterSign from '../Footer/FooterSign'
 
 
 const SignUpForm = () => {

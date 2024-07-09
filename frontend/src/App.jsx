@@ -1,17 +1,16 @@
 import { Navigate, Outlet, RouterProvider, createBrowserRouter, useLocation, useRoutes } from 'react-router-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 import './App.css'
-import SignInForm from './components/SignInForm'
+import SignInForm from './components/SignInForm/SignInForm'
 import ProductsIndex from './components/Product/ProductsIndex'
 import ProductShow from './components/Product/ProductShow'
-import SignUpForm from './components/SignUpForm'
+import SignUpForm from './components/SignUpForm/SignUpForm'
 import Home from './components/Home/Home'
 import CartItemsIndex from './components/CartItem/CartItemsIndex'
 import CreateReview from './components/Review/CreateReview'
 import ReviewsIndex from './components/Review/ReviewsIndex'
 import EditReview from './components/Review/EditReview'
 import Checkout from './components/Checkout/Checkout'
-import Footer from './components/FooterEle'
 
 const router = createBrowserRouter([
   {

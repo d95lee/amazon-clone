@@ -7,7 +7,7 @@ import check from '../../assets/icons/check.png'
 import linkedin from '../../assets/icons/linkedin.png'
 import github from '../../assets/icons/github.png'
 import truck from '../../assets/gifs/shipping.gif'
-import Footer from '../FooterEle'
+import Footer from '../Footer/FooterEle'
 
 const Checkout = () => {
     const dispatch = useDispatch()

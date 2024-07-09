@@ -1,8 +1,8 @@
 import React from "react";
 import './FooterSign.css'
-import logo from '../assets/logo/white-logo.png'
-import white_linkedin from '../assets/icons/white_linkedin.png'
-import white_github from '../assets/icons/white_github.png'
+import logo from '../../assets/logo/white-logo.png'
+import white_linkedin from '../../assets/icons/white_linkedin.png'
+import white_github from '../../assets/icons/white_github.png'
 
 const FooterSign = () => {
     

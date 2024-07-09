@@ -9,7 +9,7 @@ import { useEffect } from 'react'
 import NavBanner from '../NavBanner/NavBanner'
 import { clearCartItem, fetchCartItems } from '../../store/cartItemReducer'
 import { selectCurrentUser } from '../../store/sessionReducer'
-import Footer from '../FooterEle'
+import Footer from '../Footer/FooterEle'
 
 const CartItemsIndex = () => {
     const dispatch = useDispatch()

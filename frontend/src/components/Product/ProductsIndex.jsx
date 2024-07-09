@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 import ProductIndexItem from './ProductIndexItem'
 import Layout from '../Layout/Layout'
 import { Link } from 'react-router-dom'
-import Footer from '../FooterEle'
+import Footer from '../Footer/FooterEle'
 
 
 const ProductsIndex = () => {
