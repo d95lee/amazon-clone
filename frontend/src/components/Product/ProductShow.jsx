@@ -3,15 +3,12 @@ import './Product.css'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { fetchProduct, selectProduct } from '../../store/productReducer'
 import { useEffect, useState } from 'react'
-import Layout from '../Layout/Layout'
-import AddCartItem from '../CartItem/AddCartItem'
 import { createCartItem } from '../../store/cartItemReducer'
 import ReviewsIndex from '../Review/ReviewsIndex'
 import { selectCurrentUser } from '../../store/sessionReducer'
 import Footer from '../Footer/FooterEle'
 import blue_logo from '../../assets/logo/amazon-blue.png'
 import { FaStar } from 'react-icons/fa6'
-import { fetchReviews } from '../../store/reviewReducer'
 import NavBar from '../NavBar/NavBar'
 import SubNav from '../SubNav/SubNav'
 
@@ -51,10 +48,6 @@ const ProductShow = () => {
         }
     }
 
-
-    // const selectCurrentProducts = useSelector(state => state.review.productId === productId)
-    // console.log(selectCurrentProducts)
-
     const currentDate = new Date()
 
     useEffect(() => {
@@ -77,10 +70,9 @@ if (!product) {
     return null
 }
     return (
-        // <Layout>
         <>
-            <NavBar></NavBar>
-                <SubNav></SubNav>
+            <NavBar/>
+                <SubNav/>
             
             <div className='show-wrapper'>
                 <div className='show-left'>
@@ -164,7 +156,6 @@ if (!product) {
                 </div>
             </div>
             <Footer/>
-            {/* </Layout> */}
         </>
     )
 }
