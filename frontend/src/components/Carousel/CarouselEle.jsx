@@ -1,10 +1,8 @@
 import './CarouselEle.css'
 import React from 'react'
 import Carousel from 'react-elastic-carousel'
-import ReactDOM from 'react-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import HomeCard from '../HomeCard/HomeCard'
 
 
 const slidePoints = [

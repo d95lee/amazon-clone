@@ -1,10 +1,8 @@
 
 import { useDispatch, useSelector } from 'react-redux'
 import './CartItemsIndex.css'
-// import { selectCartItems } from '../../store/cartItemReducer'
 import Layout from '../Layout/Layout'
-import { fetchProduct, selectProduct } from '../../store/productReducer'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
 import NavBanner from '../NavBanner/NavBanner'
 import { clearCartItem, fetchCartItems } from '../../store/cartItemReducer'
