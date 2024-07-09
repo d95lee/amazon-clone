@@ -28,10 +28,8 @@ const CarouselEle = () => {
     const randomIndex5 = Math.floor(Math.random() * productsArr.length)
     const randomIndex6 = Math.floor(Math.random() * productsArr.length)
     const randomIndex7 = Math.floor(Math.random() * productsArr.length)
-    const randomIndex8 = Math.floor(Math.random() * productsArr.length)
     const randomIndex9 = Math.floor(Math.random() * productsArr.length)
     const randomIndex10 = Math.floor(Math.random() * productsArr.length)
-    const randomIndex11 = Math.floor(Math.random() * productsArr.length)
     const randomIndex12 = Math.floor(Math.random() * productsArr.length)
     
     const electronicsArray = []
@@ -50,7 +48,9 @@ const CarouselEle = () => {
             toysArray.push(product)
         }
     })
-
+    
+    randomNumber = Random.new
+    console.log(randomNumber.rand)
 
 
     return (
