@@ -2,7 +2,7 @@
 
 ##### Please read the [wiki](https://github.com/d95lee/amazon-clone/wiki/1.-Welcome-to-Amazon%E2%80%90Clone) for a more detailed layout of the project
 
-## [Amazon Clone](https://amazon-clone-yn1k.onrender.com/)
+## [Amazon Clone](https://amazon-clone-f8d6c298bf52.herokuapp.com/)
 
 ### Background
 A basic Amazon clone that allows the user to add displayed products to a shopping cart, purchase the products, and create/read/update/delete reviews for specific products. The application should be opened on a desktop web browser.    
